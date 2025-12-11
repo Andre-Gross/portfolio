@@ -1,0 +1,12 @@
+@use 'variables' as vars;
+
+
+* {
+    margin: 0;
+}
+
+
+a {
+    text-decoration: none;
+    color: vars.$black;
+}
