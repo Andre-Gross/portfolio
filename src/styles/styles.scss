@@ -1,8 +1,11 @@
-@use 'variables' as vars;
+@use '_variables' as vars;
+@use '_fonts' as fonts;
 
 
 * {
     margin: 0;
+    font-family: vars.$font-family-primary;
+    font-weight: 400;
 }
 
 
