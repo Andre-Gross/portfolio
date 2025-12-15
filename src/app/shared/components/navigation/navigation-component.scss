@@ -1,0 +1,46 @@
+@use '../../../../styles/variables' as vars;
+
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    height: 100vh;
+    width: 172px;
+    background-color: vars.$bright-green;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #logo {
+        position: relative;
+        margin-top: 32px;
+
+        >p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-20%) translateX(-50%);
+            font-size: 40px;
+            letter-spacing: -0.2rem;
+            color: vars.$bright-green;
+            -webkit-text-stroke: 2px vars.$logo-grey;
+        }
+    }
+
+    #links {
+        flex: 1; // nimmt den restlichen Platz ein
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 28px;
+
+        writing-mode: sideways-lr;
+        text-orientation: mixed;
+
+        font-size: 24px;
+    }
+}
