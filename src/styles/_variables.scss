@@ -12,3 +12,9 @@ $white: #FFFFFF;
 $grey: #9E9D9D;
 $logo-grey: #4A4A4A;
 $black: #000000;
+
+
+$navigation-width: 172px;
+$switch-section-area-width: 144px;
+
+$min-section-width: calc(100vw - #{$navigation-width} - #{$switch-section-area-width});

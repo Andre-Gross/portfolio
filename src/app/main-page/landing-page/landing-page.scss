@@ -1,0 +1,10 @@
+@use '../../../styles/variables' as vars;
+
+
+:host {
+    width: vars.$min-section-width;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
