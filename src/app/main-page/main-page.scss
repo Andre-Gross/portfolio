@@ -1,0 +1,11 @@
+@use '../../styles/variables' as vars;
+
+
+:host {
+    display: flex;
+}
+
+
+app-main-page {
+    display: flex;
+}
