@@ -3,14 +3,14 @@ import { RouterOutlet } from '@angular/router';
 import { NavigationComponent } from './shared/navigation/navigation.component';
 
 @Component({
-  selector: 'app-root',
-  imports: [
-    RouterOutlet,
-    NavigationComponent
-],
-  templateUrl: './app.html',
-  styleUrl: './app.scss'
+    selector: 'app-root',
+    imports: [
+        RouterOutlet,
+        NavigationComponent,
+    ],
+    templateUrl: './app.html',
+    styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('portfolio');
+    protected readonly title = signal('portfolio');
 }
