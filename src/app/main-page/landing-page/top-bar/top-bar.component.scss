@@ -1,0 +1,36 @@
+@use '../../../../styles/mixins' as mixins;
+
+
+$font-color: #FFFDFD;
+
+
+:host {
+    position: absolute;
+    top: 0;
+
+    @include mixins.margin-top-full(30);
+    width: 100vw;
+
+    display: flex;
+    justify-content: end;
+}
+
+
+
+#language-switch {
+    display: flex;
+
+    :first-child {
+        padding-right: 6px;
+    }
+
+    :last-child {
+        padding-left: 6px;
+        border-left: 1px solid $font-color;
+    }
+
+    >p {
+        color: $font-color;
+        font-size: 18px;
+    }
+}
