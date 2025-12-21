@@ -1,4 +1,4 @@
-@use '../../../../styles/variables' as vars;
+@use '../../../styles/variables' as vars;
 
 
 nav {
@@ -8,7 +8,7 @@ nav {
     bottom: 0;
 
     height: 100vh;
-    width: 172px;
+    width: vars.$navigation-width;
     background-color: vars.$bright-green;
 
     display: flex;
@@ -32,7 +32,7 @@ nav {
     }
 
     #links {
-        flex: 1; // nimmt den restlichen Platz ein
+        flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -43,4 +43,10 @@ nav {
 
         font-size: 24px;
     }
+}
+
+
+#nav-placeholder {
+    width: vars.$navigation-width;
+    height: 100vh;
 }
