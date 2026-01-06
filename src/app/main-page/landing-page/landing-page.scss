@@ -1,5 +1,5 @@
 @use '../../../styles/variables' as vars;
-@use '../../../styles/functions' as functions;
+@use '../../../styles/functions' as func;
 
 
 $main-title-font-size: 80px;
@@ -32,7 +32,7 @@ $subtitle-font-size: calc($main-title-font-size * (48 / 100) - (2* $subtitle-fon
 
 
 h1 {
-    margin-top: mixins.margin-top-full(560);
+    margin-top: func.margin-top-full(560);
     line-height: 1.2;
     font-size: $main-title-font-size;
     font-weight: 700;

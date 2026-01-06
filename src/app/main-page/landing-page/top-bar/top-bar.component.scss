@@ -1,4 +1,4 @@
-@use '../../../../styles/mixins' as mixins;
+@use '../../../../styles/functions' as func;
 
 
 $font-color: #FFFDFD;
@@ -8,7 +8,7 @@ $font-color: #FFFDFD;
     position: absolute;
     top: 0;
 
-    @include mixins.margin-top-full(30);
+    margin-top: func.margin-top-full-value(30);
     width: 100vw;
 
     display: flex;
