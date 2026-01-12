@@ -16,6 +16,13 @@ $subtitle-font-size: calc($main-title-font-size * (48 / 100) - (2* $subtitle-fon
 }
 
 
+#hero-container {
+    width: max-content;
+    display: flex;
+    justify-content: center;
+}
+
+
 #title-section {
     display: flex;
     flex-direction: column;
