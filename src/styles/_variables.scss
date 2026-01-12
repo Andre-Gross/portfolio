@@ -17,5 +17,6 @@ $black: #000000;
 $navigation-width: 172px;
 $switch-section-area-img-width: 144px;
 $switch-section-area-width: $switch-section-area-img-width * 1.4;
+$section-title-width: 96px;
 
-$min-section-width: calc(100vw - #{$navigation-width} - #{$switch-section-area-width});
+$min-section-width: calc(100vw - #{$navigation-width} - #{$switch-section-area-width} - #{$section-title-width});
