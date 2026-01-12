@@ -1,3 +1,10 @@
+@use "../../../styles/variables" as vars;
+
+
 :host {
     height: 100%;
+    width: vars.$switch-section-area-width;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
