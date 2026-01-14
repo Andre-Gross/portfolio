@@ -1,3 +1,5 @@
-<app-landing-page></app-landing-page>
-<app-switch-section-area></app-switch-section-area>
-<app-section-title [title]="'Why me'"></app-section-title>
+<div class="scroll-container" (wheel)="onWheel($event)">
+    <app-landing-page></app-landing-page>
+    <app-switch-section-area></app-switch-section-area>
+    <app-section-title [title]="'Why me'"></app-section-title>
+</div>

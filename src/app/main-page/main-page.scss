@@ -3,9 +3,20 @@
 
 :host {
     display: flex;
+    width: 100%;
+    overflow: hidden;
 }
 
 
 app-main-page {
     display: flex;
+}
+
+
+.scroll-container {
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
 }

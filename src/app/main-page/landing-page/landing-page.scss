@@ -8,7 +8,7 @@ $subtitle-font-size: calc($main-title-font-size * (48 / 100) - (2* $subtitle-fon
 
 :host {
     position: relative;
-    width: vars.$min-section-width;
+    min-width: vars.$min-section-width;
     display: flex;
     flex-direction: column;
     justify-content: start;
