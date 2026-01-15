@@ -4,6 +4,7 @@
 
 :host {
     margin-top: func.margin-top-full-value(164);
+    width: vars.$section-title-width;
 }
 
 
@@ -12,7 +13,6 @@ h2 {
 
     font-size: 54px;
     line-height: 1.2;
-
 
     color: vars.$black;
     -webkit-text-stroke: 2px vars.$bright-green;
