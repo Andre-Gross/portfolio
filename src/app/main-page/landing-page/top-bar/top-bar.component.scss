@@ -9,10 +9,22 @@ $font-color: #FFFDFD;
     top: 0;
 
     margin-top: func.margin-top-full-value(30);
-    width: 100vw;
+    width: 100%;
 
     display: flex;
     justify-content: end;
+    gap: 48px;
+}
+
+
+#links {
+    display: flex;
+    gap: 16px;
+
+    >a {
+        display: flex;
+        align-items: center;
+    }
 }
 
 
@@ -21,11 +33,11 @@ $font-color: #FFFDFD;
     display: flex;
 
     :first-child {
-        padding-right: 6px;
+        padding-right: 12px;
     }
 
     :last-child {
-        padding-left: 6px;
+        padding-left: 12px;
         border-left: 1px solid $font-color;
     }
 
