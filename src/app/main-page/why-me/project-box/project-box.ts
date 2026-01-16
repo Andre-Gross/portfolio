@@ -1,0 +1,14 @@
+import { Component } from '@angular/core';
+import { HeadlineComponent } from './headline/headline.component';
+
+@Component({
+  selector: 'app-project-box',
+  imports: [
+    HeadlineComponent,
+  ],
+  templateUrl: './project-box.html',
+  styleUrl: './project-box.scss',
+})
+export class ProjectBoxComponent {
+
+}

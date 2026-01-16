@@ -1,0 +1,18 @@
+@use '../../../../styles/variables' as vars;
+@use '../../../../styles/mixins' as mix;
+
+:host {
+    width: vars.$section-title-width;
+}
+
+
+h2 {
+    margin-right: 32px;
+
+    line-height: 1.2;
+
+    @include mix.emptyLetters(54px, 2px, vars.$bright-green);
+
+    writing-mode: sideways-lr;
+    text-orientation: mixed;
+}

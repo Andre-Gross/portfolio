@@ -1,0 +1,12 @@
+@use '../../../../styles/variables' as vars;
+
+
+:host {
+    border-radius: 30px;
+    padding: 42px;
+    box-sizing: border-box;
+    width: 919px;
+    height: 560px;
+    background-color: vars.$bright-green-transparent;
+    display: flex;
+}

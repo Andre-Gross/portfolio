@@ -1,0 +1,5 @@
+@mixin emptyLetters($font-size, $line-thickness, $border-color) {
+    font-size: $font-size;
+    color: transparent;
+    -webkit-text-stroke: $line-thickness $border-color;
+}

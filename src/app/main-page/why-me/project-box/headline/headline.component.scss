@@ -1,0 +1,15 @@
+@use '../../../../../styles/variables' as vars;
+
+@use '../../../../../styles/mixins' as mix;
+
+
+:host {
+    >h3 {
+        display: flex;
+
+        gap: 32px;
+
+        .number {
+            @include mix.emptyLetters(54px, 2px, vars.$bright-green);        }
+    }
+}
