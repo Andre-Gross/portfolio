@@ -14,7 +14,7 @@ app-main-page {
 
 
 .scroll-container {
-    width: 100%;
+    width: max-content;
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
