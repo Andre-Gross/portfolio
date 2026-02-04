@@ -18,6 +18,16 @@ import { MyWorkSection } from './my-work/my-work.component';
 })
 export class MainPage {
 
+    currentLang: 'en' | 'de' = 'en';
+
+    
+    constructor() {
+        if (navigator.language.startsWith('de')) {
+            this.currentLang = 'de';
+        } else {
+            this.currentLang = 'en';
+        }
+    }
 
     onWheel(event: WheelEvent): void {
         if (event.deltaY !== 0) {
