@@ -1,6 +1,6 @@
 <div class="scroll-container" (wheel)="onWheel($event)">
     <app-landing-page (newLang)="setLang($event)"></app-landing-page>
     <app-switch-section-area></app-switch-section-area>
-    <app-why-me></app-why-me>
+    <app-why-me [data]="mainPageData[currentLang].whyMe"></app-why-me>
     <app-my-work></app-my-work>
 </div>

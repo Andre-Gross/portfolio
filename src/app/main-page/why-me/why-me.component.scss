@@ -1,0 +1,7 @@
+@use '../../../styles/functions' as func;
+
+
+:host {
+    margin-top: func.margin-top-full-value(164);
+    display: flex;
+}
