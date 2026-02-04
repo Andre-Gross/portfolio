@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { LandingPage } from "./landing-page/landing-page";
 import { SwitchSectionArea } from "../shared/switch-section-area/switch-section-area";
-import { WhyMeComponent } from "./why-me/why-me.component";
+import { WhyMeSection } from "./why-me/why-me.component";
+import { MyWorkSection } from './my-work/my-work.component';
 
 
 @Component({
@@ -9,7 +10,8 @@ import { WhyMeComponent } from "./why-me/why-me.component";
     imports: [
         LandingPage,
         SwitchSectionArea,
-        WhyMeComponent,
+        WhyMeSection,
+        MyWorkSection,
     ],
     templateUrl: './main-page.html',
     styleUrl: './main-page.scss',
