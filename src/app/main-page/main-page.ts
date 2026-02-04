@@ -29,6 +29,13 @@ export class MainPage {
         }
     }
 
+
+    setLang(lang: string) {
+        this.currentLang = lang as 'en' | 'de';
+        console.log("Language changed to: ", this.currentLang);
+    }
+
+
     onWheel(event: WheelEvent): void {
         if (event.deltaY !== 0) {
             const element = event.currentTarget as HTMLElement;

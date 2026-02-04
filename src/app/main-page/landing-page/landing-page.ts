@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { TopBarComponent } from './top-bar/top-bar.component';
 
 @Component({
@@ -11,4 +11,9 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 })
 export class LandingPage {
 
+    @Output() newLang = new EventEmitter<string>()
+
+    setLang(lang: string) {
+        this.newLang.emit(lang);
+    }
 }
