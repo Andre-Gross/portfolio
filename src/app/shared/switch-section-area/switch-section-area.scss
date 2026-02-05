@@ -3,7 +3,7 @@
 
 :host {
     height: 100%;
-    width: vars.$switch-section-area-width !important;
+    min-width: vars.$switch-section-area-width !important;
     display: flex;
     justify-content: center;
     align-items: flex-start;
