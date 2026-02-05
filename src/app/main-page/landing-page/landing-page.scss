@@ -43,6 +43,7 @@ h1 {
     line-height: 1.2;
     font-size: $main-title-font-size;
     font-weight: 700;
+    color: vars.$font-color-title
 }
 
 
@@ -51,5 +52,5 @@ h1 {
     font-size: $subtitle-font-size;
     font-weight: 700;
     color: transparent;
-    -webkit-text-stroke: $subtitle-font--border-width vars.$bright-green;
+    -webkit-text-stroke: $subtitle-font--border-width vars.$font-color-title;
 }

@@ -1,9 +1,6 @@
 $font-stack-quantico: 'Quantico', sans-serif;
 $font-stack-roboto-mono: 'Roboto Mono', monospace;
 
-$font-family-primary: $font-stack-quantico;
-$font-family-secondary: $font-stack-roboto-mono;
-
 
 $bright-green: #B5E93B;
 $bright-green-transparent: #B5E93B33;
@@ -12,6 +9,13 @@ $white: #FFFFFF;
 $grey: #9E9D9D;
 $logo-grey: #4A4A4A;
 $black: #000000;
+
+
+$font-family-primary: $font-stack-quantico;
+$font-family-secondary: $font-stack-roboto-mono;
+
+$font-color-primary: $white;
+$font-color-title: $bright-green;
 
 
 $navigation-width: 172px;

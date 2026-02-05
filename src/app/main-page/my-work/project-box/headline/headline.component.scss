@@ -10,6 +10,6 @@
         gap: 32px;
 
         .number {
-            @include mix.emptyLetters(54px, 2px, vars.$bright-green);        }
+            @include mix.emptyLetters(54px, 2px, vars.$font-color-title);        }
     }
 }
