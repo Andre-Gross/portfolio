@@ -1,7 +1,9 @@
 @use '../../../styles/functions' as func;
+@use '../../../styles/variables' as vars;
 
 
 :host {
     margin-top: func.margin-top-full-value(164);
+    min-width: vars.$min-section-width;
     display: flex;
 }

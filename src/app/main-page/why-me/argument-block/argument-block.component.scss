@@ -1,0 +1,16 @@
+@use '../../../../styles/_variables' as vars;
+
+
+p {
+    color: vars.$font-color-primary,
+}
+
+
+h3 {
+    font-family: vars.$font-family-primary;
+    color: vars.$font-color-title;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+
+}
