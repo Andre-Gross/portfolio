@@ -1,4 +1,11 @@
 <p>{{ arguments.aboutMe }}</p>
 <div>
     <h3>{{ arguments.iAm }}</h3>
+    <div>
+        <div>
+            @for (item of arguments.singleArguments | keyvalue; track item.key) {
+            <app-single-argument [data]="item.value"></app-single-argument>
+            }
+        </div>
+    </div>
 </div>
