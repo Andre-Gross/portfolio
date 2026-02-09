@@ -18,7 +18,7 @@ import { MyWorkSection } from './my-work/my-work.component';
 })
 export class MainPage {
 
-    currentLang: 'en' | 'de' = 'en';
+    currentLang: 'en' | 'de' = 'de';
 
     mainPageData = {
         en: {
@@ -26,9 +26,11 @@ export class MainPage {
                 title: 'Why me',
                 aboutMe: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.',
                 iAm: 'I am',
-                location: 'located in Berlin, Germany',
-                remote: 'open to work remotly',
-                relocate: 'open to relocate',
+                singleArguments: {
+                    location: 'located in Berlin, Germany',
+                    remote: 'open to work remotly',
+                    relocate: 'open to relocate',
+                }
             }
         },
         de: {
@@ -36,14 +38,16 @@ export class MainPage {
                 title: 'Warum mich',
                 aboutMe: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.',
                 iAm: 'Ich bin',
-                location: 'Ich wohne in Berlin',
-                remote: 'Ich bin offen für Home Office',
-                relocate: 'Ich bin bereit für einen Umzug',
+                singleArguments: {
+                    location: 'Ich wohne in Berlin',
+                    remote: 'Ich bin offen für Home Office',
+                    relocate: 'Ich bin bereit für einen Umzug',
+                }
             }
         }
     }
 
-    
+
     constructor() {
         if (navigator.language.startsWith('de')) {
             this.currentLang = 'de';
