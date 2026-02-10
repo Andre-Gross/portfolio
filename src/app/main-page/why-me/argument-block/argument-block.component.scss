@@ -1,16 +1,32 @@
 @use '../../../../styles/_variables' as vars;
+@use "../../../../styles/_functions" as func;
+
+
+:host {
+    width: 100%;
+}
 
 
 p {
-    color: vars.$font-color-primary,
+    color: vars.$font-color-primary;
 }
 
 
 h3 {
+    margin-top: func.margin-top-full-value(53);
     font-family: vars.$font-family-primary;
     color: vars.$font-color-title;
     font-weight: 700;
     font-size: 48px;
     line-height: 120%;
+}
 
+#i-am-container {
+    padding:
+        func.margin-top-full-value(18)
+        func.margin-top-full-value(58)
+        0
+        func.margin-top-full-value(58);
+    display: flex;
+    justify-content: space-between;
 }

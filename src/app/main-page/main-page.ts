@@ -37,11 +37,11 @@ export class MainPage {
             whyMe: {
                 title: 'Warum mich',
                 aboutMe: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.',
-                iAm: 'Ich bin',
+                iAm: 'Ich',
                 singleArguments: {
-                    location: 'Ich wohne in Berlin',
-                    remote: 'Ich bin offen für Home Office',
-                    relocate: 'Ich bin bereit für einen Umzug',
+                    location: 'wohne in Berlin',
+                    remote: 'bin offen für Home Office',
+                    relocate: 'bin bereit für einen Umzug',
                 }
             }
         }
