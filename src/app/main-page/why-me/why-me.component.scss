@@ -6,4 +6,18 @@
     margin-top: func.margin-top-full-value(164);
     min-width: vars.$min-section-width;
     display: flex;
+    flex-direction: column;
+}
+
+
+button {
+    align-self: flex-end;
+    margin-top: func.margin-top-full-value(24);
+    border-radius: 30px;
+    padding: 13px 30px;
+    background-color: vars.$bright-green;
+    font-family: vars.$font-family-primary;
+    font-size: 14px;
+    line-height: 120%;
+    color: vars.$font-color-button-green;
 }

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { NgStyle } from '@angular/common';
 import { SectionTitleComponent } from '../../shared/section-title/section-title.component';
 import { ArgumentBlock } from './argument-block/argument-block.component';
 
@@ -8,6 +9,7 @@ import { ArgumentBlock } from './argument-block/argument-block.component';
     imports: [
         SectionTitleComponent,
         ArgumentBlock,
+        NgStyle
     ],
     templateUrl: './why-me.component.html',
     styleUrl: './why-me.component.scss',
