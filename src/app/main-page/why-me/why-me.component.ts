@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { NgStyle } from '@angular/common';
 import { SectionTitleComponent } from '../../shared/section-title/section-title.component';
 import { ArgumentBlock } from './argument-block/argument-block.component';
+import { ScrollService } from '../../shared/services/scroll/scroll.service';
 
 
 @Component({
@@ -17,4 +18,11 @@ import { ArgumentBlock } from './argument-block/argument-block.component';
 export class WhyMeSection {
     @Input() data!: any;
 
+
+    constructor(private scrollService: ScrollService) { }
+
+
+    triggerScroll(sectionId: string): void {   
+        this.scrollService.requestScroll(sectionId);
+    }
 }

@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
+
+import { ScrollService } from '../shared/services/scroll/scroll.service';
 import { LandingPage } from "./landing-page/landing-page";
-import { SwitchSectionArea } from "../shared/switch-section-area/switch-section-area";
+import { SwitchSectionArea } from "../shared/components/switch-section-area/switch-section-area";
 import { WhyMeSection } from "./why-me/why-me.component";
 import { MyWorkSection } from './my-work/my-work.component';
-
 
 @Component({
     selector: 'app-main-page',
@@ -16,7 +18,11 @@ import { MyWorkSection } from './my-work/my-work.component';
     templateUrl: './main-page.html',
     styleUrl: './main-page.scss',
 })
-export class MainPage {
+export class MainPage implements OnInit, OnDestroy {
+
+    @ViewChild('myWorkSection', { read: ElementRef }) myWorkSection!: ElementRef;
+
+    private scrollSub!: Subscription;
 
     currentLang: 'en' | 'de' = 'de';
 
@@ -48,7 +54,7 @@ export class MainPage {
     }
 
 
-    constructor() {
+    constructor(private scrollService: ScrollService) {
         if (navigator.language.startsWith('de')) {
             this.currentLang = 'de';
         } else {
@@ -57,20 +63,40 @@ export class MainPage {
     }
 
 
-    setLang(lang: string) {
-        this.currentLang = lang as 'en' | 'de';
-        console.log("Language changed to: ", this.currentLang);
+    ngOnInit() {
+        this.scrollSub = this.scrollService.scrollRequest$.subscribe(sectionId => {
+            if (sectionId === 'myWorkSection') {
+                this.scrollToElement(this.myWorkSection);
+            }
+        });
+    }
+
+
+    ngOnDestroy() {
+        this.scrollSub.unsubscribe();
+    }
+
+
+    private scrollToElement(element: ElementRef) {
+        element.nativeElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+        });
     }
 
 
     onWheel(event: WheelEvent): void {
         if (event.deltaY !== 0) {
             const element = event.currentTarget as HTMLElement;
-
             event.preventDefault();
-
             element.scrollLeft += 12 * event.deltaY;
         }
     }
 
+
+    setLang(lang: string) {
+        this.currentLang = lang as 'en' | 'de';
+        console.log("Language changed to: ", this.currentLang);
+    }
 }
