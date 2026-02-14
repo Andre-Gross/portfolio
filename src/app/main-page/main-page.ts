@@ -2,8 +2,9 @@ import { Component, ViewChild, ElementRef, OnInit, OnDestroy } from '@angular/co
 import { Subscription } from 'rxjs';
 
 import { ScrollService } from '../shared/services/scroll/scroll.service';
-import { LandingPage } from "./landing-page/landing-page";
+
 import { SwitchSectionArea } from "../shared/components/switch-section-area/switch-section-area";
+import { LandingPage } from "./landing-page/landing-page";
 import { WhyMeSection } from "./why-me/why-me.component";
 import { MyWorkSection } from './my-work/my-work.component';
 import { ContactSection } from './contact/contact.component';
@@ -11,8 +12,8 @@ import { ContactSection } from './contact/contact.component';
 @Component({
     selector: 'app-main-page',
     imports: [
-        LandingPage,
         SwitchSectionArea,
+        LandingPage,
         WhyMeSection,
         MyWorkSection,
         ContactSection,
