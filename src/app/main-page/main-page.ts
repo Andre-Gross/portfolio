@@ -40,6 +40,18 @@ export class MainPage implements OnInit, OnDestroy {
                     remote: 'open to work remotly',
                     relocate: 'open to relocate',
                 }
+            },
+            contact: {
+                title: 'Contact',
+                name: 'Your name',
+                email: 'Your e-mail',
+                message: 'Your message',
+                privacy: {
+                    text1: "I've read the ",
+                    link: 'privacy policy',
+                    text2: ' and agree to the processing of my data as outlined.',
+                },
+                submit: 'Send',
             }
         },
         de: {
@@ -52,6 +64,18 @@ export class MainPage implements OnInit, OnDestroy {
                     remote: 'bin offen für Home Office',
                     relocate: 'bin bereit für einen Umzug',
                 }
+            },
+            contact: {
+                title: 'Kontakt',
+                name: 'Ihr Name',
+                email: 'Ihre E-Mail-Adresse',
+                message: 'Ihre Nachricht',
+                privacy: {
+                    text1: 'Ich habe die ',
+                    link: 'Datenschutzerklärung',
+                    text2: ' und stimme der Verarbeitung meiner Daten wie beschrieben zu.',
+                },
+                submit: 'Senden',
             }
         }
     }
