@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, OnInit, OnDestroy } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit, OnDestroy, WritableSignal, signal } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 import { ScrollService } from '../shared/services/scroll/scroll.service';
@@ -27,7 +27,7 @@ export class MainPage implements OnInit, OnDestroy {
 
     private scrollSub!: Subscription;
 
-    currentLang: 'en' | 'de' = 'de';
+    currentLang: WritableSignal<'en' | 'de'>  = signal('de');
 
     mainPageData = {
         en: {
@@ -59,9 +59,9 @@ export class MainPage implements OnInit, OnDestroy {
 
     constructor(private scrollService: ScrollService) {
         if (navigator.language.startsWith('de')) {
-            this.currentLang = 'de';
+            this.currentLang.update(() => 'de');
         } else {
-            this.currentLang = 'en';
+            this.currentLang.update(() => 'en');
         }
     }
 
@@ -99,7 +99,7 @@ export class MainPage implements OnInit, OnDestroy {
 
 
     setLang(lang: string) {
-        this.currentLang = lang as 'en' | 'de';
+        this.currentLang.update(() => lang as 'en' | 'de');
         console.log("Language changed to: ", this.currentLang);
     }
 }
