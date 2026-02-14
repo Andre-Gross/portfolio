@@ -6,6 +6,7 @@ import { LandingPage } from "./landing-page/landing-page";
 import { SwitchSectionArea } from "../shared/components/switch-section-area/switch-section-area";
 import { WhyMeSection } from "./why-me/why-me.component";
 import { MyWorkSection } from './my-work/my-work.component';
+import { ContactSection } from './contact/contact.component';
 
 @Component({
     selector: 'app-main-page',
@@ -14,13 +15,14 @@ import { MyWorkSection } from './my-work/my-work.component';
         SwitchSectionArea,
         WhyMeSection,
         MyWorkSection,
+        ContactSection,
     ],
     templateUrl: './main-page.html',
     styleUrl: './main-page.scss',
 })
 export class MainPage implements OnInit, OnDestroy {
 
-    @ViewChild('myWorkSection', { read: ElementRef }) myWorkSection!: ElementRef;
+    @ViewChild('contactSection', { read: ElementRef }) contactSection!: ElementRef;
 
     private scrollSub!: Subscription;
 
@@ -65,8 +67,8 @@ export class MainPage implements OnInit, OnDestroy {
 
     ngOnInit() {
         this.scrollSub = this.scrollService.scrollRequest$.subscribe(sectionId => {
-            if (sectionId === 'myWorkSection') {
-                this.scrollToElement(this.myWorkSection);
+            if (sectionId === 'contactSection') {
+                this.scrollToElement(this.contactSection);
             }
         });
     }
