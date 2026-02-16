@@ -27,7 +27,7 @@ export class MainPage implements OnInit, OnDestroy {
 
     private scrollSub!: Subscription;
 
-    currentLang: WritableSignal<'en' | 'de'>  = signal('de');
+    currentLang: WritableSignal<'en' | 'de'> = signal('de');
 
     mainPageData = {
         en: {
@@ -39,6 +39,56 @@ export class MainPage implements OnInit, OnDestroy {
                     location: 'located in Berlin, Germany',
                     remote: 'open to work remotly',
                     relocate: 'open to relocate',
+                }
+            },
+            myWork: {
+                title: 'My work',
+                projects: {
+                    1: {
+                        name: 'Project Join',
+                        paragraph1: {
+                            header: 'About the project',
+                            content: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+                        },
+                        paragraph2: {
+                            header: 'Technologies I have used',
+                            content: 'Angular, TypeScript, HTML, CSS, Firebase ',
+                        },
+                        paragraph3: {
+                            header: 'My group-projects experience',
+                            content: 'How many people were in the team and what was your role? Describe your tasks  in 1-2 sentences. It is nice to mention a good teamwork and cooperation.',
+                        }
+                    },
+                    2: {
+                        name: 'Project Pollo Loco',
+                        paragraph1: {
+                            header: 'About the project',
+                            content: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+                        },
+                        paragraph2: {
+                            header: 'Technologies I have used',
+                            content: 'JavaScript, HTML, CSS',
+                        },
+                        paragraph3: {
+                            header: 'What I have  learned',
+                            content: 'Maybe you used a certain technology for the first time? Have you learnt more about how to keep your code clean or how to organise the components in your projects?',
+                        }
+                    },
+                    3: {
+                        name: 'Project DA Bubble',
+                        paragraph1: {
+                            header: 'About the project',
+                            content: 'Posuere pretium arcu sed senectus felis ac mauris.  Dui eget dictum.osuere pretium arcu sed senectus felis ac mauris. h',
+                        },
+                        paragraph2: {
+                            header: 'Technologies I have used',
+                            content: 'JavaScript, HTML, CSS',
+                        },
+                        paragraph3: {
+                            header: 'My group-projects experience',
+                            content: 'How many people were in the team and what was your role? Describe your tasks  in 1-2 sentences. It is nice to mention a good teamwork and cooperation.',
+                        }
+                    },
                 }
             },
             contact: {
@@ -63,6 +113,56 @@ export class MainPage implements OnInit, OnDestroy {
                     location: 'wohne in Berlin',
                     remote: 'bin offen für Home Office',
                     relocate: 'bin bereit für einen Umzug',
+                }
+            },
+            myWork: {
+                title: 'My work',
+                projects: {
+                    1: {
+                        name: 'Project Join',
+                        paragraph1: {
+                            header: 'About the project',
+                            content: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+                        },
+                        paragraph2: {
+                            header: 'Technologies I have used',
+                            content: 'Angular, TypeScript, HTML, CSS, Firebase ',
+                        },
+                        paragraph3: {
+                            header: 'My group-projects experience',
+                            content: 'How many people were in the team and what was your role? Describe your tasks  in 1-2 sentences. It is nice to mention a good teamwork and cooperation.',
+                        }
+                    },
+                    2: {
+                        name: 'Project Pollo Loco',
+                        paragraph1: {
+                            header: 'About the project',
+                            content: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+                        },
+                        paragraph2: {
+                            header: 'Technologies I have used',
+                            content: 'JavaScript, HTML, CSS',
+                        },
+                        paragraph3: {
+                            header: 'What I have  learned',
+                            content: 'Maybe you used a certain technology for the first time? Have you learnt more about how to keep your code clean or how to organise the components in your projects?',
+                        }
+                    },
+                    3: {
+                        name: 'Project DA Bubble',
+                        paragraph1: {
+                            header: 'About the project',
+                            content: 'Posuere pretium arcu sed senectus felis ac mauris.  Dui eget dictum.osuere pretium arcu sed senectus felis ac mauris. h',
+                        },
+                        paragraph2: {
+                            header: 'Technologies I have used',
+                            content: 'JavaScript, HTML, CSS',
+                        },
+                        paragraph3: {
+                            header: 'My group-projects experience',
+                            content: 'How many people were in the team and what was your role? Describe your tasks  in 1-2 sentences. It is nice to mention a good teamwork and cooperation.',
+                        }
+                    },
                 }
             },
             contact: {
