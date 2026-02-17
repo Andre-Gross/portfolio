@@ -46,6 +46,7 @@ export class MainPage implements OnInit, OnDestroy {
                 projects: {
                     1: {
                         name: 'Project Join',
+                        imgPath: 'img/my-work/join.png',
                         paragraph1: {
                             header: 'About the project',
                             content: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
@@ -61,6 +62,7 @@ export class MainPage implements OnInit, OnDestroy {
                     },
                     2: {
                         name: 'Project Pollo Loco',
+                        imgPath: 'img/my-work/pollo-loco.png',
                         paragraph1: {
                             header: 'About the project',
                             content: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
@@ -74,21 +76,22 @@ export class MainPage implements OnInit, OnDestroy {
                             content: 'Maybe you used a certain technology for the first time? Have you learnt more about how to keep your code clean or how to organise the components in your projects?',
                         }
                     },
-                    3: {
-                        name: 'Project DA Bubble',
-                        paragraph1: {
-                            header: 'About the project',
-                            content: 'Posuere pretium arcu sed senectus felis ac mauris.  Dui eget dictum.osuere pretium arcu sed senectus felis ac mauris. h',
-                        },
-                        paragraph2: {
-                            header: 'Technologies I have used',
-                            content: 'JavaScript, HTML, CSS',
-                        },
-                        paragraph3: {
-                            header: 'My group-projects experience',
-                            content: 'How many people were in the team and what was your role? Describe your tasks  in 1-2 sentences. It is nice to mention a good teamwork and cooperation.',
-                        }
-                    },
+                    // 3: {
+                    //     name: 'Project DA Bubble',
+                    //     imgPath: 'img/my-work/da-bubble.png',
+                    //     paragraph1: {
+                    //         header: 'About the project',
+                    //         content: 'Posuere pretium arcu sed senectus felis ac mauris.  Dui eget dictum.osuere pretium arcu sed senectus felis ac mauris. h',
+                    //     },
+                    //     paragraph2: {
+                    //         header: 'Technologies I have used',
+                    //         content: 'JavaScript, HTML, CSS',
+                    //     },
+                    //     paragraph3: {
+                    //         header: 'My group-projects experience',
+                    //         content: 'How many people were in the team and what was your role? Describe your tasks  in 1-2 sentences. It is nice to mention a good teamwork and cooperation.',
+                    //     }
+                    // },
                 }
             },
             contact: {
@@ -120,6 +123,7 @@ export class MainPage implements OnInit, OnDestroy {
                 projects: {
                     1: {
                         name: 'Project Join',
+                        imgPath: 'img/my-work/join.png',
                         paragraph1: {
                             header: 'About the project',
                             content: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
@@ -135,6 +139,7 @@ export class MainPage implements OnInit, OnDestroy {
                     },
                     2: {
                         name: 'Project Pollo Loco',
+                        imgPath: 'img/my-work/pollo-loco.png',
                         paragraph1: {
                             header: 'About the project',
                             content: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
@@ -150,6 +155,7 @@ export class MainPage implements OnInit, OnDestroy {
                     },
                     3: {
                         name: 'Project DA Bubble',
+                        imgPath: 'img/my-work/da-bubble.png',
                         paragraph1: {
                             header: 'About the project',
                             content: 'Posuere pretium arcu sed senectus felis ac mauris.  Dui eget dictum.osuere pretium arcu sed senectus felis ac mauris. h',
