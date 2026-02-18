@@ -2,12 +2,12 @@
 
 
 :host {
-    border-radius: 30px;
-    padding: 42px;
-    box-sizing: border-box;
-    width: 919px;
-    height: 560px;
-    background-color: vars.$bright-green-transparent;
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 80px;
+}
+
+
+.project-image-wrapper {
+    img {
+        width: 100px
+    }
 }

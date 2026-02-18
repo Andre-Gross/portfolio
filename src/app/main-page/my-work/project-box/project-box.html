@@ -1,2 +1,28 @@
-<app-headline></app-headline>
-<app-upper-section></app-upper-section>
+<div class="project-container">
+  <app-headline></app-headline>
+
+  <div class="project-image-wrapper">
+    <img [src]="project.img.imgPath" [alt]="project.name">
+    <div class="buttons">
+      <button>{{ project.img.btn1 }}</button>
+      <button>{{ project.img.btn2 }}</button>
+    </div>
+  </div>
+
+  <div class="project-details">
+    <section>
+      <h4>{{ project.paragraph1.header }}</h4>
+      <p>{{ project.paragraph1.content }}</p>
+    </section>
+
+    <section>
+      <h4>{{ project.paragraph2.header }}</h4>
+      <p>{{ project.paragraph2.content }}</p>
+    </section>
+
+    <section>
+      <h4>{{ project.paragraph3.header }}</h4>
+      <p>{{ project.paragraph3.content }}</p>
+    </section>
+  </div>
+</div>
