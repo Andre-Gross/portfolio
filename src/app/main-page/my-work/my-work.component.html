@@ -1,2 +1,5 @@
-<app-section-title [title]="'My work'"></app-section-title>
-<app-project-box></app-project-box>
+<app-section-title [title]="myWork.title"></app-section-title>
+
+@for (project of myWork.projects; track project.key) {
+<app-project-box [project]="project"></app-project-box>
+}

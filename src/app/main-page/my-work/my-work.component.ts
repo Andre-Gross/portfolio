@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SectionTitleComponent } from '../../shared/components/section-title/section-title.component';
 import { ProjectBoxComponent } from './project-box/project-box';
 
@@ -13,5 +13,6 @@ import { ProjectBoxComponent } from './project-box/project-box';
   styleUrl: './my-work.component.scss',
 })
 export class MyWorkSection {
+    @Input() myWork!: any;
 
 }
