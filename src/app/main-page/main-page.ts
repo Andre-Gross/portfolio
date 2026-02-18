@@ -43,26 +43,36 @@ export class MainPage implements OnInit, OnDestroy {
             },
             myWork: {
                 title: 'My work',
-                projects: {
-                    1: {
+                projects: [
+                    {
+                        key: 'project1',
                         name: 'Project Join',
-                        imgPath: 'img/my-work/join.png',
+                        img: {
+                            imgPath: 'img/my-work/join.png',
+                            btn1: 'GitHub',
+                            btn2: 'Live Test',
+                        },
                         paragraph1: {
                             header: 'About the project',
                             content: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
                         },
                         paragraph2: {
                             header: 'Technologies I have used',
-                            content: 'Angular, TypeScript, HTML, CSS, Firebase ',
+                            content: 'Angular, TypeScript, HTML, CSS, Firebase',
                         },
                         paragraph3: {
                             header: 'My group-projects experience',
-                            content: 'How many people were in the team and what was your role? Describe your tasks  in 1-2 sentences. It is nice to mention a good teamwork and cooperation.',
+                            content: 'How many people were in the team and what was your role? Describe your tasks in 1-2 sentences. It is nice to mention a good teamwork and cooperation.',
                         }
                     },
-                    2: {
+                    {
+                        key: 'project2',
                         name: 'Project Pollo Loco',
-                        imgPath: 'img/my-work/pollo-loco.png',
+                        img: {
+                            imgPath: 'img/my-work/pollo-loco.png',
+                            btn1: 'GitHub',
+                            btn2: 'Live Test',
+                        },
                         paragraph1: {
                             header: 'About the project',
                             content: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
@@ -72,27 +82,32 @@ export class MainPage implements OnInit, OnDestroy {
                             content: 'JavaScript, HTML, CSS',
                         },
                         paragraph3: {
-                            header: 'What I have  learned',
+                            header: 'What I have learned',
                             content: 'Maybe you used a certain technology for the first time? Have you learnt more about how to keep your code clean or how to organise the components in your projects?',
                         }
                     },
-                    // 3: {
-                    //     name: 'Project DA Bubble',
-                    //     imgPath: 'img/my-work/da-bubble.png',
-                    //     paragraph1: {
-                    //         header: 'About the project',
-                    //         content: 'Posuere pretium arcu sed senectus felis ac mauris.  Dui eget dictum.osuere pretium arcu sed senectus felis ac mauris. h',
-                    //     },
-                    //     paragraph2: {
-                    //         header: 'Technologies I have used',
-                    //         content: 'JavaScript, HTML, CSS',
-                    //     },
-                    //     paragraph3: {
-                    //         header: 'My group-projects experience',
-                    //         content: 'How many people were in the team and what was your role? Describe your tasks  in 1-2 sentences. It is nice to mention a good teamwork and cooperation.',
-                    //     }
-                    // },
-                }
+                    {
+                        key: 'project3',
+                        name: 'Project DA Bubble',
+                        img: {
+                            imgPath: 'img/my-work/da-bubble.png',
+                            btn1: 'GitHub',
+                            btn2: 'Live Test',
+                        },
+                        paragraph1: {
+                            header: 'About the project',
+                            content: 'Posuere pretium arcu sed senectus felis ac mauris. Dui eget dictum. Posuere pretium arcu sed senectus felis ac mauris.',
+                        },
+                        paragraph2: {
+                            header: 'Technologies I have used',
+                            content: 'JavaScript, HTML, CSS',
+                        },
+                        paragraph3: {
+                            header: 'My group-projects experience',
+                            content: 'How many people were in the team and what was your role? Describe your tasks in 1-2 sentences. It is nice to mention a good teamwork and cooperation.',
+                        }
+                    }
+                ]
             },
             contact: {
                 title: 'Contact',
@@ -120,26 +135,36 @@ export class MainPage implements OnInit, OnDestroy {
             },
             myWork: {
                 title: 'My work',
-                projects: {
-                    1: {
+                projects: [
+                    {
+                        key: 'project1',
                         name: 'Project Join',
-                        imgPath: 'img/my-work/join.png',
+                        img: {
+                            imgPath: 'img/my-work/join.png',
+                            btn1: 'GitHub',
+                            btn2: 'Live Test',
+                        },
                         paragraph1: {
                             header: 'About the project',
                             content: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
                         },
                         paragraph2: {
                             header: 'Technologies I have used',
-                            content: 'Angular, TypeScript, HTML, CSS, Firebase ',
+                            content: 'Angular, TypeScript, HTML, CSS, Firebase',
                         },
                         paragraph3: {
                             header: 'My group-projects experience',
-                            content: 'How many people were in the team and what was your role? Describe your tasks  in 1-2 sentences. It is nice to mention a good teamwork and cooperation.',
+                            content: 'How many people were in the team and what was your role? Describe your tasks in 1-2 sentences. It is nice to mention a good teamwork and cooperation.',
                         }
                     },
-                    2: {
+                    {
+                        key: 'project2',
                         name: 'Project Pollo Loco',
-                        imgPath: 'img/my-work/pollo-loco.png',
+                        img: {
+                            imgPath: 'img/my-work/pollo-loco.png',
+                            btn1: 'GitHub',
+                            btn2: 'Live Test',
+                        },
                         paragraph1: {
                             header: 'About the project',
                             content: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
@@ -149,16 +174,21 @@ export class MainPage implements OnInit, OnDestroy {
                             content: 'JavaScript, HTML, CSS',
                         },
                         paragraph3: {
-                            header: 'What I have  learned',
+                            header: 'What I have learned',
                             content: 'Maybe you used a certain technology for the first time? Have you learnt more about how to keep your code clean or how to organise the components in your projects?',
                         }
                     },
-                    3: {
+                    {
+                        key: 'project3',
                         name: 'Project DA Bubble',
-                        imgPath: 'img/my-work/da-bubble.png',
+                        img: {
+                            imgPath: 'img/my-work/da-bubble.png',
+                            btn1: 'GitHub',
+                            btn2: 'Live Test',
+                        },
                         paragraph1: {
                             header: 'About the project',
-                            content: 'Posuere pretium arcu sed senectus felis ac mauris.  Dui eget dictum.osuere pretium arcu sed senectus felis ac mauris. h',
+                            content: 'Posuere pretium arcu sed senectus felis ac mauris. Dui eget dictum. Posuere pretium arcu sed senectus felis ac mauris.',
                         },
                         paragraph2: {
                             header: 'Technologies I have used',
@@ -166,10 +196,10 @@ export class MainPage implements OnInit, OnDestroy {
                         },
                         paragraph3: {
                             header: 'My group-projects experience',
-                            content: 'How many people were in the team and what was your role? Describe your tasks  in 1-2 sentences. It is nice to mention a good teamwork and cooperation.',
+                            content: 'How many people were in the team and what was your role? Describe your tasks in 1-2 sentences. It is nice to mention a good teamwork and cooperation.',
                         }
-                    },
-                }
+                    }
+                ]
             },
             contact: {
                 title: 'Kontakt',
