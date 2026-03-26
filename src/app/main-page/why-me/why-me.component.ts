@@ -16,7 +16,7 @@ import { ScrollService } from '../../shared/services/scroll/scroll.service';
     styleUrl: './why-me.component.scss',
 })
 export class WhyMeSection {
-    @Input() data!: any;
+    @Input() whyMe!: any;
 
 
     constructor(private scrollService: ScrollService) { }

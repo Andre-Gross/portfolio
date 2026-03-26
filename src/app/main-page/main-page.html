@@ -1,8 +1,8 @@
 <div class="scroll-container" (wheel)="onWheel($event)">
     <app-landing-page (newLang)="setLang($event)"></app-landing-page>
     <app-switch-section-area></app-switch-section-area>
-    <app-why-me [data]="mainPageData[this.currentLang()].whyMe"></app-why-me>
+    <app-why-me [whyMe]="mainPageData[currentLang()].whyMe"></app-why-me>
     <app-switch-section-area></app-switch-section-area>
-    <app-my-work></app-my-work>
-    <app-contact #contactSection [data]="mainPageData[this.currentLang()].contact"></app-contact>
+    <app-my-work [myWork]="mainPageData[currentLang()].myWork"></app-my-work>
+    <app-contact #contactSection [contact]="mainPageData[currentLang()].contact"></app-contact>
 </div>

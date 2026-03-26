@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -16,14 +16,12 @@ import { SectionTitleComponent } from '../../shared/components/section-title/sec
     styleUrl: './contact.component.scss',
 })
 export class ContactSection {
-    @Input() data!: any;
+    @Input() contact!: any;
 
-    contact = {
-        name: '',
-        email: '',
-        message: '',
-        privacyAccepted: false,
-    };
+
+    ngOnInit() {
+        console.log('Empfangene Daten im Child:', this.contact);
+    }
 
 
     onSubmit(formValue: any) {
