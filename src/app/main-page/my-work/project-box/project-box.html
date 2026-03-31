@@ -3,15 +3,19 @@
 
 
   <div class="project-details">
-    <section>
-      <h4>{{ project.paragraph1.header }}</h4>
-      <p>{{ project.paragraph1.content }}</p>
-    </section>
+    <div id="upper-part">
+      <div id="left-paragraphs" class="paragraphs">
+        <div>
+          <h4><img src="img/my-work/circle.svg" alt="bullet point">{{ project.paragraph1.header }}</h4>
+          <p>{{ project.paragraph1.content }}</p>
+        </div>
 
-    <section>
-      <h4>{{ project.paragraph2.header }}</h4>
-      <p>{{ project.paragraph2.content }}</p>
-    </section>
+        <div>
+          <h4><img src="img/my-work/circle.svg" alt="bullet point">{{ project.paragraph2.header }}</h4>
+          <p>{{ project.paragraph2.content }}</p>
+        </div>
+      </div>
+
       <div id="project-image-wrapper">
         <img [src]="project.img.imgPath" [alt]="project.name">
         <div id="buttons">
@@ -22,9 +26,9 @@
 
   </div>
 
-    <section>
-      <h4>{{ project.paragraph3.header }}</h4>
-      <p>{{ project.paragraph3.content }}</p>
-    </section>
+  <div class="paragraphs">
+    <h4><img src="img/my-work/circle.svg" alt="bullet point">{{ project.paragraph3.header }}</h4>
+    <p>{{ project.paragraph3.content }}</p>
   </div>
+</div>
 </div>

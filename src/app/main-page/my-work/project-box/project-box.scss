@@ -1,5 +1,11 @@
 @use '../../../../styles/variables' as vars;
 
+$left-paragraph-padding-left: 42px;
+$bullet-point-size: 13px;
+$distance-bullet-point-text: 21px;
+$distance-padding-text: calc($bullet-point-size + $distance-bullet-point-text);
+
+
 
 :host {
     margin-right: 32px;
@@ -16,8 +22,47 @@
 }
 
 
+h4 {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 24px;
+    gap: 21px;
+
     img {
-        width: 100px
+        width: 13px;
+        height: 13px;
+    }
+
+}
+
+
+.paragraphs {
+
+    padding-left: 42px;
+
+    >div {
+        margin-top: 24px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    p {
+        margin-top: 16px;
+        margin-left: $distance-padding-text;
+    }
+}
+
+
+#upper-part {
+    display: flex;
+
+    #left-paragraphs {
+        margin-right: 54px;
+    }
+
     #project-image-wrapper {
         width: max-content;
 

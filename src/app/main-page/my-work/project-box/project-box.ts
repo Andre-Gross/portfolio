@@ -11,6 +11,10 @@ import { HeadlineComponent } from './headline/headline.component';
 })
 export class ProjectBoxComponent {
 
-    @Input() project!: any;
+  @Input() project!: any;
+
+  goToLink(url: string, target: string = "_blank") {
+    window.open(url, target);
+  }
 
 }
