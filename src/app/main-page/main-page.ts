@@ -49,8 +49,14 @@ export class MainPage implements OnInit, OnDestroy {
                         name: 'Project Join',
                         img: {
                             imgPath: 'img/my-work/join.png',
-                            btn1: 'GitHub',
-                            btn2: 'Live Test',
+                            btn1: {
+                                text: 'GitHub',
+                                link: 'https://github.com/Andre-Gross/join',
+                            },
+                            btn2: {
+                                text: 'Live Test',
+                                link: ''
+                            }
                         },
                         paragraph1: {
                             header: 'About the project',
@@ -141,8 +147,14 @@ export class MainPage implements OnInit, OnDestroy {
                         name: 'Project Join',
                         img: {
                             imgPath: 'img/my-work/join.png',
-                            btn1: 'GitHub',
-                            btn2: 'Live Test',
+                            btn1: {
+                                text: 'GitHub',
+                                link: 'https://github.com/Andre-Gross/join',
+                            },
+                            btn2: {
+                                text: 'Live Test',
+                                link: ''
+                            }
                         },
                         paragraph1: {
                             header: 'About the project',

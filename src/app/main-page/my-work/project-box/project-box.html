@@ -1,13 +1,6 @@
 <div class="project-container">
   <app-headline></app-headline>
 
-  <div class="project-image-wrapper">
-    <img [src]="project.img.imgPath" [alt]="project.name">
-    <div class="buttons">
-      <button>{{ project.img.btn1 }}</button>
-      <button>{{ project.img.btn2 }}</button>
-    </div>
-  </div>
 
   <div class="project-details">
     <section>
@@ -19,6 +12,15 @@
       <h4>{{ project.paragraph2.header }}</h4>
       <p>{{ project.paragraph2.content }}</p>
     </section>
+      <div id="project-image-wrapper">
+        <img [src]="project.img.imgPath" [alt]="project.name">
+        <div id="buttons">
+        <button (click)="goToLink(project.img.btn1.link)">{{ project.img.btn1.text }}</button>
+        <button (click)="goToLink(project.img.btn2.link)">{{ project.img.btn2.text }}</button>                                                                                            
+      </div>                                                                       
+    </div>
+
+  </div>
 
     <section>
       <h4>{{ project.paragraph3.header }}</h4>
