@@ -2,7 +2,17 @@
 
 
 :host {
+    margin-right: 32px;
     margin-bottom: 80px;
+    border-radius: 30px;
+    padding: 42px;
+    width: 919px;
+    height: 560px;
+    background-color: vars.$bright-green-transparent;
+
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 
