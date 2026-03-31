@@ -16,8 +16,42 @@
 }
 
 
-.project-image-wrapper {
     img {
         width: 100px
+    #project-image-wrapper {
+        width: max-content;
+
+        >img {
+            border-radius: 30px;
+            height: 203px;
+            width: 337px;
+            object-fit: cover;
+        }
+
+        #buttons {
+            padding-top: 16px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+
+            button {
+                border-radius: 22px;
+                border-color: vars.$bright-green;
+                width: 106px;
+                height: 43px;
+                font-size: 14px;
+
+                &:first-child {
+                    background-color: transparent;
+                    color: vars.$bright-green;
+                }
+
+                &:last-child {
+                    background-color: vars.$font-color-button-transparent;
+                    color: vars.$black;
+                }
+            }
+        }
     }
 }
