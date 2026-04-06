@@ -8,7 +8,7 @@
 
 h2 {
     margin-right: 32px;
-
+    min-height: 65px;
     line-height: 1.2;
 
     @include mix.emptyLetters(54px, 2px, vars.$font-color-title);
