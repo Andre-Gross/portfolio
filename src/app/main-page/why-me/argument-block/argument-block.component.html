@@ -1,9 +1,12 @@
-<p>{{ arguments.aboutMe }}</p>
+<p>{{ contentService.mainPageData.whyMe.aboutMe[contentService.currentLang()] }}</p>
 <div>
-    <h3>{{ arguments.iAm }}</h3>
+    <h3>{{ contentService.mainPageData.whyMe.iAm[contentService.currentLang()] }}</h3>
     <div id="i-am-container">
-        @for (item of arguments.singleArguments | keyvalue; track item.key) {
-        <app-single-argument [data]="item"></app-single-argument>
+        @for (item of contentService.mainPageData.whyMe.singleArguments | keyvalue; track item.key) {
+        <div class="argument-block">
+            <img src="img/why-me/{{item.key}}.svg" alt="">
+            <p>{{item.value[contentService.currentLang()]}}</p>
+        </div>
         }
     </div>
 </div>

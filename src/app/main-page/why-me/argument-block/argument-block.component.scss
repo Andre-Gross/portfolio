@@ -23,10 +23,31 @@ h3 {
 
 #i-am-container {
     padding:
-        func.margin-top-full-value(18)
-        func.margin-top-full-value(58)
-        0
-        func.margin-top-full-value(58);
+        func.margin-top-full-value(18) func.margin-top-full-value(58) 0 func.margin-top-full-value(58);
     display: flex;
     justify-content: space-between;
+}
+
+
+.argument-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+    img {
+        height: func.margin-top-full-value(40);
+    }
+
+
+    p {
+        margin-top: func.margin-top-full-value(17);
+        font-family: vars.$font-family-primary;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        text-align: center;
+    }
 }

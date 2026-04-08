@@ -1,4 +1,6 @@
 import { Component, Output, EventEmitter  } from '@angular/core';
+import { ContentService } from '../../../shared/services/content/content.service';
+
 
 @Component({
     selector: 'app-top-bar',
@@ -10,8 +12,12 @@ export class TopBarComponent {
 
     @Output() newLang = new EventEmitter<string>();
 
+
+    constructor(private contentService: ContentService){}
+
+
     setLang(lang: string) {
-        this.newLang.emit(lang);
+        this.contentService.setLang(lang);
     }
 
 
