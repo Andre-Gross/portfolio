@@ -272,6 +272,6 @@ export class MainPage implements OnInit, OnDestroy {
 
     setLang(lang: string) {
         this.currentLang.update(() => lang as 'en' | 'de');
-        console.log("Language changed to: ", this.currentLang);
+        console.log("Language changed to: ", this.currentLang());
     }
 }
