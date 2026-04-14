@@ -1,6 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { SectionTitleComponent } from '../../shared/components/section-title/section-title.component';
 import { ProjectBoxComponent } from './project-box/project-box';
+
+import { ContentService } from '../../shared/services/content/content.service';
 
 
 @Component({
@@ -13,6 +15,7 @@ import { ProjectBoxComponent } from './project-box/project-box';
   styleUrl: './my-work.component.scss',
 })
 export class MyWorkSection {
-    @Input() myWork!: any;
+
+  constructor(public contentService: ContentService) { } 
 
 }

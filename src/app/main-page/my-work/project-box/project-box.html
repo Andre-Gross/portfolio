@@ -6,12 +6,12 @@
     <div id="upper-part">
       <div id="left-paragraphs" class="paragraphs">
         <div>
-          <h4><img src="img/my-work/circle.svg" alt="bullet point">{{ project.paragraph1.header }}</h4>
-          <p>{{ project.paragraph1.content }}</p>
+          <h4><img src="img/my-work/circle.svg" alt="bullet point">{{ project.paragraph1.header[lang] }}</h4>
+          <p>{{ project.paragraph1.content[lang] }}</p>
         </div>
 
         <div>
-          <h4><img src="img/my-work/circle.svg" alt="bullet point">{{ project.paragraph2.header }}</h4>
+          <h4><img src="img/my-work/circle.svg" alt="bullet point">{{ project.paragraph2.header[lang] }}</h4>
           <p>{{ project.paragraph2.content }}</p>
         </div>
       </div>
@@ -19,16 +19,16 @@
       <div id="project-image-wrapper">
         <img [src]="project.img.imgPath" [alt]="project.name">
         <div id="buttons">
-        <button (click)="goToLink(project.img.btn1.link)">{{ project.img.btn1.text }}</button>
-        <button (click)="goToLink(project.img.btn2.link)">{{ project.img.btn2.text }}</button>                                                                                            
+        <button (click)="goToLink(project.img.btn1.link)">{{ project.img.btn1.text[lang] }}</button>
+        <button (click)="goToLink(project.img.btn2.link)">{{ project.img.btn2.text[lang] }}</button>                                                                                            
       </div>                                                                       
     </div>
 
   </div>
 
   <div class="paragraphs">
-    <h4><img src="img/my-work/circle.svg" alt="bullet point">{{ project.paragraph3.header }}</h4>
-    <p>{{ project.paragraph3.content }}</p>
+    <h4><img src="img/my-work/circle.svg" alt="bullet point">{{ project.paragraph3.header[lang] }}</h4>
+    <p>{{ project.paragraph3.content[lang] }}</p>
   </div>
 </div>
 </div>

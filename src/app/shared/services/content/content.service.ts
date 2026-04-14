@@ -49,8 +49,20 @@ export class ContentService {
           name: 'Project Join',
           img: {
             imgPath: 'img/my-work/join.png',
-            btn1: { text: 'GitHub', link: 'https://github.com/Andre-Gross/join' },
-            btn2: { text: 'Live Test', link: '' },
+            btn1: {
+              text: {
+                de: 'GitHub',
+                en: 'GitHub'
+              },
+              link: 'https://github.com/Andre-Gross/join'
+            },
+            btn2: {
+              text: {
+                de: 'Testen',
+                en: 'Live Test'
+              },
+              link: ''
+            },
           },
           paragraph1: {
             header: {
@@ -85,8 +97,20 @@ export class ContentService {
           name: 'Project Pollo Loco',
           img: {
             imgPath: 'img/my-work/el-pollo-loco.png',
-            btn1: { text: 'GitHub', link: 'https://github.com/Andre-Gross/join' },
-            btn2: { text: 'Live Test', link: '' },
+            btn1: {
+              text: {
+                de: 'GitHub',
+                en: 'GitHub'
+              },
+              link: 'https://github.com/Andre-Gross/join' // Link aus Original übernommen
+            },
+            btn2: {
+              text: {
+                de: 'Testen',
+                en: 'Live Test'
+              },
+              link: ''
+            },
           },
           paragraph1: {
             header: {
@@ -116,28 +140,38 @@ export class ContentService {
             },
           },
         },
-        // {
-        //     key: 'project3',
-        //     name: 'Project DA Bubble',
-        //     img: {
-        //         imgPath: 'img/my-work/da-bubble.png',
-        //         btn1: { text: 'GitHub',    link: 'https://github.com/Andre-Gross/join' },
-        //         btn2: { text: 'Live Test', link: '' },
-        //     },
-        //     paragraph1: {
-        //         header:  { en: 'About the project',        de: 'Über das Projekt' },
-        //         content: { en: 'Posuere pretium arcu sed senectus felis ac mauris. Dui eget dictum. Posuere pretium arcu sed senectus felis ac mauris.', de: '...' },
-        //     },
-        //     paragraph2: {
-        //         header:  { en: 'Technologies I have used', de: 'Verwendete Technologien' },
-        //         content: 'JavaScript, HTML, CSS',
-        //     },
-        //     paragraph3: {
-        //         header:  { en: 'My group-projects experience', de: 'Meine Erfahrung mit Gruppenprojekten' },
-        //         content: { en: 'How many people were in the team and what was your role? Describe your tasks in 1-2 sentences.', de: '...' },
-        //     },
-        // },
-      ],
+        // Das auskommentierte Projekt habe ich ebenfalls für dich vorbereitet, 
+        // falls du es später aktivieren willst:
+        /*
+        {
+          key: 'project3',
+          name: 'Project DA Bubble',
+          img: {
+            imgPath: 'img/my-work/da-bubble.png',
+            btn1: {
+              text: { de: 'GitHub', en: 'GitHub' },
+              link: 'https://github.com/Andre-Gross/join'
+            },
+            btn2: {
+              text: { de: 'Testen', en: 'Live Test' },
+              link: ''
+            },
+          },
+          paragraph1: {
+            header:  { en: 'About the project', de: 'Über das Projekt' },
+            content: { en: '...', de: '...' },
+          },
+          paragraph2: {
+            header:  { en: 'Technologies I have used', de: 'Verwendete Technologien' },
+            content: 'JavaScript, HTML, CSS',
+          },
+          paragraph3: {
+            header:  { en: 'My group-projects experience', de: 'Meine Erfahrung mit Gruppenprojekten' },
+            content: { en: '...', de: '...' },
+          },
+        },
+        */
+      ]
     },
     contact: {
       title: {
