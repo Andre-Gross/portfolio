@@ -1,42 +1,40 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-
+import { FormsModule, NgForm } from '@angular/forms';
 import { SectionTitleComponent } from '../../shared/components/section-title/section-title.component';
 
+import { ContentService } from '../../shared/services/content/content.service';
 
 @Component({
     selector: 'app-contact',
-    imports: [
-        SectionTitleComponent,
-        FormsModule,
-        CommonModule
-    ],
+    standalone: true,
+    imports: [SectionTitleComponent, FormsModule, CommonModule],
     templateUrl: './contact.component.html',
     styleUrl: './contact.component.scss',
 })
 export class ContactSection {
-    @Input() contact!: any;
 
+    constructor(public contentService: ContentService) { }
 
-    ngOnInit() {
-        console.log('Empfangene Daten im Child:', this.contact);
+    contactData = {
+        name: '',
+        email: '',
+        message: '',
+        privacyAccepted: false
+    };
+
+    onSubmit(contactForm: NgForm) {
+        if (contactForm.valid) {
+            console.log('Formular-Inhalt:', this.contactData);
+            
+            contactForm.resetForm();
+            
+            this.contactData = {
+                name: '',
+                email: '',
+                message: '',
+                privacyAccepted: false
+            };
+        }
     }
-
-
-    onSubmit(formValue: any) {
-        console.log('Formular gesendet!', formValue);
-        this.resetForm();
-    }
-
-
-    private resetForm() {
-        this.contact = {
-            name: '',
-            email: '',
-            message: '',
-            privacyAccepted: false,
-        };
-    }
-
 }

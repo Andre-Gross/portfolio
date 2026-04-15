@@ -1,5 +1,5 @@
-<app-section-title [title]="contentService.mainPageData.myWork.title[contentService.currentLang()]"></app-section-title>
+<app-section-title [title]="contentService.content().myWork.title"></app-section-title>
 
-@for (project of contentService.mainPageData.myWork.projects; track project.key) {
-<app-project-box [project]="project" [lang]="contentService.currentLang()"></app-project-box>
+@for (project of contentService.content().myWork.projects; track project.key) {
+    <app-project-box [project]="project"></app-project-box>
 }

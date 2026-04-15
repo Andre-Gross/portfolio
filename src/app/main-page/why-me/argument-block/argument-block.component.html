@@ -1,11 +1,14 @@
-<p>{{ contentService.mainPageData.whyMe.aboutMe[contentService.currentLang()] }}</p>
+<p>{{ contentService.content().whyMe.aboutMe }}</p>
+
 <div>
-    <h3>{{ contentService.mainPageData.whyMe.iAm[contentService.currentLang()] }}</h3>
+    <h3>{{ contentService.content().whyMe.iAm }}</h3>
+    
     <div id="i-am-container">
-        @for (item of contentService.mainPageData.whyMe.singleArguments | keyvalue; track item.key) {
+        @for (item of contentService.content().whyMe.singleArguments | keyvalue; track item.key) {
         <div class="argument-block">
             <img src="img/why-me/{{item.key}}.svg" alt="">
-            <p>{{item.value[contentService.currentLang()]}}</p>
+            
+            <p>{{ item.value }}</p>
         </div>
         }
     </div>

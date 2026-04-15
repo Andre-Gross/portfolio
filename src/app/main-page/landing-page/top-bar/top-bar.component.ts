@@ -16,7 +16,7 @@ export class TopBarComponent {
     constructor(private contentService: ContentService){}
 
 
-    setLang(lang: string) {
+    setLang(lang: 'en' | 'de') {
         this.contentService.setLang(lang);
     }
 

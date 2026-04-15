@@ -1,4 +1,4 @@
-import { Injectable, WritableSignal, signal } from '@angular/core';
+import { computed, Injectable, signal, WritableSignal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
@@ -9,7 +9,7 @@ export class ContentService {
   currentLang: WritableSignal<'en' | 'de'> = signal('de');
 
 
-  mainPageData = {
+  mainPageData = signal({
     whyMe: {
       title: {
         en: 'Why me',
@@ -102,7 +102,7 @@ export class ContentService {
                 de: 'GitHub',
                 en: 'GitHub'
               },
-              link: 'https://github.com/Andre-Gross/join' // Link aus Original übernommen
+              link: 'https://github.com/Andre-Gross/join'
             },
             btn2: {
               text: {
@@ -140,37 +140,33 @@ export class ContentService {
             },
           },
         },
-        // Das auskommentierte Projekt habe ich ebenfalls für dich vorbereitet, 
-        // falls du es später aktivieren willst:
-        /*
-        {
-          key: 'project3',
-          name: 'Project DA Bubble',
-          img: {
-            imgPath: 'img/my-work/da-bubble.png',
-            btn1: {
-              text: { de: 'GitHub', en: 'GitHub' },
-              link: 'https://github.com/Andre-Gross/join'
-            },
-            btn2: {
-              text: { de: 'Testen', en: 'Live Test' },
-              link: ''
-            },
-          },
-          paragraph1: {
-            header:  { en: 'About the project', de: 'Über das Projekt' },
-            content: { en: '...', de: '...' },
-          },
-          paragraph2: {
-            header:  { en: 'Technologies I have used', de: 'Verwendete Technologien' },
-            content: 'JavaScript, HTML, CSS',
-          },
-          paragraph3: {
-            header:  { en: 'My group-projects experience', de: 'Meine Erfahrung mit Gruppenprojekten' },
-            content: { en: '...', de: '...' },
-          },
-        },
-        */
+        // {
+        //   key: 'project3',
+        //   name: 'Project DA Bubble',
+        //   img: {
+        //     imgPath: 'img/my-work/da-bubble.png',
+        //     btn1: {
+        //       text: { de: 'GitHub', en: 'GitHub' },
+        //       link: 'https://github.com/Andre-Gross/join'
+        //     },
+        //     btn2: {
+        //       text: { de: 'Testen', en: 'Live Test' },
+        //       link: ''
+        //     },
+        //   },
+        //   paragraph1: {
+        //     header: { en: 'About the project', de: 'Über das Projekt' },
+        //     content: { en: '...', de: '...' },
+        //   },
+        //   paragraph2: {
+        //     header: { en: 'Technologies I have used', de: 'Verwendete Technologien' },
+        //     content: 'JavaScript, HTML, CSS',
+        //   },
+        //   paragraph3: {
+        //     header: { en: 'My group-projects experience', de: 'Meine Erfahrung mit Gruppenprojekten' },
+        //     content: { en: '...', de: '...' },
+        //   },
+        // },
       ]
     },
     contact: {
@@ -201,19 +197,76 @@ export class ContentService {
         },
         text2: {
           en: ' and agree to the processing of my data as outlined.',
-          de: ' und stimme der Verarbeitung meiner Daten wie beschrieben zu.',
+          de: ' gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.'
         },
       },
       submit: {
         en: 'Send',
         de: 'Senden',
       },
-    },
-  }
+    }
+  })
 
 
-  setLang(lang: string) {
-    this.currentLang.update(() => lang as 'en' | 'de');
+  public content = computed(() => {
+    const lang = this.currentLang();
+    const d = this.mainPageData();
+
+    
+    const t = (obj: any) => (obj && typeof obj === 'object' && obj[lang] ? obj[lang] : obj);
+
+    return {
+      whyMe: {
+        title: t(d.whyMe.title),
+        aboutMe: t(d.whyMe.aboutMe),
+        iAm: t(d.whyMe.iAm),
+        singleArguments: {
+          location: t(d.whyMe.singleArguments.location),
+          remote: t(d.whyMe.singleArguments.remote),
+          relocate: t(d.whyMe.singleArguments.relocate),
+        },
+      },
+      myWork: {
+        title: t(d.myWork.title),
+        projects: d.myWork.projects.map((p) => ({
+          ...p,
+          img: {
+            ...p.img,
+            btn1: { ...p.img.btn1, text: t(p.img.btn1.text) },
+            btn2: { ...p.img.btn2, text: t(p.img.btn2.text) },
+          },
+          paragraph1: {
+            header: t(p.paragraph1.header),
+            content: t(p.paragraph1.content)
+          },
+          paragraph2: {
+            header: t(p.paragraph2.header),
+            content: p.paragraph2.content
+          },
+          paragraph3: {
+            header: t(p.paragraph3.header),
+            content: t(p.paragraph3.content)
+          },
+        })),
+      },
+      contact: {
+        title: t(d.contact.title),
+        name: t(d.contact.name),
+        email: t(d.contact.email),
+        message: t(d.contact.message),
+        privacy: {
+          text1: t(d.contact.privacy.text1),
+          link: t(d.contact.privacy.link),
+          text2: t(d.contact.privacy.text2),
+        },
+        submit: t(d.contact.submit),
+      },
+    };
+  });
+
+
+  setLang(lang: 'en' | 'de') {
+    this.currentLang.set(lang);
     console.log("Language changed to: ", this.currentLang());
   }
 }

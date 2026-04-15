@@ -1,28 +1,40 @@
-<app-section-title [title]="contact.title"></app-section-title>
-<form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm.value)">
+<app-section-title [title]="contentService.content().contact.title"></app-section-title>
+
+<form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
     <div>
-        <label for="name">{{contact.name}}</label>
-        <input type="text" id="name" name="name" placeholder="{{contact.name}}" [(ngModel)]="contact.name" required>
+        <label for="name">{{ contentService.content().contact.name }}</label>
+        <input type="text" id="name" name="name" 
+               [placeholder]="contentService.content().contact.name" 
+               [(ngModel)]="contactData.name" required>
     </div>
 
     <div>
-        <label for="email">{{contact.email}}</label>
-        <input type="email" id="email" name="email" placeholder="{{contact.email}}" [(ngModel)]="contact.email"
-            required email>
+        <label for="email">{{ contentService.content().contact.email }}</label>
+        <input type="email" id="email" name="email" 
+               [placeholder]="contentService.content().contact.email" 
+               [(ngModel)]="contactData.email" required email>
     </div>
 
     <div>
-        <label for="message">{{contact.message}}</label>
-        <textarea id="message" name="message" placeholder="{{contact.message}}" [(ngModel)]="contact.message" required>
-    </textarea>
+        <label for="message">{{ contentService.content().contact.message }}</label>
+        <textarea id="message" name="message" 
+                  [placeholder]="contentService.content().contact.message" 
+                  [(ngModel)]="contactData.message" required>
+        </textarea>
     </div>
 
     <div id="privacy-container">
-        <input type="checkbox" id="privacy-checkbox" name="privacy-checkbox" [(ngModel)]="contact.privacyAccepted" required>
+        <input type="checkbox" id="privacy-checkbox" name="privacy-checkbox" 
+               [(ngModel)]="contactData.privacyAccepted" required>
+        
         <label id="privacy-container-text" for="privacy-checkbox">
-            {{contact.privacy.text1}}<a href="/privacy-policy" target="_blank">{{contact.privacy.link}}</a>{{contact.privacy.text2}}
+            {{ contentService.content().contact.privacy.text1 }}
+            <a href="/privacy-policy" target="_blank">{{ contentService.content().contact.privacy.link }}</a>
+            {{ contentService.content().contact.privacy.text2 }}
         </label>
     </div>
 
-    <button id="submit-btn" type="submit" [disabled]="!contactForm.valid">{{contact.submit}}</button>
+    <button id="submit-btn" type="submit" [disabled]="!contactForm.valid">
+        {{ contentService.content().contact.submit }}
+    </button>
 </form>

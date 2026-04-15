@@ -1,5 +1,9 @@
 <div [ngStyle]="{'display': 'flex'}">
-    <app-section-title [title]="contentService.mainPageData.whyMe.title[contentService.currentLang()]"></app-section-title>
+    <app-section-title [title]="contentService.content().whyMe.title"></app-section-title>
+    
     <app-argument-block></app-argument-block>
 </div>
-<button (click)="triggerScroll('contactSection')">Contact me</button>
+
+<button (click)="triggerScroll('contactSection')">
+    {{ contentService.content().contact.submit }} 
+</button>
