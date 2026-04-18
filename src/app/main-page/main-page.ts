@@ -8,6 +8,7 @@ import { LandingPage } from "./landing-page/landing-page";
 import { WhyMeSection } from "./why-me/why-me.component";
 import { MyWorkSection } from './my-work/my-work.component';
 import { ContactSection } from './contact/contact.component';
+import { MySkillSetSection } from './my-skill-set/my-skill-set';
 
 @Component({
     selector: 'app-main-page',
@@ -15,6 +16,7 @@ import { ContactSection } from './contact/contact.component';
         SwitchSectionArea,
         LandingPage,
         WhyMeSection,
+        MySkillSetSection,
         MyWorkSection,
         ContactSection,
     ],

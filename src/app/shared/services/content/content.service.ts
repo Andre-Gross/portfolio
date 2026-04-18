@@ -38,6 +38,69 @@ export class ContentService {
         },
       },
     },
+    mySkillSet: {
+      title: {
+        en: 'My Skill Set',
+        de: 'Meine Kenntisse',
+      },
+      skillText: {
+        en: 'A short introduction of your skills. Highlight your experience of working on different projects using different front-end technologies and emphasise your openness to learning and adapting to new technologies.',
+        de: 'A short introduction of your skills. Highlight your experience of working on different projects using different front-end technologies and emphasise your openness to learning and adapting to new technologies.',
+      },
+      skills: [
+        {
+          imgPath: 'img/my-skill-set/angular.svg',
+          skillName: 'Angular',
+        },
+        {
+          imgPath: 'img/my-skill-set/typescript.svg',
+          skillName: 'TypeScript',
+        },
+        {
+          imgPath: 'img/my-skill-set/javascript.svg',
+          skillName: 'JavaScript',
+        },
+        {
+          imgPath: 'img/my-skill-set/html.svg',
+          skillName: 'HTML',
+        },
+        {
+          imgPath: 'img/my-skill-set/css.svg',
+          skillName: 'CSS',
+        },
+        {
+          imgPath: 'img/my-skill-set/api.svg',
+          skillName: 'REST-API',
+        },
+        {
+          imgPath: 'img/my-skill-set/supabase.svg',
+          skillName: 'Supabase',
+        },
+        {
+          imgPath: 'img/my-skill-set/git.svg',
+          skillName: 'Git',
+        },
+        {
+          imgPath: 'img/my-skill-set/scrum.svg',
+          skillName: 'Scrum',
+        },
+        {
+          imgPath: 'img/my-skill-set/materialDesign.svg',
+          skillName: 'Material design',
+        },
+        {
+          imgPath: 'img/my-skill-set/challengeMe.svg',
+          skillName: {
+            en: 'Challenge me',
+            de: 'Challenge me',
+          },
+        },
+      ],
+      motivationText: {
+        en: 'Show that you are motivated to improve your skills, implement innovative solutions and stay abreast of new technologies.',
+        de: 'Show that you are motivated to improve your skills, implement innovative solutions and stay abreast of new technologies.',
+      }
+    },
     myWork: {
       title: {
         en: 'My work',
@@ -212,7 +275,7 @@ export class ContentService {
     const lang = this.currentLang();
     const d = this.mainPageData();
 
-    
+
     const t = (obj: any) => (obj && typeof obj === 'object' && obj[lang] ? obj[lang] : obj);
 
     return {
@@ -225,6 +288,15 @@ export class ContentService {
           remote: t(d.whyMe.singleArguments.remote),
           relocate: t(d.whyMe.singleArguments.relocate),
         },
+      },
+mySkillSet: {
+        title: t(d.mySkillSet.title),
+        skillText: t(d.mySkillSet.skillText),
+        motivationText: t(d.mySkillSet.motivationText),
+        skills: d.mySkillSet.skills.map((s) => ({
+          ...s,
+          skillName: t(s.skillName)
+        }))
       },
       myWork: {
         title: t(d.myWork.title),
