@@ -41,6 +41,10 @@ export class ContentService {
           de: 'bin bereit für einen Umzug',
         },
       },
+      contactBtn: {
+        en: 'Contact me',
+        de: 'Kontaktieren Sie mich'
+      }
     },
     mySkillSet: {
       title: {
@@ -311,14 +315,14 @@ export class ContentService {
   })
 
 
- public content = computed(() => {
+public content = computed(() => {
     const lang = this.currentLang();
     const d = this.mainPageData();
 
     const t = (obj: any) => (obj && typeof obj === 'object' && obj[lang] ? obj[lang] : obj);
 
     return {
-      general: d.general, // Statische Daten wie E-Mail/Tel einfach durchreichen
+      general: d.general,
       whyMe: {
         title: t(d.whyMe.title),
         aboutMe: t(d.whyMe.aboutMe),
@@ -328,6 +332,7 @@ export class ContentService {
           remote: t(d.whyMe.singleArguments.remote),
           relocate: t(d.whyMe.singleArguments.relocate),
         },
+        contactBtn: t(d.whyMe.contactBtn)
       },
       mySkillSet: {
         title: t(d.mySkillSet.title),
