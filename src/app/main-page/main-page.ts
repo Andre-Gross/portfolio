@@ -6,9 +6,10 @@ import { ScrollService } from '../shared/services/scroll/scroll.service';
 import { SwitchSectionArea } from "../shared/components/switch-section-area/switch-section-area";
 import { LandingPage } from "./landing-page/landing-page";
 import { WhyMeSection } from "./why-me/why-me.component";
-import { MyWorkSection } from './my-work/my-work.component';
-import { ContactSection } from './contact/contact.component';
 import { MySkillSetSection } from './my-skill-set/my-skill-set';
+import { MyWorkSection } from './my-work/my-work.component';
+import { ReferencesSection } from './references/references';
+import { ContactSection } from './contact/contact.component';
 
 @Component({
     selector: 'app-main-page',
@@ -18,6 +19,7 @@ import { MySkillSetSection } from './my-skill-set/my-skill-set';
         WhyMeSection,
         MySkillSetSection,
         MyWorkSection,
+        ReferencesSection,
         ContactSection,
     ],
     templateUrl: './main-page.html',

@@ -1,0 +1,49 @@
+@use '../../../styles/variables' as vars;
+@use '../../../styles/functions' as func;
+
+
+:host {
+    margin-bottom: func.margin-top-full-value(76);
+    min-width: min-content;
+    display: flex;
+    align-items: end;
+}
+
+
+#all-references {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 16px;
+}
+
+
+.reference-container {
+    border: solid 1px vars.$border-color;
+    border-radius: 30px;
+    padding: 26px;
+    max-width: 478px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    .reference-text {
+        padding-right: 26px;
+    }
+
+    .about-reference {
+        border-left: solid 1px vars.$border-color;
+        padding-left: 26px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 16px;
+
+        p {
+            color: vars.$font-color-secondary;
+        }
+
+        p:first-child {
+            font-size: 23px;
+        }
+    }
+}

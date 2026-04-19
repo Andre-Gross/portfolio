@@ -1,1 +1,13 @@
-<p>references works!</p>
+<app-section-title [title]="contentService.content().myReferences.title"></app-section-title>
+
+<div id="all-references">
+    @for (reference of contentService.content().myReferences.references; track reference.author) {
+    <div class="reference-container">
+        <div class="reference-text">{{ reference.text }}</div>
+        <div class="about-reference">
+            <p>{{ reference.author }}</p>
+            <p>{{ reference.context }}</p>
+        </div>
+    </div>
+    }
+</div>

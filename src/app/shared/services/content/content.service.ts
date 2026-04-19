@@ -232,6 +232,30 @@ export class ContentService {
         // },
       ]
     },
+    myReferences: {
+      title: {
+        en: 'References',
+        de: 'Referenzen',
+      },
+      references: [
+        {
+          text: {
+            en: 'I found him to be a reliable and competent project partner, and I look forward to working with him again in the future.',
+            de: 'Ich habe ihn als verlässlichen und kompetenten Projektpartner erlebt und freue mich, wenn wir auch in Zukunft wieder zusammenarbeiten.',
+          },
+          author: 'Kai Dietrich',
+          context: 'Project Join',
+        },
+        {
+          text: {
+            en: 'I found him to be a reliable and competent project partner, and I look forward to working with him again in the future.',
+            de: 'Ich habe ihn als verlässlichen und kompetenten Projektpartner erlebt und freue mich, wenn wir auch in Zukunft wieder zusammenarbeiten.',
+          },
+          author: 'Kai Dietrich',
+          context: 'Project Join',
+        },
+      ]
+    },
     contact: {
       title: {
         en: 'Contact',
@@ -274,7 +298,6 @@ export class ContentService {
   public content = computed(() => {
     const lang = this.currentLang();
     const d = this.mainPageData();
-
 
     const t = (obj: any) => (obj && typeof obj === 'object' && obj[lang] ? obj[lang] : obj);
 
@@ -320,6 +343,13 @@ export class ContentService {
             content: t(p.paragraph3.content)
           },
         })),
+      },
+      myReferences: {
+        title: t(d.myReferences.title),
+        references: d.myReferences.references.map((r) => ({
+          ...r,
+          text: t(r.text)
+        }))
       },
       contact: {
         title: t(d.contact.title),
