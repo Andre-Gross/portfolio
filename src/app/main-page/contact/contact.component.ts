@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
-import { SectionTitleComponent } from '../../shared/components/section-title/section-title.component';
 
+import { SectionTitleComponent } from '../../shared/components/section-title/section-title.component';
 import { ContentService } from '../../shared/services/content/content.service';
 
 @Component({
