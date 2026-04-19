@@ -289,7 +289,7 @@ export class ContentService {
           relocate: t(d.whyMe.singleArguments.relocate),
         },
       },
-mySkillSet: {
+      mySkillSet: {
         title: t(d.mySkillSet.title),
         skillText: t(d.mySkillSet.skillText),
         motivationText: t(d.mySkillSet.motivationText),

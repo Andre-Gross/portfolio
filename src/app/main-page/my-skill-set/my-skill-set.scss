@@ -1,0 +1,39 @@
+@use '../../../styles/variables' as vars;
+@use '../../../styles/functions' as func;
+
+
+:host {
+    margin-top: func.margin-top-full-value(461);
+    min-width: min-content;
+    display: flex;
+}
+
+
+#skills-container {
+    margin-top: 33px;
+    height: fit-content;
+    width: min-content;
+    display: grid;
+    justify-content: flex-start;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 42px;
+}
+
+
+.skill-item {
+    width: 86px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        height: 60px;
+    }
+}
+
+.motivation-item {
+    grid-column: 6;
+    width: 240px;
+}

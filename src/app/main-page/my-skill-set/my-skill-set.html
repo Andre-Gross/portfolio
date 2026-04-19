@@ -1,10 +1,19 @@
 <app-section-title [title]="contentService.content().mySkillSet.title"></app-section-title>
 
-<div class="skills-grid">
-  @for (skill of contentService.content().mySkillSet.skills; track skill.skillName) {
-    <div class="skill-item">
-      <img [src]="skill.imgPath" [alt]="skill.skillName">
-      <span>{{ skill.skillName }}</span>
+
+<div id="content">
+  <p id="skill-text">{{contentService.content().mySkillSet.skillText}}</p>
+
+  <div id="skills-container">
+    @for (skill of contentService.content().mySkillSet.skills; track skill.skillName) {
+      <div class="skill-item">
+        <img [src]="skill.imgPath" [alt]="skill.skillName">
+        <span>{{ skill.skillName }}</span>
+      </div>
+    }
+
+    <div class="motivation-item">
+      {{ contentService.content().mySkillSet.motivationText }}
     </div>
-  }
+  </div>
 </div>
