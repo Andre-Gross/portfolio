@@ -45,7 +45,7 @@ export class ContentService {
     mySkillSet: {
       title: {
         en: 'My Skill Set',
-        de: 'Meine Kenntisse',
+        de: 'Fähigkeiten',
       },
       skillText: {
         en: 'A short introduction of your skills. Highlight your experience of working on different projects using different front-end technologies and emphasise your openness to learning and adapting to new technologies.',

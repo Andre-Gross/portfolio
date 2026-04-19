@@ -9,6 +9,7 @@ import { MySkillSetSection } from './my-skill-set/my-skill-set';
 import { MyWorkSection } from './my-work/my-work.component';
 import { ReferencesSection } from './references/references';
 import { ContactSection } from './contact/contact.component';
+import { EndBlock } from './end-block/end-block';
 
 @Component({
     selector: 'app-main-page',
@@ -19,6 +20,7 @@ import { ContactSection } from './contact/contact.component';
         MyWorkSection,
         ReferencesSection,
         ContactSection,
+        EndBlock,
     ],
     templateUrl: './main-page.html',
     styleUrl: './main-page.scss',
