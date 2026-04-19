@@ -68,6 +68,20 @@ form {
             font-size: 14px;
         }
     }
+
+    button {
+        align-self: flex-end;
+        border-radius: 30px;
+        padding: 13px 30px;
+        font-family: vars.$font-family-primary;
+        font-size: 14px;
+        line-height: 120%;
+        color: vars.$font-color-button-green;
+
+        &:enabled {
+            background-color: vars.$bright-green;
+        }
+    }
 }
 
 
