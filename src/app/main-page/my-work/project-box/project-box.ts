@@ -12,7 +12,7 @@ import { HeadlineComponent } from './headline/headline.component';
 export class ProjectBoxComponent {
 
   @Input() project!: any;
-  @Input() lang!: 'en' | 'de';
+  @Input() index!: number
 
   goToLink(url: string, target: string = "_blank") {
     window.open(url, target);
