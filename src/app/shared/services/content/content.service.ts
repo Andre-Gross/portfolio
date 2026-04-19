@@ -238,7 +238,21 @@ export class ContentService {
         //     content: { en: '...', de: '...' },
         //   },
         // },
-      ]
+      ],
+      ongoingProjects: {
+        headline: {
+          en: 'Ongoing Projects',
+          de: 'Laufende Projekte'
+        },
+        text: {
+          en: 'Are you currently working on a project? What is it about and what technologies are you using? Emphasise that good planning and execution are essential to the success of your work and to achieving great results.',
+          de: 'Are you currently working on a project? What is it about and what technologies are you using? Emphasise that good planning and execution are essential to the success of your work and to achieving great results.'
+        },
+        btn: {
+          en: `Let's talk`,
+          de: 'Lasse uns reden'
+        }
+      }
     },
     myReferences: {
       title: {
@@ -365,6 +379,11 @@ public content = computed(() => {
             content: t(p.paragraph3.content)
           },
         })),
+        ongoingProjects: {
+          headline: t(d.myWork.ongoingProjects.headline),
+          text: t(d.myWork.ongoingProjects.text),
+          btn: t(d.myWork.ongoingProjects.btn)
+        }
       },
       myReferences: {
         title: t(d.myReferences.title),

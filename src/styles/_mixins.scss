@@ -1,5 +1,24 @@
+@use './variables' as vars;
+
+
+
 @mixin emptyLetters($font-size, $line-thickness, $border-color) {
     font-size: $font-size;
     color: transparent;
     -webkit-text-stroke: $line-thickness $border-color;
+}
+
+
+@mixin btn-primary() {
+    align-self: flex-end;
+    border-radius: 30px;
+    padding: 13px 30px;
+    font-family: vars.$font-family-primary;
+    font-size: 14px;
+    line-height: 120%;
+    color: vars.$font-color-button-green;
+
+    &:enabled {
+        background-color: vars.$bright-green;
+    }
 }

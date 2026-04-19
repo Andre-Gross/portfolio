@@ -1,4 +1,6 @@
+@use '../../../styles/variables' as vars;
 @use '../../../styles/functions' as func;
+@use '../../../styles/mixins' as mix;
 
 
 :host {
@@ -6,4 +8,38 @@
     height: fit-content;
     display: flex;
     align-items: flex-start;
+}
+
+
+#ongoing-projects {
+    width: 345px;
+    height: 289px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    #headline {
+        display: flex;
+        align-items: end;
+        gap: 16px;
+        color: vars.$font-color-title;
+        font-size: 30px;
+
+        #headline-number {
+            @include mix.emptyLetters(54px, 2px, vars.$font-color-title);
+            font-size: 48px;
+            height: min-content;
+            line-height: 100%;
+        }
+    }
+
+    #text {
+        margin-top: 32px;
+    }
+
+    button {
+        @include mix.btn-primary();
+        align-self: center;
+    }
 }

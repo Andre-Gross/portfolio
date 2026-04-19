@@ -1,5 +1,14 @@
 <app-section-title [title]="contentService.content().myWork.title"></app-section-title>
 
-@for (project of contentService.content().myWork.projects; track project.key; let i = $index) {
+<!-- @for (project of contentService.content().myWork.projects; track project.key; let i = $index) {
     <app-project-box [project]="project" [index]="i"></app-project-box>
-}
+} -->
+
+<div id="ongoing-projects">
+    <div>
+        <p id="headline"><span id="headline-number">{{ contentService.content().myWork.projects.length + 1}}</span>
+            {{contentService.content().myWork.ongoingProjects.headline}}</p>
+        <p id="text"> {{ contentService.content().myWork.ongoingProjects.text }}</p>
+    </div>
+    <button> {{contentService.content().myWork.ongoingProjects.btn}} </button>
+</div>
