@@ -3,5 +3,7 @@
 
 :host {
     margin-top: func.margin-top-full-value(164);
+    height: fit-content;
     display: flex;
+    align-items: flex-start;
 }

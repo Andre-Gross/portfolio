@@ -2,8 +2,22 @@
 @use '../../../../styles/mixins' as mix;
 
 :host {
-    width: vars.$section-title-width;
+    width: calc(vars.$switch-section-area-width + vars.$section-title-width);
+    display: flex;
 }
+
+#arrow-container {
+    min-width: vars.$switch-section-area-width !important;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+#arrow {
+    width: 107px;
+    height: 37px;
+}
+
 
 
 h2 {

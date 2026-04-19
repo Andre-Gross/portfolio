@@ -3,7 +3,6 @@ import { Subscription } from 'rxjs';
 
 import { ScrollService } from '../shared/services/scroll/scroll.service';
 
-import { SwitchSectionArea } from "../shared/components/switch-section-area/switch-section-area";
 import { LandingPage } from "./landing-page/landing-page";
 import { WhyMeSection } from "./why-me/why-me.component";
 import { MySkillSetSection } from './my-skill-set/my-skill-set';
@@ -14,7 +13,6 @@ import { ContactSection } from './contact/contact.component';
 @Component({
     selector: 'app-main-page',
     imports: [
-        SwitchSectionArea,
         LandingPage,
         WhyMeSection,
         MySkillSetSection,
