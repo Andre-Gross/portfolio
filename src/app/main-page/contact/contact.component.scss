@@ -4,6 +4,7 @@
 
 :host {
     margin-top: func.margin-top-full-value(164);
+    margin-right: 32px;
     display: flex;
     align-items: flex-start;
 }
@@ -14,62 +15,102 @@ form {
     display: flex;
     flex-direction: column;
     gap: 16px;
-}
 
+    label {
+        display: none;
+    }
 
-label {
-    display: none;
-}
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        box-sizing: border-box;
+        width: 100%;
+        border: solid 1px vars.$bright-green;
+        border-radius: 30px;
+        background-color: transparent;
 
+        &::placeholder {
+            opacity: 0.4;
+            color: vars.$bright-green;
+            font-size: 14px;
+            line-height: 120%;
+        }
+    }
 
-input[type="text"], 
-input[type="email"],
-textarea {
-    box-sizing: border-box;
-    width: 100%;
-    border: solid 1px vars.$bright-green;
-    border-radius: 30px;
-    background-color: transparent;
+    input[type="text"],
+    input[type="email"] {
+        padding: 0 30px;
+        height: 60px;
+    }
 
-    &::placeholder {
-        opacity: 0.4;
+    textarea {
+        padding: 30px;
+        height: 255px;
+    }
+
+    #privacy-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 16px;
+    }
+
+    #privacy-container-text {
+        margin-left: 16px;
+        display: inline-block !important;
         color: vars.$bright-green;
         font-size: 14px;
         line-height: 120%;
+
+        a {
+            color: vars.$white;
+            font-size: 14px;
+        }
     }
 }
 
 
-input[type="text"],
-input[type="email"] {
-    padding: 0 30px;
-    height: 60px;
-}
-
-
-textarea {
-    padding: 30px;
-    height: 255px;
-}
-
-
-#privacy-container {
+#call-to-action {
+    margin-left: 56px;
+    width: 417px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
 
-    margin-top: 16px;
-}
+    >div {
+        p {
+            text-align: end;
+            margin-top: 32px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        #first-line {
+            color: vars.$font-color-secondary
+        }
+
+        a {
+            margin-top: 32px;
+            height: 30px;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            color: vars.$font-color-primary;
+
+            p {
+                margin-top: 0;
+                margin-left: 8px;
+            }
+        }
+    }
 
 
-#privacy-container-text {
-    margin-left: 16px;
-    display: inline-block !important;
-    color: vars.$bright-green;
-    font-size: 14px;
-    line-height: 120%;
-
-    a {
-        color: vars.$white;
+    >img {
+        padding: 160px 0;
+        transform: rotate(180deg);
     }
 }

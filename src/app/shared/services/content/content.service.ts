@@ -10,6 +10,10 @@ export class ContentService {
 
 
   mainPageData = signal({
+    general: {
+      email: 'andre.p.gross@proton.me',
+      tel: '+49 152 046 344 94'
+    },
     whyMe: {
       title: {
         en: 'Why me',
@@ -261,47 +265,60 @@ export class ContentService {
         en: 'Contact',
         de: 'Kontakt',
       },
-      name: {
-        en: 'Your name',
-        de: 'Ihr Name',
-      },
-      email: {
-        en: 'Your e-mail',
-        de: 'Ihre E-Mail-Adresse',
-      },
-      message: {
-        en: 'Your message',
-        de: 'Ihre Nachricht',
-      },
-      privacy: {
-        text1: {
-          en: "I've read the ",
-          de: 'Ich habe die ',
+      form: {
+        name: {
+          en: 'Your name',
+          de: 'Ihr Name',
         },
-        link: {
-          en: 'privacy policy',
-          de: 'Datenschutzerklärung',
+        email: {
+          en: 'Your e-mail',
+          de: 'Ihre E-Mail-Adresse',
         },
-        text2: {
-          en: ' and agree to the processing of my data as outlined.',
-          de: ' gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.'
+        message: {
+          en: 'Your message',
+          de: 'Ihre Nachricht',
+        },
+        privacy: {
+          text1: {
+            en: "I've read the ",
+            de: 'Ich habe die ',
+          },
+          link: {
+            en: 'privacy policy',
+            de: 'Datenschutzerklärung',
+          },
+          text2: {
+            en: ' and agree to the processing of my data as outlined.',
+            de: ' gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.'
+          },
+        },
+        submit: {
+          en: 'Send',
+          de: 'Senden',
         },
       },
-      submit: {
-        en: 'Send',
-        de: 'Senden',
-      },
+      callToAction: {
+        firstLine: {
+          en: 'Let us work together.',
+          de: 'Arbeiten wir zusammen',
+        },
+        paragraph: {
+          en: 'Encourage people to contact you and describe what role you are interested in. Express confidence in your ability to make a meaningful contribution to a team through your expertise and enthusiasm for improving your skills.',
+          de: 'Encourage people to contact you and describe what role you are interested in. Express confidence in your ability to make a meaningful contribution to a team through your expertise and enthusiasm for improving your skills.',
+        }
+      }
     }
   })
 
 
-  public content = computed(() => {
+ public content = computed(() => {
     const lang = this.currentLang();
     const d = this.mainPageData();
 
     const t = (obj: any) => (obj && typeof obj === 'object' && obj[lang] ? obj[lang] : obj);
 
     return {
+      general: d.general, // Statische Daten wie E-Mail/Tel einfach durchreichen
       whyMe: {
         title: t(d.whyMe.title),
         aboutMe: t(d.whyMe.aboutMe),
@@ -353,15 +370,21 @@ export class ContentService {
       },
       contact: {
         title: t(d.contact.title),
-        name: t(d.contact.name),
-        email: t(d.contact.email),
-        message: t(d.contact.message),
-        privacy: {
-          text1: t(d.contact.privacy.text1),
-          link: t(d.contact.privacy.link),
-          text2: t(d.contact.privacy.text2),
+        callToAction: {
+          firstLine: t(d.contact.callToAction.firstLine),
+          paragraph: t(d.contact.callToAction.paragraph)
         },
-        submit: t(d.contact.submit),
+        form: {
+          name: t(d.contact.form.name),
+          email: t(d.contact.form.email),
+          message: t(d.contact.form.message),
+          privacy: {
+            text1: t(d.contact.form.privacy.text1),
+            link: t(d.contact.form.privacy.link),
+            text2: t(d.contact.form.privacy.text2),
+          },
+          submit: t(d.contact.form.submit),
+        }
       },
     };
   });
