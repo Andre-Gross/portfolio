@@ -42,6 +42,10 @@ nav {
         text-orientation: mixed;
 
         font-size: 24px;
+
+        >a {
+            cursor: pointer;
+        }
     }
 }
 
