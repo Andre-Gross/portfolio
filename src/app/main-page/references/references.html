@@ -1,7 +1,7 @@
-<app-section-title [title]="contentService.content().myReferences.title"></app-section-title>
+<app-section-title [title]="contentService.content().mainPage.myReferences.title"></app-section-title>
 
 <div id="all-references">
-    @for (reference of contentService.content().myReferences.references; track reference.author) {
+    @for (reference of contentService.content().mainPage.myReferences.references; track reference.author) {
     <div class="reference-container">
         <div class="reference-text">{{ reference.text }}</div>
         <div class="about-reference">

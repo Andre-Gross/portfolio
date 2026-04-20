@@ -1,22 +1,22 @@
-<app-section-title [title]="contentService.content().contact.title"></app-section-title>
+<app-section-title [title]="contentService.content().mainPage.contact.title"></app-section-title>
 
 
 <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
     <div>
-        <label for="name">{{ contentService.content().contact.form.name }}</label>
-        <input type="text" id="name" name="name" [placeholder]="contentService.content().contact.form.name"
+        <label for="name">{{ contentService.content().mainPage.contact.form.name }}</label>
+        <input type="text" id="name" name="name" [placeholder]="contentService.content().mainPage.contact.form.name"
             [(ngModel)]="contactData.name" required>
     </div>
 
     <div>
-        <label for="email">{{ contentService.content().contact.form.email }}</label>
-        <input type="email" id="email" name="email" [placeholder]="contentService.content().contact.form.email"
+        <label for="email">{{ contentService.content().mainPage.contact.form.email }}</label>
+        <input type="email" id="email" name="email" [placeholder]="contentService.content().mainPage.contact.form.email"
             [(ngModel)]="contactData.email" required email>
     </div>
 
     <div>
-        <label for="message">{{ contentService.content().contact.form.message }}</label>
-        <textarea id="message" name="message" [placeholder]="contentService.content().contact.form.message"
+        <label for="message">{{ contentService.content().mainPage.contact.form.message }}</label>
+        <textarea id="message" name="message" [placeholder]="contentService.content().mainPage.contact.form.message"
             [(ngModel)]="contactData.message" required>
         </textarea>
     </div>
@@ -26,22 +26,22 @@
             required>
 
         <label id="privacy-container-text" for="privacy-checkbox">
-            {{ contentService.content().contact.form.privacy.text1 }}
-            <a href="/privacy-policy" target="_blank">{{ contentService.content().contact.form.privacy.link }}</a>
-            {{ contentService.content().contact.form.privacy.text2 }}
+            {{ contentService.content().mainPage.contact.form.privacy.text1 }}
+            <a href="/privacy-policy" target="_blank">{{ contentService.content().mainPage.contact.form.privacy.link }}</a>
+            {{ contentService.content().mainPage.contact.form.privacy.text2 }}
         </label>
     </div>
 
     <button id="submit-btn" type="submit" [disabled]="!contactForm.valid">
-        {{ contentService.content().contact.form.submit }}
+        {{ contentService.content().mainPage.contact.form.submit }}
     </button>
 </form>
 
 
 <div id="call-to-action">
     <div>
-        <p id="first-line">{{ contentService.content().contact.callToAction.firstLine }}</p>
-        <p>{{ contentService.content().contact.callToAction.paragraph }}</p>
+        <p id="first-line">{{ contentService.content().mainPage.contact.callToAction.firstLine }}</p>
+        <p>{{ contentService.content().mainPage.contact.callToAction.paragraph }}</p>
         <a href="mailto: {{ contentService.content().general.email }}">
             <img src="img/contact/mail.svg" alt="email">
             <p>E-mail: {{ contentService.content().general.email }}</p>

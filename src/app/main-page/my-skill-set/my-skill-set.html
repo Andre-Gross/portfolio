@@ -1,11 +1,11 @@
-<app-section-title [title]="contentService.content().mySkillSet.title"></app-section-title>
+<app-section-title [title]="contentService.content().mainPage.mySkillSet.title"></app-section-title>
 
 
 <div id="content">
-  <p id="skill-text">{{contentService.content().mySkillSet.skillText}}</p>
+  <p id="skill-text">{{contentService.content().mainPage.mySkillSet.skillText}}</p>
 
   <div id="skills-container">
-    @for (skill of contentService.content().mySkillSet.skills; track skill.skillName) {
+    @for (skill of contentService.content().mainPage.mySkillSet.skills; track skill.skillName) {
       <div class="skill-item">
         <img [src]="skill.imgPath" [alt]="skill.skillName">
         <span>{{ skill.skillName }}</span>
@@ -13,7 +13,7 @@
     }
 
     <div class="motivation-item">
-      {{ contentService.content().mySkillSet.motivationText }}
+      {{ contentService.content().mainPage.mySkillSet.motivationText }}
     </div>
   </div>
 </div>

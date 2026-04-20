@@ -1,9 +1,9 @@
 <div [ngStyle]="{'display': 'flex'}">
-    <app-section-title [title]="contentService.content().whyMe.title"></app-section-title>
+    <app-section-title [title]="contentService.content().mainPage.whyMe.title"></app-section-title>
     
     <app-argument-block></app-argument-block>
 </div>
 
 <button (click)="triggerScroll('contactSection')">
-    {{ contentService.content().whyMe.contactBtn }}
+    {{ contentService.content().mainPage.whyMe.contactBtn }}
 </button>
