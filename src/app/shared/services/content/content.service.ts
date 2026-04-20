@@ -250,7 +250,7 @@ export class ContentService {
         },
         btn: {
           en: `Let's talk`,
-          de: 'Lasse uns reden'
+          de: 'Lass uns reden'
         }
       }
     },
