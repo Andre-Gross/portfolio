@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { TopBarComponent } from './top-bar/top-bar.component';
+import { TopBarComponent } from '../../shared/components/top-bar/top-bar.component'
 
 @Component({
   selector: 'app-landing-page',
