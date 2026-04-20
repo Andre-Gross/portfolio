@@ -1,8 +1,8 @@
 <app-section-title [title]="contentService.content().myWork.title"></app-section-title>
 
-<!-- @for (project of contentService.content().myWork.projects; track project.key; let i = $index) {
+@for (project of contentService.content().myWork.projects; track project.key; let i = $index) {
     <app-project-box [project]="project" [index]="i"></app-project-box>
-} -->
+}
 
 <div id="ongoing-projects">
     <div>
