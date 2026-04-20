@@ -9,407 +9,460 @@ export class ContentService {
   currentLang: WritableSignal<'en' | 'de'> = signal('de');
 
 
-  mainPageData = signal({
+  data = signal({
     general: {
+      name: 'André Groß',
       email: 'andre.p.gross@proton.me',
-      tel: '+49 152 046 344 94'
+      tel: '+49 152 046 344 94',
+      address: {
+        street: 'Winckelmannstraße 41',
+        city: '12487 Berlin',
+      },
     },
-    whyMe: {
-      title: {
-        en: 'Why me',
-        de: 'Warum mich',
-      },
-      aboutMe: {
-        en: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.',
-        de: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.',
-      },
-      iAm: {
-        en: 'I am',
-        de: 'Ich',
-      },
-      singleArguments: {
-        location: {
-          en: 'located in Berlin, Germany',
-          de: 'wohne in Berlin',
+    mainPage: {
+      whyMe: {
+        title: {
+          en: 'Why me',
+          de: 'Warum mich',
         },
-        remote: {
-          en: 'open to work remotly',
-          de: 'bin offen für Home Office',
+        aboutMe: {
+          en: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.',
+          de: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.',
         },
-        relocate: {
-          en: 'open to relocate',
-          de: 'bin bereit für einen Umzug',
+        iAm: {
+          en: 'I am',
+          de: 'Ich',
         },
+        singleArguments: {
+          location: {
+            en: 'located in Berlin, Germany',
+            de: 'wohne in Berlin',
+          },
+          remote: {
+            en: 'open to work remotly',
+            de: 'bin offen für Home Office',
+          },
+          relocate: {
+            en: 'open to relocate',
+            de: 'bin bereit für einen Umzug',
+          },
+        },
+        contactBtn: {
+          en: 'Contact me',
+          de: 'Kontaktieren Sie mich'
+        }
       },
-      contactBtn: {
-        en: 'Contact me',
-        de: 'Kontaktieren Sie mich'
+      mySkillSet: {
+        title: {
+          en: 'My Skill Set',
+          de: 'Fähigkeiten',
+        },
+        skillText: {
+          en: 'A short introduction of your skills. Highlight your experience of working on different projects using different front-end technologies and emphasise your openness to learning and adapting to new technologies.',
+          de: 'A short introduction of your skills. Highlight your experience of working on different projects using different front-end technologies and emphasise your openness to learning and adapting to new technologies.',
+        },
+        skills: [
+          {
+            imgPath: 'img/my-skill-set/angular.svg',
+            skillName: 'Angular',
+          },
+          {
+            imgPath: 'img/my-skill-set/typescript.svg',
+            skillName: 'TypeScript',
+          },
+          {
+            imgPath: 'img/my-skill-set/javascript.svg',
+            skillName: 'JavaScript',
+          },
+          {
+            imgPath: 'img/my-skill-set/html.svg',
+            skillName: 'HTML',
+          },
+          {
+            imgPath: 'img/my-skill-set/css.svg',
+            skillName: 'CSS',
+          },
+          {
+            imgPath: 'img/my-skill-set/api.svg',
+            skillName: 'REST-API',
+          },
+          {
+            imgPath: 'img/my-skill-set/supabase.svg',
+            skillName: 'Supabase',
+          },
+          {
+            imgPath: 'img/my-skill-set/git.svg',
+            skillName: 'Git',
+          },
+          {
+            imgPath: 'img/my-skill-set/scrum.svg',
+            skillName: 'Scrum',
+          },
+          {
+            imgPath: 'img/my-skill-set/materialDesign.svg',
+            skillName: 'Material design',
+          },
+          {
+            imgPath: 'img/my-skill-set/challengeMe.svg',
+            skillName: {
+              en: 'Challenge me',
+              de: 'Challenge me',
+            },
+          },
+        ],
+        motivationText: {
+          en: 'Show that you are motivated to improve your skills, implement innovative solutions and stay abreast of new technologies.',
+          de: 'Show that you are motivated to improve your skills, implement innovative solutions and stay abreast of new technologies.',
+        }
+      },
+      myWork: {
+        title: {
+          en: 'My work',
+          de: 'Meine Projekte',
+        },
+        projects: [
+          {
+            key: 'project1',
+            name: 'Project Join',
+            img: {
+              imgPath: 'img/my-work/join.png',
+              btn1: {
+                text: {
+                  de: 'GitHub',
+                  en: 'GitHub'
+                },
+                link: 'https://github.com/Andre-Gross/join'
+              },
+              btn2: {
+                text: {
+                  de: 'Testen',
+                  en: 'Live Test'
+                },
+                link: ''
+              },
+            },
+            paragraph1: {
+              header: {
+                en: 'About the project',
+                de: 'Über das Projekt',
+              },
+              content: {
+                en: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+                de: 'Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Benutzer und Kategorien zu.',
+              },
+            },
+            paragraph2: {
+              header: {
+                en: 'Technologies I have used',
+                de: 'Verwendete Technologien',
+              },
+              content: 'Angular, TypeScript, HTML, CSS, Firebase',
+            },
+            paragraph3: {
+              header: {
+                en: 'My group-projects experience',
+                de: 'Meine Erfahrung mit Gruppenprojekten',
+              },
+              content: {
+                en: 'How many people were in the team and what was your role? Describe your tasks in 1-2 sentences. It is nice to mention a good teamwork and cooperation.',
+                de: 'Wie viele Personen waren im Team und welche Rolle hattest du? Beschreibe deine Aufgaben in 1-2 Sätzen. Erwähne ruhig eine gute Zusammenarbeit im Team.',
+              },
+            },
+          },
+          {
+            key: 'project2',
+            name: 'Project Pollo Loco',
+            img: {
+              imgPath: 'img/my-work/el-pollo-loco.png',
+              btn1: {
+                text: {
+                  de: 'GitHub',
+                  en: 'GitHub'
+                },
+                link: 'https://github.com/Andre-Gross/join'
+              },
+              btn2: {
+                text: {
+                  de: 'Testen',
+                  en: 'Live Test'
+                },
+                link: ''
+              },
+            },
+            paragraph1: {
+              header: {
+                en: 'About the project',
+                de: 'Über das Projekt',
+              },
+              content: {
+                en: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+                de: 'Spring-, Lauf- und Wurfspiel auf Basis eines objektorientierten Ansatzes. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.',
+              },
+            },
+            paragraph2: {
+              header: {
+                en: 'Technologies I have used',
+                de: 'Verwendete Technologien',
+              },
+              content: 'JavaScript, HTML, CSS',
+            },
+            paragraph3: {
+              header: {
+                en: 'What I have learned',
+                de: 'Was ich gelernt habe',
+              },
+              content: {
+                en: 'Maybe you used a certain technology for the first time? Have you learnt more about how to keep your code clean or how to organise the components in your projects?',
+                de: 'Hast du eine bestimmte Technologie zum ersten Mal eingesetzt? Hast du mehr darüber gelernt, wie du deinen Code sauber hältst oder deine Projektkomponenten strukturierst?',
+              },
+            },
+          },
+          // {
+          //   key: 'project3',
+          //   name: 'Project DA Bubble',
+          //   img: {
+          //     imgPath: 'img/my-work/da-bubble.png',
+          //     btn1: {
+          //       text: { de: 'GitHub', en: 'GitHub' },
+          //       link: 'https://github.com/Andre-Gross/join'
+          //     },
+          //     btn2: {
+          //       text: { de: 'Testen', en: 'Live Test' },
+          //       link: ''
+          //     },
+          //   },
+          //   paragraph1: {
+          //     header: { en: 'About the project', de: 'Über das Projekt' },
+          //     content: { en: '...', de: '...' },
+          //   },
+          //   paragraph2: {
+          //     header: { en: 'Technologies I have used', de: 'Verwendete Technologien' },
+          //     content: 'JavaScript, HTML, CSS',
+          //   },
+          //   paragraph3: {
+          //     header: { en: 'My group-projects experience', de: 'Meine Erfahrung mit Gruppenprojekten' },
+          //     content: { en: '...', de: '...' },
+          //   },
+          // },
+        ],
+        ongoingProjects: {
+          headline: {
+            en: 'Ongoing Projects',
+            de: 'Laufende Projekte'
+          },
+          text: {
+            en: 'Are you currently working on a project? What is it about and what technologies are you using? Emphasise that good planning and execution are essential to the success of your work and to achieving great results.',
+            de: 'Are you currently working on a project? What is it about and what technologies are you using? Emphasise that good planning and execution are essential to the success of your work and to achieving great results.'
+          },
+          btn: {
+            en: `Let's talk`,
+            de: 'Lass uns reden'
+          }
+        }
+      },
+      myReferences: {
+        title: {
+          en: 'References',
+          de: 'Referenzen',
+        },
+        references: [
+          {
+            text: {
+              en: 'I found him to be a reliable and competent project partner, and I look forward to working with him again in the future.',
+              de: 'Ich habe ihn als verlässlichen und kompetenten Projektpartner erlebt und freue mich, wenn wir auch in Zukunft wieder zusammenarbeiten.',
+            },
+            author: 'Kai Dietrich',
+            context: 'Project Join',
+          },
+          {
+            text: {
+              en: 'I found him to be a reliable and competent project partner, and I look forward to working with him again in the future.',
+              de: 'Ich habe ihn als verlässlichen und kompetenten Projektpartner erlebt und freue mich, wenn wir auch in Zukunft wieder zusammenarbeiten.',
+            },
+            author: 'Kai Dietrich',
+            context: 'Project Join',
+          },
+        ]
+      },
+      contact: {
+        title: {
+          en: 'Contact',
+          de: 'Kontakt',
+        },
+        form: {
+          name: {
+            en: 'Your name',
+            de: 'Ihr Name',
+          },
+          email: {
+            en: 'Your e-mail',
+            de: 'Ihre E-Mail-Adresse',
+          },
+          message: {
+            en: 'Your message',
+            de: 'Ihre Nachricht',
+          },
+          privacy: {
+            text1: {
+              en: "I've read the ",
+              de: 'Ich habe die ',
+            },
+            link: {
+              en: 'privacy policy',
+              de: 'Datenschutzerklärung',
+            },
+            text2: {
+              en: ' and agree to the processing of my data as outlined.',
+              de: ' gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.'
+            },
+          },
+          submit: {
+            en: 'Send',
+            de: 'Senden',
+          },
+        },
+        callToAction: {
+          firstLine: {
+            en: 'Let us work together.',
+            de: 'Arbeiten wir zusammen',
+          },
+          paragraph: {
+            en: 'Encourage people to contact you and describe what role you are interested in. Express confidence in your ability to make a meaningful contribution to a team through your expertise and enthusiasm for improving your skills.',
+            de: 'Encourage people to contact you and describe what role you are interested in. Express confidence in your ability to make a meaningful contribution to a team through your expertise and enthusiasm for improving your skills.',
+          }
+        }
       }
     },
-    mySkillSet: {
-      title: {
-        en: 'My Skill Set',
-        de: 'Fähigkeiten',
-      },
-      skillText: {
-        en: 'A short introduction of your skills. Highlight your experience of working on different projects using different front-end technologies and emphasise your openness to learning and adapting to new technologies.',
-        de: 'A short introduction of your skills. Highlight your experience of working on different projects using different front-end technologies and emphasise your openness to learning and adapting to new technologies.',
-      },
-      skills: [
-        {
-          imgPath: 'img/my-skill-set/angular.svg',
-          skillName: 'Angular',
-        },
-        {
-          imgPath: 'img/my-skill-set/typescript.svg',
-          skillName: 'TypeScript',
-        },
-        {
-          imgPath: 'img/my-skill-set/javascript.svg',
-          skillName: 'JavaScript',
-        },
-        {
-          imgPath: 'img/my-skill-set/html.svg',
-          skillName: 'HTML',
-        },
-        {
-          imgPath: 'img/my-skill-set/css.svg',
-          skillName: 'CSS',
-        },
-        {
-          imgPath: 'img/my-skill-set/api.svg',
-          skillName: 'REST-API',
-        },
-        {
-          imgPath: 'img/my-skill-set/supabase.svg',
-          skillName: 'Supabase',
-        },
-        {
-          imgPath: 'img/my-skill-set/git.svg',
-          skillName: 'Git',
-        },
-        {
-          imgPath: 'img/my-skill-set/scrum.svg',
-          skillName: 'Scrum',
-        },
-        {
-          imgPath: 'img/my-skill-set/materialDesign.svg',
-          skillName: 'Material design',
-        },
-        {
-          imgPath: 'img/my-skill-set/challengeMe.svg',
-          skillName: {
-            en: 'Challenge me',
-            de: 'Challenge me',
-          },
-        },
-      ],
-      motivationText: {
-        en: 'Show that you are motivated to improve your skills, implement innovative solutions and stay abreast of new technologies.',
-        de: 'Show that you are motivated to improve your skills, implement innovative solutions and stay abreast of new technologies.',
-      }
-    },
-    myWork: {
-      title: {
-        en: 'My work',
-        de: 'Meine Projekte',
-      },
-      projects: [
-        {
-          key: 'project1',
-          name: 'Project Join',
-          img: {
-            imgPath: 'img/my-work/join.png',
-            btn1: {
-              text: {
-                de: 'GitHub',
-                en: 'GitHub'
-              },
-              link: 'https://github.com/Andre-Gross/join'
-            },
-            btn2: {
-              text: {
-                de: 'Testen',
-                en: 'Live Test'
-              },
-              link: ''
-            },
-          },
-          paragraph1: {
-            header: {
-              en: 'About the project',
-              de: 'Über das Projekt',
-            },
-            content: {
-              en: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-              de: 'Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Benutzer und Kategorien zu.',
-            },
-          },
-          paragraph2: {
-            header: {
-              en: 'Technologies I have used',
-              de: 'Verwendete Technologien',
-            },
-            content: 'Angular, TypeScript, HTML, CSS, Firebase',
-          },
-          paragraph3: {
-            header: {
-              en: 'My group-projects experience',
-              de: 'Meine Erfahrung mit Gruppenprojekten',
-            },
-            content: {
-              en: 'How many people were in the team and what was your role? Describe your tasks in 1-2 sentences. It is nice to mention a good teamwork and cooperation.',
-              de: 'Wie viele Personen waren im Team und welche Rolle hattest du? Beschreibe deine Aufgaben in 1-2 Sätzen. Erwähne ruhig eine gute Zusammenarbeit im Team.',
-            },
-          },
-        },
-        {
-          key: 'project2',
-          name: 'Project Pollo Loco',
-          img: {
-            imgPath: 'img/my-work/el-pollo-loco.png',
-            btn1: {
-              text: {
-                de: 'GitHub',
-                en: 'GitHub'
-              },
-              link: 'https://github.com/Andre-Gross/join'
-            },
-            btn2: {
-              text: {
-                de: 'Testen',
-                en: 'Live Test'
-              },
-              link: ''
-            },
-          },
-          paragraph1: {
-            header: {
-              en: 'About the project',
-              de: 'Über das Projekt',
-            },
-            content: {
-              en: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-              de: 'Spring-, Lauf- und Wurfspiel auf Basis eines objektorientierten Ansatzes. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.',
-            },
-          },
-          paragraph2: {
-            header: {
-              en: 'Technologies I have used',
-              de: 'Verwendete Technologien',
-            },
-            content: 'JavaScript, HTML, CSS',
-          },
-          paragraph3: {
-            header: {
-              en: 'What I have learned',
-              de: 'Was ich gelernt habe',
-            },
-            content: {
-              en: 'Maybe you used a certain technology for the first time? Have you learnt more about how to keep your code clean or how to organise the components in your projects?',
-              de: 'Hast du eine bestimmte Technologie zum ersten Mal eingesetzt? Hast du mehr darüber gelernt, wie du deinen Code sauber hältst oder deine Projektkomponenten strukturierst?',
-            },
-          },
-        },
-        // {
-        //   key: 'project3',
-        //   name: 'Project DA Bubble',
-        //   img: {
-        //     imgPath: 'img/my-work/da-bubble.png',
-        //     btn1: {
-        //       text: { de: 'GitHub', en: 'GitHub' },
-        //       link: 'https://github.com/Andre-Gross/join'
-        //     },
-        //     btn2: {
-        //       text: { de: 'Testen', en: 'Live Test' },
-        //       link: ''
-        //     },
-        //   },
-        //   paragraph1: {
-        //     header: { en: 'About the project', de: 'Über das Projekt' },
-        //     content: { en: '...', de: '...' },
-        //   },
-        //   paragraph2: {
-        //     header: { en: 'Technologies I have used', de: 'Verwendete Technologien' },
-        //     content: 'JavaScript, HTML, CSS',
-        //   },
-        //   paragraph3: {
-        //     header: { en: 'My group-projects experience', de: 'Meine Erfahrung mit Gruppenprojekten' },
-        //     content: { en: '...', de: '...' },
-        //   },
-        // },
-      ],
-      ongoingProjects: {
-        headline: {
-          en: 'Ongoing Projects',
-          de: 'Laufende Projekte'
-        },
+    legalNotes: {
+      title: { de: 'Impressum', en: 'Legal Notes' },
+      disclaimer: { de: 'Angaben gemäß § 5 DDG', en: 'Information according to § 5 DDG' },
+      representative: { de: 'Vertreten durch:', en: 'Represented by:' },
+      dispute: {
+        title: { de: 'Verbraucherstreitbeilegung / Universalschlichtungsstelle', en: 'Consumer dispute resolution' },
         text: {
-          en: 'Are you currently working on a project? What is it about and what technologies are you using? Emphasise that good planning and execution are essential to the success of your work and to achieving great results.',
-          de: 'Are you currently working on a project? What is it about and what technologies are you using? Emphasise that good planning and execution are essential to the success of your work and to achieving great results.'
+          de: 'Wir nehmen nicht an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil und sind dazu auch nicht verpflichtet.',
+          en: 'We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.'
+        }
+      },
+      liability: {
+        content: {
+          title: { de: 'Haftung für Inhalte', en: 'Liability for Content' },
+          text: {
+            de: 'Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.',
+            en: 'The contents of our pages were created with great care. However, we cannot guarantee the accuracy, completeness, or topicality of the content...'
+          }
         },
-        btn: {
-          en: `Let's talk`,
-          de: 'Lass uns reden'
+        links: {
+          title: { de: 'Haftung für Links', en: 'Liability for Links' },
+          text: {
+            de: 'Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.',
+            en: 'Our offer contains links to external websites of third parties...'
+          }
+        },
+        copyright: {
+          title: { de: 'Urheberrecht', en: 'Copyright' },
+          text: {
+            de: 'Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw.Erstellers.Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet.Insbesondere werden Inhalte Dritter als solche gekennzeichnet.Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis.Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen. ',
+            en: 'The content and works created by the site operators on these pages are subject to German copyright law...'
+          }
         }
       }
     },
-    myReferences: {
-      title: {
-        en: 'References',
-        de: 'Referenzen',
-      },
-      references: [
-        {
-          text: {
-            en: 'I found him to be a reliable and competent project partner, and I look forward to working with him again in the future.',
-            de: 'Ich habe ihn als verlässlichen und kompetenten Projektpartner erlebt und freue mich, wenn wir auch in Zukunft wieder zusammenarbeiten.',
-          },
-          author: 'Kai Dietrich',
-          context: 'Project Join',
-        },
-        {
-          text: {
-            en: 'I found him to be a reliable and competent project partner, and I look forward to working with him again in the future.',
-            de: 'Ich habe ihn als verlässlichen und kompetenten Projektpartner erlebt und freue mich, wenn wir auch in Zukunft wieder zusammenarbeiten.',
-          },
-          author: 'Kai Dietrich',
-          context: 'Project Join',
-        },
-      ]
-    },
-    contact: {
-      title: {
-        en: 'Contact',
-        de: 'Kontakt',
-      },
-      form: {
-        name: {
-          en: 'Your name',
-          de: 'Ihr Name',
-        },
-        email: {
-          en: 'Your e-mail',
-          de: 'Ihre E-Mail-Adresse',
-        },
-        message: {
-          en: 'Your message',
-          de: 'Ihre Nachricht',
-        },
-        privacy: {
-          text1: {
-            en: "I've read the ",
-            de: 'Ich habe die ',
-          },
-          link: {
-            en: 'privacy policy',
-            de: 'Datenschutzerklärung',
-          },
-          text2: {
-            en: ' and agree to the processing of my data as outlined.',
-            de: ' gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.'
-          },
-        },
-        submit: {
-          en: 'Send',
-          de: 'Senden',
-        },
-      },
-      callToAction: {
-        firstLine: {
-          en: 'Let us work together.',
-          de: 'Arbeiten wir zusammen',
-        },
-        paragraph: {
-          en: 'Encourage people to contact you and describe what role you are interested in. Express confidence in your ability to make a meaningful contribution to a team through your expertise and enthusiasm for improving your skills.',
-          de: 'Encourage people to contact you and describe what role you are interested in. Express confidence in your ability to make a meaningful contribution to a team through your expertise and enthusiasm for improving your skills.',
-        }
-      }
+    privacyPolicy: {
+      // Platzhalter für später
     }
   })
 
 
-public content = computed(() => {
-    const lang = this.currentLang();
-    const d = this.mainPageData();
 
+
+  public content = computed(() => {
+    const lang = this.currentLang();
+    const d = this.data();
     const t = (obj: any) => (obj && typeof obj === 'object' && obj[lang] ? obj[lang] : obj);
 
     return {
       general: d.general,
-      whyMe: {
-        title: t(d.whyMe.title),
-        aboutMe: t(d.whyMe.aboutMe),
-        iAm: t(d.whyMe.iAm),
-        singleArguments: {
-          location: t(d.whyMe.singleArguments.location),
-          remote: t(d.whyMe.singleArguments.remote),
-          relocate: t(d.whyMe.singleArguments.relocate),
+      mainPage: {
+        whyMe: {
+          title: t(d.mainPage.whyMe.title),
+          aboutMe: t(d.mainPage.whyMe.aboutMe),
+          iAm: t(d.mainPage.whyMe.iAm),
+          singleArguments: {
+            location: t(d.mainPage.whyMe.singleArguments.location),
+            remote: t(d.mainPage.whyMe.singleArguments.remote),
+            relocate: t(d.mainPage.whyMe.singleArguments.relocate),
+          },
+          contactBtn: t(d.mainPage.whyMe.contactBtn)
         },
-        contactBtn: t(d.whyMe.contactBtn)
-      },
-      mySkillSet: {
-        title: t(d.mySkillSet.title),
-        skillText: t(d.mySkillSet.skillText),
-        motivationText: t(d.mySkillSet.motivationText),
-        skills: d.mySkillSet.skills.map((s) => ({
-          ...s,
-          skillName: t(s.skillName)
-        }))
-      },
-      myWork: {
-        title: t(d.myWork.title),
-        projects: d.myWork.projects.map((p) => ({
-          ...p,
-          img: {
-            ...p.img,
-            btn1: { ...p.img.btn1, text: t(p.img.btn1.text) },
-            btn2: { ...p.img.btn2, text: t(p.img.btn2.text) },
-          },
-          paragraph1: {
-            header: t(p.paragraph1.header),
-            content: t(p.paragraph1.content)
-          },
-          paragraph2: {
-            header: t(p.paragraph2.header),
-            content: p.paragraph2.content
-          },
-          paragraph3: {
-            header: t(p.paragraph3.header),
-            content: t(p.paragraph3.content)
-          },
-        })),
-        ongoingProjects: {
-          headline: t(d.myWork.ongoingProjects.headline),
-          text: t(d.myWork.ongoingProjects.text),
-          btn: t(d.myWork.ongoingProjects.btn)
-        }
-      },
-      myReferences: {
-        title: t(d.myReferences.title),
-        references: d.myReferences.references.map((r) => ({
-          ...r,
-          text: t(r.text)
-        }))
-      },
-      contact: {
-        title: t(d.contact.title),
-        callToAction: {
-          firstLine: t(d.contact.callToAction.firstLine),
-          paragraph: t(d.contact.callToAction.paragraph)
+        mySkillSet: {
+          title: t(d.mainPage.mySkillSet.title),
+          skillText: t(d.mainPage.mySkillSet.skillText),
+          motivationText: t(d.mainPage.mySkillSet.motivationText),
+          skills: d.mainPage.mySkillSet.skills.map((s) => ({
+            ...s,
+            skillName: t(s.skillName)
+          }))
         },
-        form: {
-          name: t(d.contact.form.name),
-          email: t(d.contact.form.email),
-          message: t(d.contact.form.message),
-          privacy: {
-            text1: t(d.contact.form.privacy.text1),
-            link: t(d.contact.form.privacy.link),
-            text2: t(d.contact.form.privacy.text2),
+        myWork: {
+          title: t(d.mainPage.myWork.title),
+          projects: d.mainPage.myWork.projects.map((p) => ({
+            ...p,
+            img: {
+              ...p.img,
+              btn1: { ...p.img.btn1, text: t(p.img.btn1.text) },
+              btn2: { ...p.img.btn2, text: t(p.img.btn2.text) },
+            },
+            paragraph1: { header: t(p.paragraph1.header), content: t(p.paragraph1.content) },
+            paragraph2: { header: t(p.paragraph2.header), content: p.paragraph2.content },
+            paragraph3: { header: t(p.paragraph3.header), content: t(p.paragraph3.content) },
+          })),
+          ongoingProjects: {
+            headline: t(d.mainPage.myWork.ongoingProjects.headline),
+            text: t(d.mainPage.myWork.ongoingProjects.text),
+            btn: t(d.mainPage.myWork.ongoingProjects.btn)
+          }
+        },
+        myReferences: {
+          title: t(d.mainPage.myReferences.title),
+          references: d.mainPage.myReferences.references.map((r) => ({
+            ...r,
+            text: t(r.text)
+          }))
+        },
+        contact: {
+          title: t(d.mainPage.contact.title),
+          callToAction: {
+            firstLine: t(d.mainPage.contact.callToAction.firstLine),
+            paragraph: t(d.mainPage.contact.callToAction.paragraph)
           },
-          submit: t(d.contact.form.submit),
-        }
+          form: {
+            name: t(d.mainPage.contact.form.name),
+            email: t(d.mainPage.contact.form.email),
+            message: t(d.mainPage.contact.form.message),
+            privacy: {
+              text1: t(d.mainPage.contact.form.privacy.text1),
+              link: t(d.mainPage.contact.form.privacy.link),
+              text2: t(d.mainPage.contact.form.privacy.text2),
+            },
+            submit: t(d.mainPage.contact.form.submit),
+          }
+        },
       },
+      legalNotes: {
+        title: t(d.legalNotes.title),
+        disclaimer: t(d.legalNotes.disclaimer),
+        representativeLabel: t(d.legalNotes.representative),
+        dispute: {
+          title: t(d.legalNotes.dispute.title),
+          text: t(d.legalNotes.dispute.text)
+        },
+        liability: {
+          content: { title: t(d.legalNotes.liability.content.title), text: t(d.legalNotes.liability.content.text) },
+          links: { title: t(d.legalNotes.liability.links.title), text: t(d.legalNotes.liability.links.text) },
+          copyright: { title: t(d.legalNotes.liability.copyright.title), text: t(d.legalNotes.liability.copyright.text) }
+        }
+      }
     };
   });
 

@@ -1,1 +1,39 @@
-<p>legal-notes works!</p>
+<section class="legal-notes-container">
+    <h1>{{ contentService.content().legalNotes.title }}</h1>
+
+    <p>{{ contentService.content().legalNotes.disclaimer }}</p>
+
+    <address>
+        {{ contentService.content().general.name }}<br>
+        {{ contentService.content().general.address.street }}<br>
+        {{ contentService.content().general.address.city }}
+    </address>
+
+    <div class="section">
+        <strong>{{ contentService.content().legalNotes.representativeLabel }}</strong><br>
+        {{ contentService.content().general.name }}
+    </div>
+
+    <div class="section">
+        <strong>Kontakt:</strong><br>
+        Telefon: {{ contentService.content().general.tel }}<br>
+        E-Mail: <a [href]="'mailto:' + contentService.content().general.email">{{ contentService.content().general.email
+            }}</a>
+    </div>
+
+    <div class="section">
+        <strong>{{ contentService.content().legalNotes.dispute.title }}</strong><br>
+        <p>{{ contentService.content().legalNotes.dispute.text }}</p>
+    </div>
+
+    <div class="section">
+        <h2>{{ contentService.content().legalNotes.liability.content.title }}</h2>
+        <p>{{ contentService.content().legalNotes.liability.content.text }}</p>
+
+        <h2>{{ contentService.content().legalNotes.liability.links.title }}</h2>
+        <p>{{ contentService.content().legalNotes.liability.links.text }}</p>
+
+        <h2>{{ contentService.content().legalNotes.liability.copyright.title }}</h2>
+        <p>{{ contentService.content().legalNotes.liability.copyright.text }}</p>
+    </div>
+</section>
