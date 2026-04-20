@@ -10,5 +10,5 @@
             {{contentService.content().myWork.ongoingProjects.headline}}</p>
         <p id="text"> {{ contentService.content().myWork.ongoingProjects.text }}</p>
     </div>
-    <button> {{contentService.content().myWork.ongoingProjects.btn}} </button>
+    <button (click)="triggerScroll('contactSection')"> {{contentService.content().myWork.ongoingProjects.btn}} </button>
 </div>

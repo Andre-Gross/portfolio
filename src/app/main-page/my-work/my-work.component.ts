@@ -3,6 +3,7 @@ import { SectionTitleComponent } from '../../shared/components/section-title/sec
 import { ProjectBoxComponent } from './project-box/project-box';
 
 import { ContentService } from '../../shared/services/content/content.service';
+import { ScrollService } from '../../shared/services/scroll/scroll.service';
 
 
 @Component({
@@ -16,6 +17,10 @@ import { ContentService } from '../../shared/services/content/content.service';
 })
 export class MyWorkSection {
 
-  constructor(public contentService: ContentService) { } 
+  constructor(private scrollService: ScrollService, public contentService: ContentService) { } 
 
+
+  triggerScroll(sectionId: string): void {
+    this.scrollService.requestScroll(sectionId);
+  }
 }

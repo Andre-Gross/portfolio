@@ -27,7 +27,11 @@ import { EndBlock } from './end-block/end-block';
 })
 export class MainPage implements OnInit, OnDestroy {
 
+@ViewChild('whyMe', { read: ElementRef }) whyMe!: ElementRef;
+    @ViewChild('mySkills', { read: ElementRef }) mySkills!: ElementRef;
+    @ViewChild('myWork', { read: ElementRef }) myWork!: ElementRef;
     @ViewChild('contactSection', { read: ElementRef }) contactSection!: ElementRef;
+
 
     private scrollSub!: Subscription;
 
@@ -37,24 +41,41 @@ export class MainPage implements OnInit, OnDestroy {
 
     ngOnInit() {
         this.scrollSub = this.scrollService.scrollRequest$.subscribe(sectionId => {
-            if (sectionId === 'contactSection') {
-                this.scrollToElement(this.contactSection);
+            const sectionMap: { [key: string]: ElementRef } = {
+                'whyMe': this.whyMe,
+                'mySkills': this.mySkills,
+                'myWork': this.myWork,
+                'contactSection': this.contactSection
+            };
+
+            const target = sectionMap[sectionId];
+
+            if (target) {
+                this.scrollToElement(target);
+            } else {
+                console.warn(`Sektion mit der ID "${sectionId}" wurde nicht gefunden.`);
             }
         });
     }
 
 
     ngOnDestroy() {
-        this.scrollSub.unsubscribe();
+        if (this.scrollSub) {
+            this.scrollSub.unsubscribe();
+        }
     }
 
 
     private scrollToElement(element: ElementRef) {
-        element.nativeElement.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-            inline: 'nearest'
-        });
+        const target = element.nativeElement as HTMLElement;
+        const container = target.parentElement;
+
+        if (container) {
+            container.scrollTo({
+                left: target.offsetLeft,
+                behavior: 'smooth'
+            });
+        }
     }
 
 
@@ -64,5 +85,5 @@ export class MainPage implements OnInit, OnDestroy {
             event.preventDefault();
             element.scrollLeft += 12 * event.deltaY;
         }
-    }                                                                                                       
+    }
 }
