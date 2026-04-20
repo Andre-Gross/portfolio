@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { NgStyle } from '@angular/common';
+
 import { SectionTitleComponent } from '../../shared/components/section-title/section-title.component';
 import { ArgumentBlock } from './argument-block/argument-block.component';
 
