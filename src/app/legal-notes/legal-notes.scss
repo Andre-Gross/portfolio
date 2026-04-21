@@ -1,0 +1,16 @@
+@use '../../styles/variables' as vars;
+
+
+a {
+    color: vars.$font-color-primary
+}
+
+
+h3 {
+    color: vars.$font-color-title;
+}
+
+
+#content {
+    max-width: 1900px;
+}

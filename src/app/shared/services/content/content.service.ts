@@ -333,39 +333,95 @@ export class ContentService {
         }
       }
     },
+    // legalNotes: {
+    //   title: { de: 'Impressum', en: 'Legal Notes' },
+    //   disclaimer: { de: 'Angaben gemäß § 5 DDG', en: 'Information according to § 5 DDG' },
+    //   representative: { de: 'Vertreten durch:', en: 'Represented by:' },
+    //   dispute: {
+    //     title: { de: 'Verbraucherstreitbeilegung / Universalschlichtungsstelle', en: 'Consumer dispute resolution' },
+    //     text: {
+    //       de: 'Wir nehmen nicht an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil und sind dazu auch nicht verpflichtet.',
+    //       en: 'We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.'
+    //     }
+    //   },
+    //   liability: {
+    //     content: {
+    //       title: { de: 'Haftung für Inhalte', en: 'Liability for Content' },
+    //       text: {
+    //         de: 'Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.',
+    //         en: 'The contents of our pages were created with great care. However, we cannot guarantee the accuracy, completeness, or topicality of the content...'
+    //       }
+    //     },
+    //     links: {
+    //       title: { de: 'Haftung für Links', en: 'Liability for Links' },
+    //       text: {
+    //         de: 'Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.',
+    //         en: 'Our offer contains links to external websites of third parties...'
+    //       }
+    //     },
+    //     copyright: {
+    //       title: { de: 'Urheberrecht', en: 'Copyright' },
+    //       text: {
+    //         de: 'Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw.Erstellers.Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet.Insbesondere werden Inhalte Dritter als solche gekennzeichnet.Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis.Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen. ',
+    //         en: 'The content and works created by the site operators on these pages are subject to German copyright law...'
+    //       }
+    //     }
+    //   }
+    // },
     legalNotes: {
-      title: { de: 'Impressum', en: 'Legal Notes' },
-      disclaimer: { de: 'Angaben gemäß § 5 DDG', en: 'Information according to § 5 DDG' },
-      representative: { de: 'Vertreten durch:', en: 'Represented by:' },
-      dispute: {
-        title: { de: 'Verbraucherstreitbeilegung / Universalschlichtungsstelle', en: 'Consumer dispute resolution' },
-        text: {
-          de: 'Wir nehmen nicht an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil und sind dazu auch nicht verpflichtet.',
-          en: 'We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.'
-        }
+      title: { de: 'Rechtshinweise', en: 'Legal Notes' },
+      imprint: {
+        header: { de: 'Impressum', en: 'Imprint' },
+        // text: { de: '', en: 'Exploring the Board' },
+        emailKey: { de: 'E-Mail', en: 'Email' },
       },
-      liability: {
-        content: {
-          title: { de: 'Haftung für Inhalte', en: 'Liability for Content' },
+      main: [
+        {
+          header: { de: 'Zustimmung zu den Nutzungsbedingungen', en: 'Acceptance of terms' },
           text: {
-            de: 'Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.',
-            en: 'The contents of our pages were created with great care. However, we cannot guarantee the accuracy, completeness, or topicality of the content...'
+            de: 'Durch den Zugriff auf und die Nutzung von Portfolio (Produkt) erkennen Sie die folgenden Nutzungsbedingungen sowie alle Richtlinien, Leitlinien oder Änderungen daran, die Ihnen von Zeit zu Zeit vorgelegt werden, an und erklären sich damit einverstanden. Wir, die aufgeführten Studierenden, behalten uns vor, die Nutzungsbedingungen von Zeit zu Zeit ohne vorherige Ankündigung zu aktualisieren oder zu ändern.',
+            en: 'By accessing and using Portfolio (Product), you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. We, the listed students, may update or change the terms and conditions from time to time without notice.'
           }
         },
-        links: {
-          title: { de: 'Haftung für Links', en: 'Liability for Links' },
+        {
+          header: { de: 'Umfang und Eigentumsrechte des Produkts', en: 'Scope and ownership of the product' },
           text: {
-            de: 'Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.',
-            en: 'Our offer contains links to external websites of third parties...'
+            de: 'Portfolio wurde im Rahmen eines studentischen Gruppenprojekts in einem Webentwicklungs-Bootcamp bei der Developer Akademie GmbH entwickelt. Es dient zu Bildungszwecken und ist nicht für den umfassenden privaten oder geschäftlichen Gebrauch bestimmt. Daher können wir keine Gewähr für die ständige Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder sonstige Qualitätsmerkmale dieses Produkts übernehmen. Das Design von Portfolio ist Eigentum der Developer Akademie GmbH. Die unbefugte Nutzung, Vervielfältigung, Änderung, Verbreitung oder Nachahmung des Designs ist strengstens untersagt.',
+            en: 'Portfolio has been developed as part of a student group project in a web development bootcamp at the Developer Akademie GmbH. It has an educational purpose and is not intended for extensive personal & business usage. As such, we cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product. The design of Portfolio is owned by the Developer Akademie GmbH. Unauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited.'
           }
         },
-        copyright: {
-          title: { de: 'Urheberrecht', en: 'Copyright' },
+        {
+          header: { de: 'Eigentumsrechte', en: 'Proprietary rights' },
           text: {
-            de: 'Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw.Erstellers.Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet.Insbesondere werden Inhalte Dritter als solche gekennzeichnet.Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis.Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen. ',
-            en: 'The content and works created by the site operators on these pages are subject to German copyright law...'
+            de: 'Abgesehen von dem Design, dessen Eigentümer die Developer Akademie GmbH ist, behalten wir, die aufgeführten Studierenden, alle Eigentumsrechte am Portfolio, einschließlich aller damit verbundenen urheberrechtlich geschützten Materialien, Marken und sonstigen geschützten Informationen.',
+            en: 'Aside from the design owned by Developer Akademie GmbH, we, the listed students, retain all proprietary rights in Portfolio, including any associated copyrighted material, trademarks, and other proprietary information.'
           }
-        }
+        },
+        {
+          header: { de: 'Nutzung des Produkts', en: 'Use of the product' },
+          text: {
+            de: 'Portfolio darf ausschließlich für rechtmäßige Zwecke und in Übereinstimmung mit allen geltenden Gesetzen und Vorschriften genutzt werden. Jede Nutzung von Portfolio für illegale Aktivitäten oder zur Belästigung, Schädigung, Bedrohung oder Einschüchterung anderer Personen ist strengstens untersagt. Sie tragen die alleinige Verantwortung für Ihre Interaktionen mit anderen Nutzern von Portfolio.',
+            en: 'Portfolio is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of Portfolio for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of Portfolio.'
+          }
+        },
+        {
+          header: { de: 'Haftungsausschluss und Haftungsbeschränkung', en: 'Disclaimer of warranties and limitation of liability' },
+          text: {
+            de: 'Das Portfolio wird „wie besehen“ ohne jegliche ausdrückliche oder stillschweigende Gewährleistung bereitgestellt, einschließlich, aber nicht beschränkt auf die stillschweigenden Gewährleistungen der Marktgängigkeit, der Eignung für einen bestimmten Zweck und der Nichtverletzung von Rechten Dritter. In keinem Fall haften wir, die aufgeführten Studierenden oder die Developer Akademie für direkte, indirekte, zufällige, besondere, Folge- oder exemplarische Schäden, einschließlich, aber nicht beschränkt auf Schäden aufgrund von entgangenem Gewinn, Verlust von Goodwill, Nutzungsausfall, Datenverlust oder anderen immateriellen Verlusten, selbst wenn wir auf die Möglichkeit solcher Schäden hingewiesen wurden, die sich aus oder im Zusammenhang mit der Nutzung oder Leistung von Portfolio ergeben.',
+            en: 'Portfolio is provided "as is" without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or the Developer Akademie, be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such damages, arising out of or in connection with the use or performance of Portfolio.'
+          }
+        },
+        {
+          header: { de: 'Haftungsfreistellung', en: 'Indemnity' },
+          text: {
+            de: 'Sie erklären sich damit einverstanden, uns, die aufgeführten Studierenden, die Developer Akademie sowie unsere verbundenen Unternehmen, Partner, Führungskräfte, Direktoren, Beauftragten und Mitarbeiter von allen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Haftungsansprüchen (einschließlich angemessener Anwaltskosten) freizustellen, zu verteidigen und schadlos zu halten, die sich aus Ihrer Nutzung von Portfolio und/oder Ihrem Verstoß gegen diesen rechtlichen Hinweis ergeben oder damit in Zusammenhang stehen.',
+            en: 'You agree to indemnify, defend and hold harmless us, the listed students, the Developer Akademie, and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of Portfolio and/or your breach of this Legal Notice.'
+          }
+        },
+      ],
+      anyQuestions: {
+        text: { de: 'Bei Fragen oder Mitteilungen kontaktieren Sie uns bitte unter ', en: 'For any questions or notices, please contact us at ' },
+        date: { de: 'Datum: 26. Juli 2025', en: 'Date: July 26, 2025' }
       }
     },
     privacyPolicy: {
@@ -451,16 +507,17 @@ export class ContentService {
       },
       legalNotes: {
         title: t(d.legalNotes.title),
-        disclaimer: t(d.legalNotes.disclaimer),
-        representativeLabel: t(d.legalNotes.representative),
-        dispute: {
-          title: t(d.legalNotes.dispute.title),
-          text: t(d.legalNotes.dispute.text)
+        imprint: {
+          header: t(d.legalNotes.imprint.header),
+          emailKey: t(d.legalNotes.imprint.emailKey)
         },
-        liability: {
-          content: { title: t(d.legalNotes.liability.content.title), text: t(d.legalNotes.liability.content.text) },
-          links: { title: t(d.legalNotes.liability.links.title), text: t(d.legalNotes.liability.links.text) },
-          copyright: { title: t(d.legalNotes.liability.copyright.title), text: t(d.legalNotes.liability.copyright.text) }
+        main: d.legalNotes.main.map((item) => ({
+          header: t(item.header),
+          text: t(item.text)
+        })),
+        anyQuestions: {
+          text: t(d.legalNotes.anyQuestions.text),
+          date: t(d.legalNotes.anyQuestions.date)
         }
       }
     };
