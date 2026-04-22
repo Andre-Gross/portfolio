@@ -1,21 +1,37 @@
-<h2>{{ contentService.content().legalNotes.title }}</h2>
-<div id="content">
-    <div id="imprint">
-        <h3>{{ contentService.content().legalNotes.imprint.header }}</h3>
-        <ul>
-            <li>{{ contentService.content().general.name }}</li>
-            <li>{{ contentService.content().general.address.street }}</li>
-            <li>{{ contentService.content().general.address.city }}</li>
-        </ul>
-        <p>{{ contentService.content().legalNotes.imprint.emailKey }}:
-            <a href="mailto: {{ contentService.content().general.email }}">{{
-                contentService.content().general.email}}</a>
-        </p>
+<div class="full-width">
+    <h2>{{ contentService.content().legalNotes.title }}</h2>
+    <div class="content">
+        <div id="imprint">
+            <h3>{{ contentService.content().legalNotes.imprint.header }}</h3>
+            <ul>
+                <li>{{ contentService.content().general.name }}</li>
+                <li>{{ contentService.content().general.address.street }}</li>
+                <li>{{ contentService.content().general.address.city }}</li>
+            </ul>
+            <p>{{ contentService.content().legalNotes.imprint.emailKey }}:
+                <a href="mailto: {{ contentService.content().general.email }}">{{
+                    contentService.content().general.email}}</a>
+            </p>
+        </div>
+        <div class="main">
+            @for (paragraph of contentService.content().legalNotes.main.slice(0, 3); track paragraph.header) {
+            <section>
+                <h3>{{ paragraph.header }}</h3>
+                <p>{{ paragraph.text }}</p>
+            </section>
+            }
+        </div>
     </div>
-    <div id="main">
-        @for (paragraph of contentService.content().legalNotes.main; track paragraph.header) {
-        <h3>{{ paragraph.header }}</h3>
-        <p>{{ paragraph.text }}</p>
+</div>
+
+
+<div class="class">
+    <div class="main">
+        @for (paragraph of contentService.content().legalNotes.main.slice(3); track paragraph.header) {
+        <section>
+            <h3>{{ paragraph.header }}</h3>
+            <p>{{ paragraph.text }}</p>
+        </section>
         }
     </div>
     <div id="anyQuestions">
@@ -28,6 +44,7 @@
 
     </div>
 </div>
+<!-- </div> -->
 
 
 <!-- {{ contentService.content().legalNotes. }} -->

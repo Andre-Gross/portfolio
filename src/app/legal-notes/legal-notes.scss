@@ -1,6 +1,27 @@
 @use '../../styles/variables' as vars;
 
 
+:host {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+app-legal-notes {
+    display: flex;
+}
+
+
+.scroll-container {
+    width: max-content;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+
+
 a {
     color: vars.$font-color-primary
 }
