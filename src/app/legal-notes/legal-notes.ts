@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
+
 import { ContentService } from '../shared/services/content/content.service';
 import { ScrollService } from '../shared/services/scroll/scroll.service';
+
+import { TopBarComponent } from '../shared/components/top-bar/top-bar.component';
 import { SwitchArrowComponent } from '../shared/components/switch-arrow/switch-arrow.component';
 import { EndBlock } from '../shared/components/end-block/end-block';
 
@@ -8,6 +11,7 @@ import { EndBlock } from '../shared/components/end-block/end-block';
   selector: 'app-legal-notes',
   standalone: true,
   imports: [
+    TopBarComponent,
     SwitchArrowComponent,
     EndBlock
   ],
