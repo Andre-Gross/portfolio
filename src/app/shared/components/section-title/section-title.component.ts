@@ -1,8 +1,9 @@
 import { Component, Input } from '@angular/core';
+import { SwitchArrowComponent } from '../switch-arrow/switch-arrow.component';
 
 @Component({
   selector: 'app-section-title',
-  imports: [],
+  imports: [SwitchArrowComponent],
   templateUrl: './section-title.component.html',
   styleUrl: './section-title.component.scss',
 })

@@ -1,0 +1,21 @@
+@use '../../../../styles/variables' as vars;
+
+
+:host{
+    display: flex;
+    align-items: end;
+}
+
+
+#arrow-container {
+    height: min-content;
+    min-width: vars.$switch-arrow-container-width !important;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+#arrow {
+    width: vars.$switch-arrow-img-width;
+    height: 37px;
+}

@@ -24,8 +24,8 @@ $font-color-button-transparent: $bright-green;
 
 
 $navigation-width: 172px;
-$switch-section-area-img-width: 144px;
-$switch-section-area-width: $switch-section-area-img-width * 1.4;
+$switch-arrow-img-width: 144px;
+$switch-arrow-container-width: $switch-arrow-img-width * 1.4;
 $section-title-width: 96px;
 
-$min-section-width: calc(100vw - #{$navigation-width} - #{$switch-section-area-width} - #{$section-title-width});
+$min-section-width: calc(100vw - #{$navigation-width} - #{$switch-arrow-container-width} - #{$section-title-width});
