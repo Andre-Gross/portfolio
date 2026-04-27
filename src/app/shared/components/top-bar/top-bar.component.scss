@@ -1,3 +1,4 @@
+@use '../../../../styles/variables' as vars;
 @use '../../../../styles/functions' as func;
 
 
@@ -9,7 +10,7 @@ $font-color: #FFFDFD;
     top: 0;
 
     margin-top: func.margin-top-full-value(30);
-    width: 100%;
+    width: vars.$min-section-width;
 
     display: flex;
     justify-content: end;
