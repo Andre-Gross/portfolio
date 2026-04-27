@@ -1,6 +1,6 @@
 <div class="scroll-container" (wheel)="onWheel($event)">
     <app-top-bar></app-top-bar>
-    <div class="full-width">
+    <div #start class="full-width">
         <div class="d-flex">
             <h2>{{ contentService.content().legalNotes.title }}</h2>
             <div class="content ma-le-56px">
@@ -27,10 +27,10 @@
                 </div>
             </div>
         </div>
-        <app-switch-arrow></app-switch-arrow>
+        <app-switch-arrow (click)="triggerScroll('secondColumn')"></app-switch-arrow>
     </div>
-
-    <div class="full-width">
+    
+    <div #secondColumn class="full-width">
         <div class="main">
             <div class="content ma-le-317px">
                 @for (paragraph of contentService.content().legalNotes.main.slice(3); track paragraph.header) {
@@ -62,7 +62,7 @@
                     </a>
                 </div>
 
-                <img src="img/next-section-arrow.png" alt="arrow">
+                <img src="img/next-section-arrow.png" alt="arrow" (click)="triggerScroll('start')">
 
                 <div>
                     <a routerLink="/legal-notes">Legal notice</a>
