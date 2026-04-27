@@ -44,6 +44,17 @@ h3 {
 }
 
 
+app-switch-arrow {
+    display: flex;
+    align-items: center;
+}
+
+
+.d-flex {
+    display: flex;
+}
+
+
 .full-width {
     max-height: fit-content;
     min-width: calc(100vw - #{vars.$navigation-width});
