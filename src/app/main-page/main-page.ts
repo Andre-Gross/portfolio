@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ViewChild, ElementRef, OnInit, OnDestroy, inject } from '@angular/core';
+import { Component, ElementRef, OnInit, OnDestroy, AfterViewInit, inject, viewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription, take } from 'rxjs';
 
@@ -11,6 +11,7 @@ import { MyWorkSection } from './my-work/my-work.component';
 import { ReferencesSection } from './references/references';
 import { ContactSection } from './contact/contact.component';
 import { EndBlock } from '../shared/components/end-block/end-block';
+
 
 @Component({
     selector: 'app-main-page',
@@ -27,27 +28,27 @@ import { EndBlock } from '../shared/components/end-block/end-block';
     styleUrl: './main-page.scss',
 })
 export class MainPage implements OnInit, OnDestroy, AfterViewInit {
-
-    @ViewChild('whyMe', { read: ElementRef }) whyMe!: ElementRef;
-    @ViewChild('mySkills', { read: ElementRef }) mySkills!: ElementRef;
-    @ViewChild('myWork', { read: ElementRef }) myWork!: ElementRef;
-    @ViewChild('contactSection', { read: ElementRef }) contactSection!: ElementRef;
-
+    readonly landingPage = viewChild('landingPage', { read: ElementRef });
+    readonly whyMe = viewChild('whyMe', { read: ElementRef });
+    readonly mySkills = viewChild('mySkills', { read: ElementRef });
+    readonly myWork = viewChild('myWork', { read: ElementRef });
+    readonly references = viewChild('references', { read: ElementRef });
+    readonly contactSection = viewChild('contactSection', { read: ElementRef });
 
     private route = inject(ActivatedRoute);
+    private scrollService = inject(ScrollService);
     private scrollSub!: Subscription;
-
-
-    constructor(private scrollService: ScrollService) { }
 
 
     ngOnInit() {
         this.scrollSub = this.scrollService.scrollRequest$.subscribe(sectionId => {
-            const sectionMap: { [key: string]: ElementRef } = {
-                'whyMe': this.whyMe,
-                'mySkills': this.mySkills,
-                'myWork': this.myWork,
-                'contactSection': this.contactSection
+            const sectionMap: Record<string, ElementRef | undefined> = {
+                'landingPage': this.landingPage(),
+                'whyMe': this.whyMe(),
+                'mySkills': this.mySkills(),
+                'myWork': this.myWork(),
+                'references': this.references(),
+                'contactSection': this.contactSection()
             };
 
             const target = sectionMap[sectionId];
@@ -73,29 +74,24 @@ export class MainPage implements OnInit, OnDestroy, AfterViewInit {
 
 
     ngOnDestroy() {
-        if (this.scrollSub) {
-            this.scrollSub.unsubscribe();
-        }
+        this.scrollSub?.unsubscribe();
     }
 
 
-    private scrollToElement(element: ElementRef) {
-        const target = element.nativeElement as HTMLElement;
-        const container = target.parentElement;
+    public scrollToElement(element: any) {
+        const target = element instanceof ElementRef ? element.nativeElement : element.nativeElement;
 
-        if (container) {
-            container.scrollTo({
-                left: target.offsetLeft,
-                behavior: 'smooth'
-            });
-        }
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+        });
     }
 
 
     onWheel(event: WheelEvent): void {
         if (event.deltaY !== 0) {
             const element = event.currentTarget as HTMLElement;
-            event.preventDefault();
             element.scrollLeft += 12 * event.deltaY;
         }
     }

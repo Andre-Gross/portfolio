@@ -1,4 +1,4 @@
-<app-section-title [title]="contentService.content().mainPage.myReferences.title"></app-section-title>
+<app-section-title [title]="contentService.content().mainPage.myReferences.title" (click)="triggerScroll('references')"></app-section-title>
 
 <div id="all-references">
     @for (reference of contentService.content().mainPage.myReferences.references; track reference.author) {

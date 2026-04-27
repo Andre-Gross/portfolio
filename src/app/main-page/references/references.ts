@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 
-import { SectionTitleComponent } from '../../shared/components/section-title/section-title.component';
 import { ContentService } from '../../shared/services/content/content.service';
+import { ScrollService } from '../../shared/services/scroll/scroll.service';
+
+import { SectionTitleComponent } from '../../shared/components/section-title/section-title.component';
 
 
 @Component({
@@ -12,6 +14,11 @@ import { ContentService } from '../../shared/services/content/content.service';
 })
 export class ReferencesSection {
 
-  constructor(public contentService: ContentService) { }
+  constructor(public contentService: ContentService, private scrollService: ScrollService) { }
+
+
+  triggerScroll(sectionId: string): void {
+    this.scrollService.requestScroll(sectionId);
+  }
 
 }

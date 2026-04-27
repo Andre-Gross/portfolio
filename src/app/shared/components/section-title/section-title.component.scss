@@ -5,6 +5,7 @@
 :host {
     width: calc(vars.$switch-arrow-container-width + vars.$section-title-width);
     display: flex;
+    cursor: pointer;
 }
 
 

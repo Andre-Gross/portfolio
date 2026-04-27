@@ -3,8 +3,10 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 
-import { SectionTitleComponent } from '../../shared/components/section-title/section-title.component';
+import { ScrollService } from '../../shared/services/scroll/scroll.service';
 import { ContentService } from '../../shared/services/content/content.service';
+
+import { SectionTitleComponent } from '../../shared/components/section-title/section-title.component';
 
 @Component({
     selector: 'app-contact',
@@ -19,7 +21,7 @@ import { ContentService } from '../../shared/services/content/content.service';
 })
 export class ContactSection {
 
-    constructor(public contentService: ContentService) { }
+    constructor(public contentService: ContentService, private scrollService: ScrollService) { }
 
     contactData = {
         name: '',
@@ -41,5 +43,9 @@ export class ContactSection {
                 privacyAccepted: false
             };
         }
+    }
+
+    triggerScroll(sectionId: string): void {
+        this.scrollService.requestScroll(sectionId);
     }
 }

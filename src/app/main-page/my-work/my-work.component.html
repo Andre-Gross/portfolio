@@ -1,4 +1,4 @@
-<app-section-title [title]="contentService.content().mainPage.myWork.title"></app-section-title>
+<app-section-title [title]="contentService.content().mainPage.myWork.title" (click)="triggerScroll('myWork')"></app-section-title>
 
 @for (project of contentService.content().mainPage.myWork.projects; track project.key; let i = $index) {
     <app-project-box [project]="project" [index]="i"></app-project-box>

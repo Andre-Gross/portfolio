@@ -1,4 +1,5 @@
-<app-section-title [title]="contentService.content().mainPage.contact.title"></app-section-title>
+<app-section-title [title]="contentService.content().mainPage.contact.title"
+    (click)="triggerScroll('contactSection')"></app-section-title>
 
 
 <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
@@ -27,7 +28,8 @@
 
         <label id="privacy-container-text" for="privacy-checkbox">
             {{ contentService.content().mainPage.contact.form.privacy.text1 }}
-            <a href="/privacy-policy" target="_blank">{{ contentService.content().mainPage.contact.form.privacy.link }}</a>
+            <a href="/privacy-policy" target="_blank">{{ contentService.content().mainPage.contact.form.privacy.link
+                }}</a>
             {{ contentService.content().mainPage.contact.form.privacy.text2 }}
         </label>
     </div>
@@ -52,7 +54,7 @@
         </a>
     </div>
 
-    <img src="img/next-section-arrow.png" alt="arrow">
+    <img src="img/next-section-arrow.png" alt="arrow" (click)="triggerScroll('landingPage')">
 
     <div>
         <a routerLink="/legal-notes">Legal notice</a>

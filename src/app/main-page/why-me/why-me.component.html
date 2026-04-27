@@ -1,6 +1,7 @@
 <div [ngStyle]="{'display': 'flex'}">
-    <app-section-title [title]="contentService.content().mainPage.whyMe.title"></app-section-title>
-    
+    <app-section-title [title]="contentService.content().mainPage.whyMe.title"
+        (click)="triggerScroll('whyMe')"></app-section-title>
+
     <app-argument-block></app-argument-block>
 </div>
 
