@@ -4,15 +4,9 @@
 
 
 :host {
-    margin-top: func.margin-top-full-value(164);
     max-height: 100vh;
     width: 100%;
     overflow: hidden;
-    display: flex;
-}
-
-
-app-legal-notes {
     display: flex;
 }
 
@@ -31,6 +25,7 @@ a {
 
 
 h2 {
+    margin-top: func.margin-top-full-value(164);
     margin-left: 102px;
     margin-right: 32px;
     min-height: 65px;
@@ -50,8 +45,10 @@ h3 {
 
 
 .full-width {
-    min-width: vars.$min-section-width;
+    max-height: fit-content;
+    min-width: calc(100vw - #{vars.$navigation-width});
     display: flex;
+    justify-content: space-between;
 }
 
 
@@ -60,9 +57,15 @@ h3 {
 }
 
 
+.ma-le-317px {
+    margin-left: 317px;
+}
+
+
 .content {
-    max-width: 740px;
+    margin-top: func.margin-top-full-value(164);
     max-height: 100%;
+    max-width: 740px;
 
 
     #imprint {

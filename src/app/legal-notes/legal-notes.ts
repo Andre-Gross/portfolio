@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { ContentService } from '../shared/services/content/content.service';
 import { ScrollService } from '../shared/services/scroll/scroll.service';
+import { SwitchArrowComponent } from '../shared/components/switch-arrow/switch-arrow.component';
 
 @Component({
   selector: 'app-legal-notes',
   standalone: true,
-  imports: [],
+  imports: [SwitchArrowComponent],
   templateUrl: './legal-notes.html',
   styleUrl: './legal-notes.scss'
 })

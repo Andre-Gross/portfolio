@@ -1,34 +1,35 @@
 <div class="scroll-container" (wheel)="onWheel($event)">
     <div class="full-width">
-        <h2>{{ contentService.content().legalNotes.title }}</h2>
-        <div class="content ma-le-56px">
-            <div id="imprint">
-                <h3>{{ contentService.content().legalNotes.imprint.header }}</h3>
-                <ul>
-                    <li>{{ contentService.content().general.name }}</li>
-                    <li>{{ contentService.content().general.address.street }}</li>
-                    <li>{{ contentService.content().general.address.city }}</li>
-                </ul>
-                <p>{{ contentService.content().legalNotes.imprint.emailKey }}:
-                    <a href="mailto: {{ contentService.content().general.email }}">{{
-                        contentService.content().general.email}}</a>
-                </p>
-            </div>
-            <div class="main">
-                @for (paragraph of contentService.content().legalNotes.main.slice(0, 3); track paragraph.header) {
-                <div>
-                    <h3>{{ paragraph.header }}</h3>
-                    <p>{{ paragraph.text }}</p>
+        <div class="d-flex">
+            <h2>{{ contentService.content().legalNotes.title }}</h2>
+            <div class="content ma-le-56px">
+                <div id="imprint">
+                    <h3>{{ contentService.content().legalNotes.imprint.header }}</h3>
+                    <ul>
+                        <li>{{ contentService.content().general.name }}</li>
+                        <li>{{ contentService.content().general.address.street }}</li>
+                        <li>{{ contentService.content().general.address.city }}</li>
+                    </ul>
+                    <p>{{ contentService.content().legalNotes.imprint.emailKey }}:
+                        <a href="mailto: {{ contentService.content().general.email }}">{{
+                            contentService.content().general.email}}</a>
+                    </p>
                 </div>
-                }
+                <div class="main">
+                    @for (paragraph of contentService.content().legalNotes.main.slice(0, 3); track paragraph.header) {
+                    <div>
+                        <h3>{{ paragraph.header }}</h3>
+                        <p>{{ paragraph.text }}</p>
+                    </div>
+                    }
+                </div>
             </div>
         </div>
     </div>
 
-
     <div class="full-width">
         <div class="main">
-            <div class="content">
+            <div class="content ma-le-317px">
                 @for (paragraph of contentService.content().legalNotes.main.slice(3); track paragraph.header) {
                 <div>
                     <h3>{{ paragraph.header }}</h3>
