@@ -90,3 +90,48 @@ app-switch-arrow {
         }
     }
 }
+
+
+#call-to-action {
+    margin: func.margin-top-full-value(164) 0 func.margin-top-full-value(164) 56px;
+    width: 417px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+
+    >div {
+        p {
+            text-align: end;
+            margin-top: 32px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        #first-line {
+            color: vars.$font-color-secondary
+        }
+
+        a {
+            margin-top: 32px;
+            height: 30px;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            color: vars.$font-color-primary;
+
+            p {
+                margin-top: 0;
+                margin-left: 8px;
+            }
+        }
+    }
+
+
+    >img {
+        padding: 160px 0;
+        transform: rotate(180deg);
+    }
+}
