@@ -1,5 +1,6 @@
-import { Component, ViewChild, ElementRef, OnInit, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { AfterViewInit, Component, ViewChild, ElementRef, OnInit, OnDestroy, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Subscription, take } from 'rxjs';
 
 import { ScrollService } from '../shared/services/scroll/scroll.service';
 
@@ -25,14 +26,15 @@ import { EndBlock } from '../shared/components/end-block/end-block';
     templateUrl: './main-page.html',
     styleUrl: './main-page.scss',
 })
-export class MainPage implements OnInit, OnDestroy {
+export class MainPage implements OnInit, OnDestroy, AfterViewInit {
 
-@ViewChild('whyMe', { read: ElementRef }) whyMe!: ElementRef;
+    @ViewChild('whyMe', { read: ElementRef }) whyMe!: ElementRef;
     @ViewChild('mySkills', { read: ElementRef }) mySkills!: ElementRef;
     @ViewChild('myWork', { read: ElementRef }) myWork!: ElementRef;
     @ViewChild('contactSection', { read: ElementRef }) contactSection!: ElementRef;
 
 
+    private route = inject(ActivatedRoute);
     private scrollSub!: Subscription;
 
 
@@ -54,6 +56,17 @@ export class MainPage implements OnInit, OnDestroy {
                 this.scrollToElement(target);
             } else {
                 console.warn(`Sektion mit der ID "${sectionId}" wurde nicht gefunden.`);
+            }
+        });
+    }
+
+
+    ngAfterViewInit() {
+        this.route.fragment.pipe(take(1)).subscribe((fragment) => {
+            if (fragment) {
+                setTimeout(() => {
+                    this.scrollService.requestScroll(fragment);
+                }, 300);
             }
         });
     }
