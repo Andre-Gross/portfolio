@@ -47,25 +47,29 @@
                 </div>
             </div>
         </div>
-        <div id="call-to-action">
-            <div>
-                <a href="mailto: {{ contentService.content().general.email }}">
-                    <img src="img/contact/mail.svg" alt="email">
-                    <p>E-mail: {{ contentService.content().general.email }}</p>
-                </a>
-                <a href="tel: {{ contentService.content().general.tel}}">
-                    <img src="img/contact/phone.svg" alt="phone">
-                    <p>Tel: {{ contentService.content().general.tel }}</p>
-                </a>
-            </div>
+        <div class="d-flex">
+            <div id="call-to-action">
+                <div>
+                    <a href="mailto: {{ contentService.content().general.email }}">
+                        <img src="img/contact/mail.svg" alt="email">
+                        <p>E-mail: {{ contentService.content().general.email }}</p>
+                    </a>
+                    <a href="tel: {{ contentService.content().general.tel}}">
+                        <img src="img/contact/phone.svg" alt="phone">
+                        <p>Tel: {{ contentService.content().general.tel }}</p>
+                    </a>
+                </div>
 
-            <img src="img/next-section-arrow.png" alt="arrow">
+                <img src="img/next-section-arrow.png" alt="arrow">
 
-            <div>
-                <a routerLink="/legal-notes">Legal notice</a>
-                <a routerLink="/privacy-policy">Privacy Policy</a>
-                <p>&copy; André Groß 2026</p>
+                <div>
+                    <a routerLink="/legal-notes">Legal notice</a>
+                    <a routerLink="/privacy-policy">Privacy Policy</a>
+                    <p>&copy; André Groß 2026</p>
+                </div>
             </div>
+            <app-end-block></app-end-block>
         </div>
     </div>
+
 </div>
