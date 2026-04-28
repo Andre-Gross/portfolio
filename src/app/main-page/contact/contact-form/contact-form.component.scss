@@ -1,0 +1,77 @@
+@use '../../../../styles/variables' as vars;
+@use '../../../../styles/functions' as func;
+
+
+form {
+    width: 456px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    label {
+        display: none;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        box-sizing: border-box;
+        width: 100%;
+        border: solid 1px vars.$bright-green;
+        border-radius: 30px;
+        background-color: transparent;
+
+        &::placeholder {
+            opacity: 0.4;
+            color: vars.$bright-green;
+            font-size: 14px;
+            line-height: 120%;
+        }
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        padding: 0 30px;
+        height: 60px;
+    }
+
+    textarea {
+        padding: 30px;
+        height: 255px;
+    }
+
+    #privacy-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 16px;
+    }
+
+    #privacy-container-text {
+        margin-left: 16px;
+        display: inline-block !important;
+        color: vars.$bright-green;
+        font-size: 14px;
+        line-height: 120%;
+
+        a {
+            color: vars.$white;
+            font-size: 14px;
+        }
+    }
+
+    button {
+        align-self: flex-end;
+        border-radius: 30px;
+        padding: 13px 30px;
+        font-family: vars.$font-family-primary;
+        font-size: 14px;
+        line-height: 120%;
+        color: vars.$font-color-button-green;
+
+        &:enabled {
+            background-color: vars.$bright-green;
+        }
+    }
+}

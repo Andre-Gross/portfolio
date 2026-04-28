@@ -7,12 +7,15 @@ import { ScrollService } from '../../shared/services/scroll/scroll.service';
 import { ContentService } from '../../shared/services/content/content.service';
 
 import { SectionTitleComponent } from '../../shared/components/section-title/section-title.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+
 
 @Component({
     selector: 'app-contact',
     standalone: true,
     imports: [
         SectionTitleComponent,
+        ContactFormComponent,
         FormsModule,
         CommonModule,
         RouterLink],
@@ -22,28 +25,6 @@ import { SectionTitleComponent } from '../../shared/components/section-title/sec
 export class ContactSection {
 
     constructor(public contentService: ContentService, private scrollService: ScrollService) { }
-
-    contactData = {
-        name: '',
-        email: '',
-        message: '',
-        privacyAccepted: false
-    };
-
-    onSubmit(contactForm: NgForm) {
-        if (contactForm.valid) {
-            console.log('Formular-Inhalt:', this.contactData);
-
-            contactForm.resetForm();
-
-            this.contactData = {
-                name: '',
-                email: '',
-                message: '',
-                privacyAccepted: false
-            };
-        }
-    }
 
     triggerScroll(sectionId: string): void {
         this.scrollService.requestScroll(sectionId);
