@@ -4,6 +4,7 @@
 
 :host {
     width: calc(vars.$switch-arrow-container-width + vars.$section-title-width);
+    max-height: 40vh;
     display: flex;
     cursor: pointer;
 }
@@ -18,4 +19,33 @@ h2 {
 
     writing-mode: sideways-lr;
     text-orientation: mixed;
+}
+
+
+@media (max-height: 950px) {
+    :host {
+        margin-left: 21px
+    }
+
+    h2 {
+        @include mix.emptyLetters(36px, 2px, vars.$font-color-title);
+    }
+}
+
+
+@media (max-width: 1200px) {
+    :host {
+        display: none;
+    }
+}
+
+
+@media (max-height: 630px) {
+    :host {
+        margin-left: 35px
+    }
+
+    h2 {
+        @include mix.emptyLetters(24px, 2px, vars.$font-color-title);
+    }
 }

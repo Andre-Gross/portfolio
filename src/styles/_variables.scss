@@ -1,5 +1,6 @@
 $font-stack-quantico: 'Quantico', sans-serif;
 $font-stack-roboto-mono: 'Roboto Mono', monospace;
+$breakpoint-tablet-portrait: 799px;
 
 
 $bright-green: #B5E93B;
@@ -22,10 +23,12 @@ $font-color-title: $bright-green;
 $font-color-button-green: $black;
 $font-color-button-transparent: $bright-green;
 
-
+$scroll-bar-size: 4px;
 $navigation-width: 172px;
 $switch-arrow-img-width: 144px;
 $switch-arrow-container-width: $switch-arrow-img-width * 1.4;
 $section-title-width: 96px;
 
+$full-width-with-scroll-bar: calc(100vw - $scroll-bar-size);
+$full-height-with-scroll-bar: calc(100vh - $scroll-bar-size);
 $min-section-width: calc(100vw - #{$navigation-width} - #{$switch-arrow-container-width} - #{$section-title-width});

@@ -54,3 +54,11 @@ h1 {
     color: transparent;
     -webkit-text-stroke: $subtitle-font--border-width vars.$font-color-title;
 }
+
+
+@media (max-width: 1200px) {
+    :host {
+        min-width: auto;
+        max-width: vars.$full-width-with-scroll-bar;
+    }
+}
