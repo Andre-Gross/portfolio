@@ -1,11 +1,27 @@
 @use '../../../../styles/variables' as vars;
 
 
+$nav-height-mobile: 73px;
+
+
+:host {
+    a {
+        color: vars.$nav-grey;
+    }
+}
+
+
+button {
+    display: none;
+}
+
+
 nav {
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
+
+    z-index: 100;
 
     height: 100%;
     width: vars.$navigation-width;
@@ -15,37 +31,59 @@ nav {
     flex-direction: column;
     align-items: center;
 
-    #logo {
-        position: relative;
-        margin-top: 32px;
 
-        >p {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateY(-20%) translateX(-50%);
-            font-size: 40px;
-            letter-spacing: -0.2rem;
-            color: vars.$font-color-title;
-            -webkit-text-stroke: 2px vars.$logo-grey;
+
+    #closed-menu {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        #logo {
+            position: relative;
+            margin-top: 32px;
+
+            >img {
+                height: 103px;
+            }
+
+            >p {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-20%) translateX(-50%);
+                font-size: 40px;
+                letter-spacing: -0.2rem;
+                color: vars.$font-color-title;
+                -webkit-text-stroke: 2px vars.$nav-grey;
+            }
+        }
+
+        #desktop-links {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 28px;
+
+            writing-mode: sideways-lr;
+            text-orientation: mixed;
+
+
+
+            font-size: 24px;
+
+            >a {
+                cursor: pointer;
+                color: vars.$nav-grey;
+                font-size: 30px;
+            }
         }
     }
 
-    #links {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 28px;
-
-        writing-mode: sideways-lr;
-        text-orientation: mixed;
-
-        font-size: 24px;
-
-        >a {
-            cursor: pointer;
-        }
+    #mobile-overlay {
+        display: none;
     }
 }
 
@@ -53,4 +91,114 @@ nav {
 #nav-placeholder {
     width: vars.$navigation-width;
     height: 100%;
+}
+
+
+// @media (max-height: 1000px) {
+//     nav {
+//         #closed-menu {
+//             #desktop-links {
+//                 font-size: 24px;    
+//             }
+//         }
+//     }
+// }
+
+
+@media (max-width: #{vars.$breakpoint-tablet-portrait}) {
+    :host {
+        width: 100%;
+    }
+
+
+    button {
+        display: flex;
+        background-color: transparent;
+        border: none;
+    }
+
+    nav {
+        right: 0;
+        width: 100%;
+        height: min-content;
+
+
+        #closed-menu {
+            box-sizing: border-box;
+            padding: 0 16px;
+            height: $nav-height-mobile;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            #desktop-links {
+                display: none;
+            }
+
+
+
+            #logo {
+                position: relative;
+                margin-top: 0;
+
+                >img {
+                    height: 45px;
+                }
+
+                >p {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translateY(-20%) translateX(-50%);
+                    font-size: 40px;
+                    letter-spacing: -0.2rem;
+                    color: vars.$font-color-title;
+                    -webkit-text-stroke: 2px vars.$nav-grey;
+                }
+            }
+        }
+    }
+
+    #mobile-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        box-sizing: border-box;
+        padding: 16px;
+
+        height: max-content;
+        width: 100%;
+
+        background-color: vars.$bright-green;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        >button {
+            width: 100%;
+            display: flex;
+            justify-content: end;
+        }
+
+
+        >#mobile-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+        }
+    }
+
+    #nav-placeholder {
+        width: #{vars.$full-width-with-scroll-bar};
+        height: $nav-height-mobile
+    }
 }
