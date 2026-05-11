@@ -2,9 +2,6 @@
 @use '../../../../styles/functions' as func;
 
 
-$font-color: #FFFDFD;
-
-
 :host {
     position: absolute;
     top: 0;
@@ -14,6 +11,7 @@ $font-color: #FFFDFD;
 
     display: flex;
     justify-content: end;
+    align-items: center;
     gap: 48px;
 }
 
@@ -25,25 +23,5 @@ $font-color: #FFFDFD;
     >a {
         display: flex;
         align-items: center;
-    }
-}
-
-
-
-#language-switch {
-    display: flex;
-
-    :first-child {
-        padding-right: 12px;
-    }
-
-    :last-child {
-        padding-left: 12px;
-        border-left: 1px solid $font-color;
-    }
-
-    >p {
-        color: $font-color;
-        font-size: 18px;
     }
 }
