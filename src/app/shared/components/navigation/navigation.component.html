@@ -1,13 +1,12 @@
 <nav>
-    <a routerLink="/" id="logo">
-        <img src="img/nav/logo-part-frontend-developer.png" alt="frontend developer">
-        <p>AG</p>
-    </a>
     <div id="links">
         <a (click)="triggerScroll('whyMe')">Why me</a>
         <a (click)="triggerScroll('mySkills')">Skills</a>
         <a (click)="triggerScroll('myWork')">My Works</a>
         <a (click)="triggerScroll('contactSection')">Contact</a>
+        <a routerLink="/" id="logo">
+            <img src="img/nav/logo-inverted.svg" alt="frontend developer">
+        </a>
     </div>
 </nav>
 <div id="nav-placeholder"></div>
