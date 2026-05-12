@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
+
 import { SectionTitleComponent } from '../../shared/components/section-title/section-title.component';
 import { ProjectBoxComponent } from './project-box/project-box';
+import { BtnToContactComponent } from '../../shared/components/btn-to-contact/btn-to-contact.component';
 
 import { ContentService } from '../../shared/services/content/content.service';
 import { ScrollService } from '../../shared/services/scroll/scroll.service';
@@ -9,9 +11,10 @@ import { ScrollService } from '../../shared/services/scroll/scroll.service';
 @Component({
   selector: 'app-my-work',
   imports: [
-        SectionTitleComponent,
-        ProjectBoxComponent,
-    ],
+    SectionTitleComponent,
+    ProjectBoxComponent,
+    BtnToContactComponent
+],
   templateUrl: './my-work.component.html',
   styleUrl: './my-work.component.scss',
 })

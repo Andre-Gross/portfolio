@@ -10,7 +10,6 @@
 
 
 @mixin btn-primary() {
-    align-self: flex-end;
     border-radius: 30px;
     padding: 13px 30px;
     font-family: vars.$font-family-primary;

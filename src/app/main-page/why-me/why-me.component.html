@@ -5,6 +5,4 @@
     <app-argument-block></app-argument-block>
 </div>
 
-<button (click)="triggerScroll('contactSection')">
-    {{ contentService.content().mainPage.whyMe.contactBtn }}
-</button>
+<app-btn-to-contact [text]="contentService.content().mainPage.whyMe.contactBtn"></app-btn-to-contact>

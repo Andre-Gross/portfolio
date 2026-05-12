@@ -38,8 +38,7 @@
         margin-top: 32px;
     }
 
-    button {
-        @include mix.btn-primary();
+    app-btn-to-contact {
         align-self: center;
     }
 }
