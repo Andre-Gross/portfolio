@@ -23,14 +23,18 @@
 
 .skill-item {
     width: 86px;
-    height: 90px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
+    >span {
+        text-align: center;
+    }
+
     img {
         height: 60px;
+        object-fit: contain;
     }
 }
 
