@@ -64,6 +64,7 @@ app-main-page {
         padding: 0 vars.$padding-mobile-left-right;
         flex-direction: column;
         overflow-y: scroll;
+        overflow-x: hidden;
         max-width: 100%;
         width: 100%;
     }
