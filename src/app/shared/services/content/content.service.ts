@@ -113,7 +113,11 @@ export class ContentService {
         motivationText: {
           en: 'Show that you are motivated to improve your skills, implement innovative solutions and stay abreast of new technologies.',
           de: 'Show that you are motivated to improve your skills, implement innovative solutions and stay abreast of new technologies.',
-        }
+        },
+        contactBtn: {
+          en: 'Let´s talk',
+          de: 'Let´s talk',
+        },
       },
       myWork: {
         title: {
@@ -458,7 +462,8 @@ export class ContentService {
           skills: d.mainPage.mySkillSet.skills.map((s) => ({
             ...s,
             skillName: t(s.skillName)
-          }))
+          })),
+          contactBtn: t(d.mainPage.mySkillSet.contactBtn),
         },
         myWork: {
           title: t(d.mainPage.myWork.title),

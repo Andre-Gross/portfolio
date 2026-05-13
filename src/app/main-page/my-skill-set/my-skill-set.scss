@@ -1,5 +1,6 @@
 @use '../../../styles/variables' as vars;
 @use '../../../styles/functions' as func;
+@use '../../../styles/mixins' as mix;
 
 
 :host {
@@ -10,10 +11,19 @@
 }
 
 
+#mobile-section-title {
+    display: none;
+}
+
+
+#skill-text {
+    margin-top: 24px;
+}
+
+
 #skills-container {
     margin-top: 33px;
     height: fit-content;
-    // width: min-content;
     display: grid;
     justify-content: flex-start;
     grid-template-columns: repeat(6, 1fr);
@@ -25,6 +35,7 @@
     width: 86px;
     display: flex;
     flex-direction: column;
+    gap: 8px;
     justify-content: space-between;
     align-items: center;
 
@@ -38,15 +49,56 @@
     }
 }
 
-.motivation-item {
+
+#motivation-item-desktop {
     grid-column: 6;
     width: 240px;
 }
 
 
+#motivation-item-mobile {
+    display: none;
+}
+
+
+app-btn-to-contact {
+    display: none;
+}
+
+
 @media (max-width: #{vars.$breakpoint-tablet-portrait}) {
     :host {
-        // min-width: auto;
         max-width: vars.$full-width-with-scroll-bar;
+    }
+
+
+    #mobile-section-title {
+        display: block;
+        @include mix.emptyLetters(38px, 2px, vars.$font-color-title);
+    }
+
+
+    #skills-container {
+        grid-template-columns: repeat(auto-fill, minmax(86px, 1fr));
+        width: 100%;
+    }
+
+
+    #motivation-item-desktop {
+        display: none;
+    }
+
+
+    #motivation-item-mobile {
+        margin-top: 32px;
+
+        display: block;
+    }
+
+
+    app-btn-to-contact {
+        display: flex;
+        justify-content: center;
+        margin-top: 32px;
     }
 }
