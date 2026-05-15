@@ -15,9 +15,9 @@ app-contact-links {
 }
 
 
-// .arrow-container {
-//     display: none;
-// }
+.arrow-container {
+    display: none;
+}
 
 
 #call-to-action {
@@ -68,6 +68,9 @@ app-contact-links {
     }
 
     .arrow-container {
+        display: flex;
+
+        
         >img {
             padding: 160px 0;
             transform: rotate(180deg);
