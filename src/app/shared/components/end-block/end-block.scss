@@ -2,9 +2,46 @@
 @use '../../../../styles/functions' as func;
 
 
-:host{
+:host {
     margin-left: 32px;
     min-height: 100%;
     min-width: 100px;
     background-color: vars.$bright-green;
+}
+
+
+footer {
+    display: none;
+}
+
+
+@media (max-width: #{vars.$breakpoint-tablet-portrait}) {
+    :host {
+        margin: 0;
+        padding: 32px 0 34px 0;
+        width: 100%;
+        min-height: unset;
+        height: max-content;
+    }
+
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+
+
+        p, a {
+            color: vars.$nav-grey;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        img {
+            height: 41px;
+        }
+
+
+    }
 }
