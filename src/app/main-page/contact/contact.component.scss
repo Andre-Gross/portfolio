@@ -1,5 +1,6 @@
 @use '../../../styles/variables' as vars;
 @use '../../../styles/functions' as func;
+@use '../../../styles/mixins' as mix;
 
 
 :host {
@@ -9,6 +10,16 @@
 }
 
 
+app-contact-links {
+    display: none;
+}
+
+
+// .arrow-container {
+//     display: none;
+// }
+
+
 #call-to-action {
     margin-left: 56px;
     width: 417px;
@@ -16,6 +27,10 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: end;
+
+    #mobile-section-title {
+        display: none;
+    }
 
     >div {
         p {
@@ -39,6 +54,12 @@
             align-items: center;
             color: vars.$font-color-primary;
 
+            >div {
+                display: flex;
+                align-items: center;
+                justify-content: start;
+            }
+
             p {
                 margin-top: 0;
                 margin-left: 8px;
@@ -46,10 +67,88 @@
         }
     }
 
+    .arrow-container {
+        >img {
+            padding: 160px 0;
+            transform: rotate(180deg);
+            cursor: pointer;
+        }
+    }
+}
 
-    >img {
-        padding: 160px 0;
-        transform: rotate(180deg);
-        cursor: pointer;
+
+@media (max-width: #{vars.$breakpoint-tablet-portrait}) {
+
+    :host {
+        flex-direction: column-reverse;
+        margin-top: vars.$margin-top-section-mobile;
+        padding: 0 16px;
+    }
+
+
+    app-contact-links {
+        padding: 54px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .arrow-container {
+        padding-top: 54px;
+        height: 45px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        >img {
+            padding: 0;
+            width: 45px;
+            height: 15px;
+            transform: rotate(270deg);
+        }
+    }
+
+
+    app-contact-form {
+        margin-top: 32px;
+    }
+    
+    #call-to-action {
+        margin: 0;
+        width: 100%;
+        align-items: start;
+
+        #mobile-section-title {
+            margin-bottom: 16px;
+            display: block;
+            @include mix.emptyLetters(38px, 2px, vars.$font-color-title);
+        }
+
+        >div {
+            p {
+                text-align: start;
+            }
+
+            #first-line {
+                color: vars.$font-color-secondary
+            }
+
+            a {
+                justify-content: start;
+
+                >div {
+                    width: 30px;
+                }
+            }
+        }
+
+        #links {
+            display: none;
+        }
+
+        .arrow-container {
+            display: none;
+        }
     }
 }

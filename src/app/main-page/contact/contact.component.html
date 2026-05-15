@@ -2,26 +2,43 @@
     (click)="triggerScroll('contactSection')"></app-section-title>
 
 
+<app-contact-links></app-contact-links>
+
+
+<div class="arrow-container" (click)="triggerScroll('landingPage')">
+    <img src="img/next-section-arrow.png" alt="arrow">
+</div>
+
+
 <app-contact-form></app-contact-form>
 
 
 <div id="call-to-action">
+    <h2 id="mobile-section-title">{{ contentService.content().mainPage.mySkillSet.title }}</h2>
     <div>
         <p id="first-line">{{ contentService.content().mainPage.contact.callToAction.firstLine }}</p>
         <p>{{ contentService.content().mainPage.contact.callToAction.paragraph }}</p>
         <a href="mailto: {{ contentService.content().general.email }}">
-            <img src="img/contact/mail.svg" alt="email">
+            <div>
+                <img src="img/contact/mail.svg" alt="email">
+            </div>
             <p>E-mail: {{ contentService.content().general.email }}</p>
         </a>
         <a href="tel: {{ contentService.content().general.tel}}">
-            <img src="img/contact/phone.svg" alt="phone">
+            <div>
+                <img src="img/contact/phone.svg" alt="phone">
+            </div>
             <p>Tel: {{ contentService.content().general.tel }}</p>
         </a>
     </div>
 
-    <img src="img/next-section-arrow.png" alt="arrow" (click)="triggerScroll('landingPage')">
 
-    <div>
+    <div class="arrow-container" (click)="triggerScroll('landingPage')">
+        <img src="img/next-section-arrow.png" alt="arrow">
+    </div>
+
+
+    <div id="links">
         <a routerLink="/legal-notes">Legal notice</a>
         <a routerLink="/privacy-policy">Privacy Policy</a>
         <p>&copy; André Groß 2026</p>

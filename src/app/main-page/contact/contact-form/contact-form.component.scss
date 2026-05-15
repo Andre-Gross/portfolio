@@ -75,3 +75,10 @@ form {
         }
     }
 }
+
+
+@media (max-width: #{vars.$breakpoint-tablet-portrait}) {
+    form {
+        width: 100%;
+    }
+}

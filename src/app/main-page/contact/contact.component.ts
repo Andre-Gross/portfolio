@@ -8,17 +8,20 @@ import { ContentService } from '../../shared/services/content/content.service';
 
 import { SectionTitleComponent } from '../../shared/components/section-title/section-title.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { ContactLinksComponent } from '../../shared/components/contact-links/contact-links.component';
 
 
 @Component({
     selector: 'app-contact',
     standalone: true,
     imports: [
-        SectionTitleComponent,
-        ContactFormComponent,
         FormsModule,
         CommonModule,
-        RouterLink],
+        RouterLink,
+        SectionTitleComponent,
+        ContactFormComponent,
+        ContactLinksComponent
+    ],
     templateUrl: './contact.component.html',
     styleUrl: './contact.component.scss',
 })
