@@ -1,6 +1,6 @@
 <app-section-title [title]="contentService.content().mainPage.contact.title"
     (click)="triggerScroll('contactSection')"></app-section-title>
-
+    
 
 <app-contact-links></app-contact-links>
 
@@ -14,7 +14,7 @@
 
 
 <div id="call-to-action">
-    <h2 id="mobile-section-title">{{ contentService.content().mainPage.contact.title }}</h2>
+    <app-mobile-section-title [text]="contentService.content().mainPage.contact.title"></app-mobile-section-title>
     <div>
         <p id="first-line">{{ contentService.content().mainPage.contact.callToAction.firstLine }}</p>
         <p>{{ contentService.content().mainPage.contact.callToAction.paragraph }}</p>

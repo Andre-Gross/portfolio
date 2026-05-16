@@ -3,7 +3,7 @@
 
 
 <div id=" content">
-  <h2 id="mobile-section-title">{{ contentService.content().mainPage.mySkillSet.title }}</h2>
+   <app-mobile-section-title [text]="contentService.content().mainPage.mySkillSet.title"></app-mobile-section-title>
   <p id="skill-text">{{contentService.content().mainPage.mySkillSet.skillText}}</p>
 
   <div id="skills-container">

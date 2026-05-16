@@ -9,6 +9,7 @@ import { ContentService } from '../../shared/services/content/content.service';
 import { SectionTitleComponent } from '../../shared/components/section-title/section-title.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ContactLinksComponent } from '../../shared/components/contact-links/contact-links.component';
+import { MobileSectionTitleComponent } from '../../shared/components/mobile-section-title/mobile-section-title.component';
 
 
 @Component({
@@ -20,7 +21,8 @@ import { ContactLinksComponent } from '../../shared/components/contact-links/con
         RouterLink,
         SectionTitleComponent,
         ContactFormComponent,
-        ContactLinksComponent
+        ContactLinksComponent,
+        MobileSectionTitleComponent
     ],
     templateUrl: './contact.component.html',
     styleUrl: './contact.component.scss',

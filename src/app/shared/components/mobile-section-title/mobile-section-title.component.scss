@@ -1,0 +1,15 @@
+@use '../../../../styles/variables' as vars;
+@use '../../../../styles/mixins' as mix;
+
+
+h2 {
+    display: none;
+}
+
+
+@media (max-width: #{vars.$breakpoint-tablet-portrait}) {
+    h2 {
+        display: block;
+        @include mix.emptyLetters(38px, 2px, vars.$font-color-title);
+    }
+}

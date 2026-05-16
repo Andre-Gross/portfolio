@@ -28,9 +28,6 @@ app-contact-links {
     justify-content: space-between;
     align-items: end;
 
-    #mobile-section-title {
-        display: none;
-    }
 
     >div {
         p {
@@ -83,9 +80,9 @@ app-contact-links {
 @media (max-width: #{vars.$breakpoint-tablet-portrait}) {
 
     :host {
-        flex-direction: column-reverse;
         margin-top: vars.$margin-top-section-mobile;
         padding: 0 16px;
+        flex-direction: column-reverse;
     }
 
 
@@ -121,12 +118,7 @@ app-contact-links {
         margin: 0;
         width: 100%;
         align-items: start;
-
-        #mobile-section-title {
-            margin-bottom: 16px;
-            display: block;
-            @include mix.emptyLetters(38px, 2px, vars.$font-color-title);
-        }
+        
 
         >div {
             p {

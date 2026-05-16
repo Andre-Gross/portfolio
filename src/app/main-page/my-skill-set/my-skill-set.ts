@@ -5,13 +5,15 @@ import { ScrollService } from '../../shared/services/scroll/scroll.service';
 
 import { SectionTitleComponent } from '../../shared/components/section-title/section-title.component';
 import { BtnToContactComponent } from '../../shared/components/btn-to-contact/btn-to-contact.component';
+import { MobileSectionTitleComponent } from '../../shared/components/mobile-section-title/mobile-section-title.component';
 
 
 @Component({
   selector: 'app-my-skill-set',
   imports: [
     SectionTitleComponent,
-    BtnToContactComponent
+    BtnToContactComponent,
+    MobileSectionTitleComponent
   ],
   templateUrl: './my-skill-set.html',
   styleUrl: './my-skill-set.scss',

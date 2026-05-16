@@ -11,11 +11,6 @@
 }
 
 
-#mobile-section-title {
-    display: none;
-}
-
-
 #skill-text {
     margin-top: 24px;
 }
@@ -71,12 +66,6 @@ app-btn-to-contact {
         margin-top: vars.$margin-top-section-mobile;
         padding: 0 vars.$padding-mobile-left-right;
         width: vars.$full-width-with-scroll-bar;
-    }
-
-
-    #mobile-section-title {
-        display: block;
-        @include mix.emptyLetters(38px, 2px, vars.$font-color-title);
     }
 
 
