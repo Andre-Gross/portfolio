@@ -1,34 +1,69 @@
-<div class="project-container">
+@if (!shallShowMeMore && screenWidth <= breakpointMobile) { <div class="project-container">
   <app-headline [index]="index" [name]="project.name"></app-headline>
 
 
   <div class="project-details">
-    <div id="upper-part">
-      <div id="left-paragraphs" class="paragraphs">
-        <div>
-          <h4><img src="img/my-work/circle.svg" alt="bullet point">{{ project.paragraph1.header }}</h4>
-          <p>{{ project.paragraph1.content }}</p>
+    <div class="paragraphs">
+      <div>
+        <h4><img src="img/my-work/circle.svg" alt="bullet point">{{ project.paragraph1.header }}</h4>
+        <p>{{ project.paragraph1.content }}</p>
+      </div>
+    </div>
+  </div>
+
+
+  <p id="show-me-more" (click)="shallShowMeMore = true">
+    {{ contentService.content().mainPage.myWork.showMeTexts.more }}
+    <img src="img/my-work/triangle-down.svg" alt="Dreieck runter">
+  </p>
+  </div>
+  } @else {
+  <div class="project-container">
+    <app-headline [index]="index" [name]="project.name"></app-headline>
+
+
+    <div class="project-details">
+      <div id="upper-part">
+        <div id="left-paragraphs" class="paragraphs">
+          <div>
+            <h4><img src="img/my-work/circle.svg" alt="bullet point">{{ project.paragraph1.header }}</h4>
+            <p>{{ project.paragraph1.content }}</p>
+          </div>
+
+          <div>
+            <h4><img src="img/my-work/circle.svg" alt="bullet point">{{ project.paragraph2.header }}</h4>
+            <p>{{ project.paragraph2.content }}</p>
+          </div>
         </div>
 
-        <div>
-          <h4><img src="img/my-work/circle.svg" alt="bullet point">{{ project.paragraph2.header }}</h4>
-          <p>{{ project.paragraph2.content }}</p>
+        <div id="project-image-wrapper">
+          <img [src]="project.img.imgPath" [alt]="project.name">
+          <div id="buttons">
+            <button (click)="goToLink(project.img.btn1.link)">{{ project.img.btn1.text }}</button>
+            <button (click)="goToLink(project.img.btn2.link)">{{ project.img.btn2.text }}</button>
+          </div>
         </div>
+
+      </div>
+
+      <div class="paragraphs">
+        <h4><img src="img/my-work/circle.svg" alt="bullet point">{{ project.paragraph3.header }}</h4>
+        <p>{{ project.paragraph3.content }}</p>
       </div>
 
       <div id="project-image-wrapper">
         <img [src]="project.img.imgPath" [alt]="project.name">
         <div id="buttons">
-        <button (click)="goToLink(project.img.btn1.link)">{{ project.img.btn1.text }}</button>
-        <button (click)="goToLink(project.img.btn2.link)">{{ project.img.btn2.text }}</button>                                                                                            
-      </div>                                                                       
+          <button (click)="goToLink(project.img.btn1.link)">{{ project.img.btn1.text }}</button>
+          <button (click)="goToLink(project.img.btn2.link)">{{ project.img.btn2.text }}</button>
+        </div>
+      </div>
     </div>
-
   </div>
 
-  <div class="paragraphs">
-    <h4><img src="img/my-work/circle.svg" alt="bullet point">{{ project.paragraph3.header }}</h4>
-    <p>{{ project.paragraph3.content }}</p>
-  </div>
-</div>
-</div>
+
+  <p id="show-me-less" (click)="shallShowMeMore = false">
+    {{ contentService.content().mainPage.myWork.showMeTexts.less }}
+    <img src="img/my-work/triangle-up.svg" alt="Dreieck hoch">
+  </p>
+  }

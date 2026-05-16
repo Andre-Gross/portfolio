@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component } from '@angular/core';
 
 import { SectionTitleComponent } from '../../shared/components/section-title/section-title.component';
 import { ProjectBoxComponent } from './project-box/project-box';
@@ -14,13 +14,13 @@ import { ScrollService } from '../../shared/services/scroll/scroll.service';
     SectionTitleComponent,
     ProjectBoxComponent,
     BtnToContactComponent
-],
+  ],
   templateUrl: './my-work.component.html',
   styleUrl: './my-work.component.scss',
 })
 export class MyWorkSection {
 
-  constructor(private scrollService: ScrollService, public contentService: ContentService) { } 
+  constructor(private scrollService: ScrollService, public contentService: ContentService) { }
 
 
   triggerScroll(sectionId: string): void {

@@ -2,24 +2,43 @@
 @use '../../../../../styles/mixins' as mix;
 
 
-:host {
-    >h3 {
-        display: flex;
-        align-items: center;
-        gap: 32px;
+h3 {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+
+    .number {
+        @include mix.emptyLetters(100px, 2px, vars.$font-color-title);
+    }
+
+
+    .project-name {
+        color: vars.$font-color-title;
+        font-size: 54px;
+        line-height: 120%;
+        letter-spacing: 0%;
+
+    }
+}
+
+
+@media (max-width: #{vars.$breakpoint-tablet-portrait}) {
+    h3 {
+        gap: 16px;
+
 
         .number {
-            @include mix.emptyLetters(54px, 2px, vars.$font-color-title);
-            font-size: 100px;
+            @include mix.emptyLetters(40px, 2px, vars.$font-color-title);
         }
+
 
         .project-name {
             color: vars.$font-color-title;
-            font-size: 54px;
+            font-size: 24px;
             line-height: 120%;
             letter-spacing: 0%;
 
         }
-
     }
 }
