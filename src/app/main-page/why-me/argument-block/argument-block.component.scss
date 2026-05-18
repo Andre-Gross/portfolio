@@ -19,6 +19,11 @@ h3 {
     font-weight: 700;
     font-size: 48px;
     line-height: 120%;
+
+
+    >span {
+        display: none;
+    }
 }
 
 
@@ -31,10 +36,10 @@ h3 {
 
 
 .argument-block {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 
     img {
@@ -50,5 +55,38 @@ h3 {
         line-height: 120%;
         letter-spacing: 0%;
         text-align: center;
+    }
+}
+
+
+@media (max-width: #{vars.$breakpoint-tablet-portrait}) {
+    h3 {
+        margin-top: 16px;
+        width: 100%;
+        text-align: center;
+        font-size: 32px;
+
+
+        >span {
+            display: inline;
+            font-family: vars.$font-family-primary;
+            color: vars.$font-color-title;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 120%;
+        }
+    }
+
+
+    #argument-block-container {
+        padding: 32px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 32px;
+
+        >.argument-block {
+            
+        }
     }
 }

@@ -1,7 +1,8 @@
 <p>{{ contentService.content().mainPage.whyMe.aboutMe }}</p>
 
 <div>
-    <h3>{{ contentService.content().mainPage.whyMe.iAm }}</h3>
+    <h3>{{ contentService.content().mainPage.whyMe.iAm }}<span>:</span>
+    </h3>
     
     <div id="argument-block-container">
         @for (item of contentService.content().mainPage.whyMe.singleArguments | keyvalue; track item.key) {

@@ -18,7 +18,16 @@ app-btn-to-contact {
 
 @media (max-width: #{vars.$breakpoint-tablet-portrait}) {
     :host {
+        margin-top: vars.$margin-top-section-mobile;
+        padding: 0 vars.$padding-mobile-left-right;
         min-width: auto;
+        width: vars.$full-width-with-scroll-bar;
         max-width: vars.$full-width-with-scroll-bar;
+    }
+
+
+    app-btn-to-contact {
+        align-self: center;
+        margin-top: 32px;
     }
 }
