@@ -81,7 +81,8 @@ app-contact-links {
 
     :host {
         margin-top: vars.$margin-top-section-mobile;
-        padding: 0 16px;
+        padding: 0 vars.$padding-mobile-left-right;
+;
         flex-direction: column-reverse;
     }
 
