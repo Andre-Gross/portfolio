@@ -249,6 +249,16 @@ export class ContentService {
           //   },
           // },
         ],
+        showMeTexts: {
+          more: {
+            en: 'Show me more',
+            de: 'Ausklappen',
+          },
+          less: {
+            en: 'Show me less',
+            de: 'Einklappen',
+          },
+        },
         ongoingProjects: {
           headline: {
             en: 'Ongoing Projects',
@@ -443,6 +453,10 @@ export class ContentService {
             paragraph2: { header: t(p.paragraph2.header), content: p.paragraph2.content },
             paragraph3: { header: t(p.paragraph3.header), content: t(p.paragraph3.content) },
           })),
+          showMeTexts: {
+            more: t(d.mainPage.myWork.showMeTexts.more),
+            less: t(d.mainPage.myWork.showMeTexts.less),
+          },
           ongoingProjects: {
             headline: t(d.mainPage.myWork.ongoingProjects.headline),
             text: t(d.mainPage.myWork.ongoingProjects.text),
