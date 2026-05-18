@@ -338,7 +338,7 @@ export class ContentService {
         callToAction: {
           firstLine: {
             en: 'Let us work together.',
-            de: 'Arbeiten wir zusammen',
+            de: 'Arbeiten wir zusammen.',
           },
           paragraph: {
             en: 'Encourage people to contact you and describe what role you are interested in. Express confidence in your ability to make a meaningful contribution to a team through your expertise and enthusiasm for improving your skills.',
