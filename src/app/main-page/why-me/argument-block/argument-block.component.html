@@ -3,7 +3,7 @@
 <div>
     <h3>{{ contentService.content().mainPage.whyMe.iAm }}</h3>
     
-    <div id="i-am-container">
+    <div id="argument-block-container">
         @for (item of contentService.content().mainPage.whyMe.singleArguments | keyvalue; track item.key) {
         <div class="argument-block">
             <img src="img/why-me/{{item.key}}.svg" alt="">
