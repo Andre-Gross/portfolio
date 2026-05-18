@@ -60,7 +60,7 @@ app-main-page {
 
 
     .scroll-container {
-        padding: 0 vars.$padding-mobile-left-right;
+        // padding: 0 vars.$padding-mobile-left-right;
         flex-direction: column;
         overflow-y: scroll;
         overflow-x: hidden;
