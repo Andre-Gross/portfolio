@@ -290,11 +290,11 @@ export class ContentService {
           },
           {
             text: {
-              en: 'I found him to be a reliable and competent project partner, and I look forward to working with him again in the future.',
-              de: 'Ich habe ihn als verlässlichen und kompetenten Projektpartner erlebt und freue mich, wenn wir auch in Zukunft wieder zusammenarbeiten.',
+              en: 'Itś a test text.',
+              de: 'Ist ein Test Text',
             },
-            author: 'Kai Dietrich',
-            context: 'Project Join',
+            author: 'Na ich',
+            context: 'Project Dieses hier',
           },
         ]
       },
