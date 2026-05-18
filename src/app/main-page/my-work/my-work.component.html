@@ -5,15 +5,15 @@
 
 @for (project of contentService.content().mainPage.myWork.projects; track project.key; let i = $index) {
 <app-project-box [project]="project" [index]="i">
-    </app-project-box>
-    }
+</app-project-box>
+}
 
-    <div id="ongoing-projects">
-        <div>
-            <p id="headline"><span id="headline-number">{{ contentService.content().mainPage.myWork.projects.length +
-                    1}}</span>
-                {{contentService.content().mainPage.myWork.ongoingProjects.headline}}</p>
-            <p id="text"> {{ contentService.content().mainPage.myWork.ongoingProjects.text }}</p>
-        </div>
-        <app-btn-to-contact [text]="contentService.content().mainPage.myWork.ongoingProjects.btn"></app-btn-to-contact>
+<div id="ongoing-projects">
+    <div>
+        <p id="headline"><span id="headline-number">{{ contentService.content().mainPage.myWork.projects.length +
+                1}}</span>
+            {{contentService.content().mainPage.myWork.ongoingProjects.headline}}</p>
+        <p id="text"> {{ contentService.content().mainPage.myWork.ongoingProjects.text }}</p>
     </div>
+    <app-btn-to-contact [text]="contentService.content().mainPage.myWork.ongoingProjects.btn"></app-btn-to-contact>
+</div>
