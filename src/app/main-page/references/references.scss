@@ -2,6 +2,9 @@
 @use '../../../styles/functions' as func;
 
 
+$reference-container-min-width: calc(320px - 2 * vars.$padding-mobile-left-right);
+
+
 :host {
     margin-bottom: func.margin-top-full-value(76);
     min-width: min-content;
@@ -11,6 +14,7 @@
 
 
 #all-references {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -51,7 +55,81 @@
 
 @media (max-width: #{vars.$breakpoint-tablet-portrait}) {
     :host {
-        min-width: auto;
+        margin-top: vars.$margin-top-section-mobile;
+        margin-bottom: 0;
+        width: calc(100vw - vars.$scroll-bar-size);
+        display: block;
+    }
+
+    #all-references {
+        width: 100%;
+        height: min-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 8px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+
+        scroll-padding-left: vars.$padding-mobile-left-right;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .reference-container {
+        padding: 16px;
+        box-sizing: border-box;
+        height: auto;
+        min-width: $reference-container-min-width;
         max-width: vars.$full-width-with-scroll-bar;
+        scroll-snap-align: start;
+        flex-shrink: 0;
+
+        &:first-child {
+            margin-left: vars.$padding-mobile-left-right;
+        }
+
+        &:last-child {
+            margin-right: vars.$padding-mobile-left-right;
+        }
+
+        .reference-text {
+            padding-right: 12px;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+        }
+
+        .about-reference {
+            padding-left: 12px;
+        }
+    }
+
+
+    .scroll-marker-group {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .scroll-marker {
+        padding: 0;
+        border: 1px solid vars.$bright-green;
+        height: 6px;
+        width: 9px;
+        background-color: rgba(255, 255, 255, 0);
+        border-radius: 6px;
+        cursor: pointer;
+        transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+        &.active {
+            background-color: vars.$bright-green;
+            width: 18px;
+        }
     }
 }
