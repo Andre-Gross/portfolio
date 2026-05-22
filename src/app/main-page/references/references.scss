@@ -65,7 +65,7 @@ $reference-container-min-width: calc(320px - 2 * vars.$padding-mobile-left-right
 
 @media (max-width: #{vars.$breakpoint-tablet-portrait}) {
     :host {
-        margin-top: vars.$margin-top-section-mobile;
+        margin-top: 60px;
         margin-bottom: 0;
         width: calc(100vw - vars.$scroll-bar-size);
         display: block;
