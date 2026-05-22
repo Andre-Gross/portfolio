@@ -1,4 +1,4 @@
-import { Component, HostListener, inject, Inject, Input, OnInit } from '@angular/core';
+import { Component, HostListener, inject, Input, OnInit } from '@angular/core';
 import { HeadlineComponent } from './headline/headline.component';
 import { ContentService } from '../../../shared/services/content/content.service';
 

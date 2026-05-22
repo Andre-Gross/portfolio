@@ -91,17 +91,6 @@ nav {
 }
 
 
-// @media (max-height: 1000px) {
-//     nav {
-//         #closed-menu {
-//             #desktop-links {
-//                 font-size: 24px;    
-//             }
-//         }
-//     }
-// }
-
-
 @media (max-width: #{vars.$breakpoint-tablet-portrait}) {
     :host {
         width: 100%;
