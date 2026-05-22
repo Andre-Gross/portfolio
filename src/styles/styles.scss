@@ -30,3 +30,10 @@ a {
     text-decoration: none;
     color: vars.$black;
 }
+
+
+@media (max-width: #{vars.$breakpoint-tablet-portrait}) {
+    html {
+        font-size: 16px;
+    }
+}
