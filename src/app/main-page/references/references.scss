@@ -58,6 +58,11 @@ $reference-container-min-width: calc(320px - 2 * vars.$padding-mobile-left-right
 }
 
 
+.scroll-marker-group {
+    display: none;
+}
+
+
 @media (max-width: #{vars.$breakpoint-tablet-portrait}) {
     :host {
         margin-top: vars.$margin-top-section-mobile;
