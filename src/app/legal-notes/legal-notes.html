@@ -9,7 +9,7 @@
                     <ul>
                         <li>{{ contentService.content().general.name }}</li>
                         <li>{{ contentService.content().general.address.street }}</li>
-                        <li>{{ contentService.content().general.address.city }}</li>
+                        <li>{{ contentService.content().general.address.zip + ' ' + contentService.content().general.address.city }}</li>
                     </ul>
                     <p>{{ contentService.content().legalNotes.imprint.emailKey }}:
                         <a href="mailto: {{ contentService.content().general.email }}">{{
