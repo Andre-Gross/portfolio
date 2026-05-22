@@ -12,7 +12,7 @@ export class ContentService {
   data = signal({
     general: {
       name: 'André Groß',
-      email: 'andre.p.gross@proton.me',
+      email: 'mail@andre-gross.dev',
       tel: '+49 152 046 344 94',
       address: {
         street: 'Winckelmannstraße 41',
