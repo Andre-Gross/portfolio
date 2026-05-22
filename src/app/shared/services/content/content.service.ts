@@ -16,7 +16,8 @@ export class ContentService {
       tel: '+49 152 046 344 94',
       address: {
         street: 'Winckelmannstraße 41',
-        city: '12487 Berlin',
+        zip: '12487',
+        city: 'Berlin',
       },
     },
     mainPage: {
