@@ -33,7 +33,7 @@ h2 {
 }
 
 
-@media (max-width: 1200px) {
+@media (max-width: vars.$breakpoint-tablet-portrait) {
     :host {
         display: none;
     }
