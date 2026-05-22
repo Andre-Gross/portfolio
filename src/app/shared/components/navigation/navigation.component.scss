@@ -1,9 +1,6 @@
 @use '../../../../styles/variables' as vars;
 
 
-$nav-height-mobile: 73px;
-
-
 :host {
     a {
         color: vars.$nav-grey;
@@ -126,7 +123,7 @@ nav {
         #closed-menu {
             box-sizing: border-box;
             padding: 0 16px;
-            height: $nav-height-mobile;
+            height: vars.$nav-height-mobile;
             width: 100%;
             display: flex;
             flex-direction: row;
@@ -199,6 +196,6 @@ nav {
 
     #nav-placeholder {
         width: #{vars.$full-width-with-scroll-bar};
-        height: $nav-height-mobile
+        height: vars.$nav-height-mobile
     }
 }
