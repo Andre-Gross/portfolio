@@ -1,6 +1,12 @@
 <app-section-title [title]="contentService.content().mainPage.myReferences.title" (click)="triggerScroll('references')"></app-section-title>
 
 
+<div id="mobileText">
+    <p id="mobileTitle">{{ contentService.content().mainPage.myReferences.mobileText.title }}</p>
+    <p id="mobileSubtitle">{{ contentService.content().mainPage.myReferences.mobileText.subtitle }}</p>
+</div>
+
+
 <div id="all-references" #scrollContainer (scroll)="onScroll(scrollContainer)">
     @for (reference of contentService.content().mainPage.myReferences.references; track reference.author; let i = $index) {
     <div class="reference-container">

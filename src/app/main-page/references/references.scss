@@ -13,6 +13,11 @@ $reference-container-min-width: calc(320px - 2 * vars.$padding-mobile-left-right
 }
 
 
+#mobileText {
+    display: none;
+}
+
+
 #all-references {
     position: relative;
     display: flex;
@@ -60,6 +65,26 @@ $reference-container-min-width: calc(320px - 2 * vars.$padding-mobile-left-right
         width: calc(100vw - vars.$scroll-bar-size);
         display: block;
     }
+
+
+    #mobileText {
+        padding: 0 vars.$padding-mobile-left-right 40px vars.$padding-mobile-left-right;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+
+        #mobileTitle {
+            font-size: 22px;
+            color: vars.$font-color-secondary ;
+        }
+
+
+        #mobileSubtitle {
+            font-size: 16px;
+        }
+    }
+
 
     #all-references {
         width: 100%;

@@ -280,6 +280,16 @@ export class ContentService {
           en: 'References',
           de: 'Referenzen',
         },
+        mobileText: {
+          title: {
+            en: 'Need a teamplayer?',
+            de: 'Brauchen Sie ein Teamspieler?'
+          },
+          subtitle: {
+            en: 'Here what my colleagues said about me',
+            de: 'Das sagen meine Kollegen über mich',
+          },
+        },
         references: [
           {
             text: {
@@ -466,6 +476,10 @@ export class ContentService {
         },
         myReferences: {
           title: t(d.mainPage.myReferences.title),
+          mobileText: {
+            title: t(d.mainPage.myReferences.mobileText.title),
+            subtitle: t(d.mainPage.myReferences.mobileText.subtitle),
+          },
           references: d.mainPage.myReferences.references.map((r) => ({
             ...r,
             text: t(r.text)
