@@ -56,9 +56,72 @@ h1 {
 }
 
 
-@media (max-width: 1200px) {
+#city {
+    display: none;
+}
+
+
+@media (max-width: #{vars.$breakpoint-tablet-portrait}) {
     :host {
-        min-width: auto;
-        max-width: vars.$full-width-with-scroll-bar;
+        position: unset;
+        padding: vars.$margin-top-section-mobile vars.$padding-mobile-left-right 0 vars.$padding-mobile-left-right;
+        box-sizing: border-box;
+        min-width: vars.$full-width-with-scroll-bar;
+        max-width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    app-top-bar {
+        display: none;
+    }
+
+
+    #hero-container {
+        width: 100%;
+        height: calc(100vh - vars.$nav-height-mobile);
+        display: flex;
+        flex-direction: column;
+        justify-content: unset;
+        align-items: center;
+    }
+
+
+    #hero {
+        z-index: -1;
+        position: unset;
+        width: 100%;
+        height: auto;
+        bottom: 0;
+    }
+
+
+    #title-section {
+        height: max-content;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 8px;
+    }
+
+
+    h1 {
+        font-size: 40px;
+        font-weight: 400;
+        margin-top: 0;
+    }
+
+
+    #subtitle {
+        font-size: 24px;
+        width: max-content;
+        font-weight: 400;
+        color: vars.$font-color-secondary;
+        -webkit-text-stroke: unset;
+    }
+
+
+    #city {
+        display: block;
     }
 }
