@@ -7,6 +7,7 @@ $reference-container-min-width: calc(320px - 2 * vars.$padding-mobile-left-right
 
 :host {
     margin-bottom: func.margin-top-full-value(76);
+    min-width: vars.$min-section-width;
     display: flex;
     align-items: end;
 }
