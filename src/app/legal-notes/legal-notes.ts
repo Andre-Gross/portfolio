@@ -1,28 +1,32 @@
 import { Component, ElementRef, viewChild } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { RouterLink } from '@angular/router';
 
 import { ContentService } from '../shared/services/content/content.service';
 import { ScrollService } from '../shared/services/scroll/scroll.service';
 
 import { TopBarComponent } from '../shared/components/top-bar/top-bar.component';
+import { ContactLinksComponent } from "../shared/components/contact-links/contact-links.component";
 import { SwitchArrowComponent } from '../shared/components/switch-arrow/switch-arrow.component';
 import { EndBlock } from '../shared/components/end-block/end-block';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-legal-notes',
   standalone: true,
   imports: [
+    RouterLink,
     TopBarComponent,
     SwitchArrowComponent,
-    EndBlock
-  ],
+    EndBlock,
+    ContactLinksComponent
+],
   templateUrl: './legal-notes.html',
   styleUrl: './legal-notes.scss'
 })
 export class LegalNotes {
 
   readonly start = viewChild('start', { read: ElementRef });
-  readonly secondColumn = viewChild('secondColumn', { read: ElementRef });
+  readonly legalsPanelTwo = viewChild('legalsPanelTwo', { read: ElementRef });
   private scrollSub!: Subscription;
 
 
@@ -33,7 +37,7 @@ export class LegalNotes {
     this.scrollSub = this.scrollService.scrollRequest$.subscribe(sectionId => {
       const sectionMap: Record<string, ElementRef | undefined> = {
         'start': this.start(),
-        'secondColumn': this.secondColumn(),
+        'legalsPanelTwo': this.legalsPanelTwo(),
 
       };
 
@@ -76,7 +80,7 @@ export class LegalNotes {
   triggerScroll(sectionId: string): void {
     const sectionMap: Record<string, ElementRef | undefined> = {
       'start': this.start(),
-      'secondColumn': this.secondColumn(),
+      'legalsPanelTwo': this.legalsPanelTwo(),
     };
 
     const target = sectionMap[sectionId];

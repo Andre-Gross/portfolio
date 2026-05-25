@@ -31,8 +31,75 @@ a {
 }
 
 
+.only-mobile {
+    display: none;
+}
+
+
+.desktop-full-width {
+    min-width: calc(100vw - #{vars.$navigation-width});
+}
+
+
+.h-100-per {
+    height: 100%;
+}
+
+
+.d-flex {
+    display: flex;
+}
+
+
+.flex-dir-column {
+    flex-direction: column;
+}
+
+
+.flex-dir-column-rev {
+    flex-direction: column-reverse;
+}
+
+
+.just-cont-space-bet {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.align-items-start {
+    align-items: start;
+}
+
+
+.pointer {
+    cursor: pointer;
+}
+
+
 @media (max-width: #{vars.$breakpoint-tablet-portrait}) {
     html {
         font-size: 16px;
+    }
+
+
+    .only-desktop {
+        display: none !important;
+    }
+
+
+
+    .only-mobile {
+        display: unset;
+    }
+
+
+    .desktop-full-width {
+        min-width: unset;
+    }
+
+
+    .mobile-flex-dir-column {
+        flex-direction: column;
     }
 }

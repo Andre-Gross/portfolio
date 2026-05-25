@@ -1,7 +1,12 @@
 <div class="scroll-container" (wheel)="onWheel($event)">
-    <app-top-bar></app-top-bar>
-    <div #start class="full-width">
-        <div class="d-flex">
+    <div routerLink="/" id="mobile-arrow-back-to-homepage" class="only-mobile padding-mobile-left-right pointer">
+        <a>
+            <img src="img/legals/arrow-back.svg" alt="arrow back">
+        </a>
+    </div>
+    <div #start id="legals-panel-one" class="desktop-full-width">
+        <app-top-bar></app-top-bar>
+        <div class="padding-mobile-left-right d-flex just-cont-space-bet mobile-flex-dir-column">
             <h2>{{ contentService.content().legalNotes.title }}</h2>
             <div class="content ma-le-56px">
                 <div id="imprint">
@@ -9,14 +14,15 @@
                     <ul>
                         <li>{{ contentService.content().general.name }}</li>
                         <li>{{ contentService.content().general.address.street }}</li>
-                        <li>{{ contentService.content().general.address.zip + ' ' + contentService.content().general.address.city }}</li>
+                        <li>{{ contentService.content().general.address.zip + ' ' +
+                            contentService.content().general.address.city }}</li>
                     </ul>
                     <p>{{ contentService.content().legalNotes.imprint.emailKey }}:
                         <a href="mailto: {{ contentService.content().general.email }}">{{
                             contentService.content().general.email}}</a>
                     </p>
                 </div>
-                <div class="main">
+                <div id="legal-text-part-one">
                     @for (paragraph of contentService.content().legalNotes.main.slice(0, 3); track paragraph.header)
                     {
                     <div>
@@ -27,19 +33,19 @@
                 </div>
             </div>
         </div>
-        <app-switch-arrow (click)="triggerScroll('secondColumn')"></app-switch-arrow>
+        <app-switch-arrow class="pointer" (click)="triggerScroll('legalsPanelTwo')"></app-switch-arrow>
     </div>
-    
-    <div #secondColumn class="full-width">
-        <div class="main">
-            <div class="content ma-le-317px">
+
+    <div #legalsPanelTwo id="legals-panel-two" class="just-cont-space-bet mobile-flex-dir-column desktop-full-width">
+        <div class="padding-mobile-left-right">
+            <div id="legal-text-part-two" class="content ma-le-317px">
                 @for (paragraph of contentService.content().legalNotes.main.slice(3); track paragraph.header) {
                 <div>
                     <h3>{{ paragraph.header }}</h3>
                     <p>{{ paragraph.text }}</p>
                 </div>
                 }
-                <div id="anyQuestions">
+                <div id="any-questions">
                     <p>
                         {{ contentService.content().legalNotes.anyQuestions.text }}
                         <a href="mailto: {{ contentService.content().general.email }}">{{
@@ -49,7 +55,7 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex">
+        <div class="d-flex mobile-flex-dir-column">
             <div id="call-to-action">
                 <div>
                     <a href="mailto: {{ contentService.content().general.email }}">
@@ -62,7 +68,7 @@
                     </a>
                 </div>
 
-                <img src="img/next-section-arrow.png" alt="arrow" (click)="triggerScroll('start')">
+                <img class="pointer" src="img/next-section-arrow.png" alt="arrow" (click)="triggerScroll('start')">
 
                 <div>
                     <a routerLink="/legal-notes">Legal notice</a>
@@ -70,6 +76,12 @@
                     <p>&copy; André Groß 2026</p>
                 </div>
             </div>
+
+            <div id="mobile-arrow-back-to-start" class="only-mobile">
+                <img class="pointer" src="img/next-section-arrow.png" alt="arrow" (click)="triggerScroll('start')">
+            </div>
+
+            <app-contact-links class="only-mobile"></app-contact-links>
             <app-end-block></app-end-block>
         </div>
     </div>

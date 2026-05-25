@@ -50,14 +50,9 @@ app-switch-arrow {
 }
 
 
-.d-flex {
-    display: flex;
-}
-
-
-.full-width {
+#legals-panel-one {
+    position: relative;
     max-height: fit-content;
-    min-width: calc(100vw - #{vars.$navigation-width});
     display: flex;
     justify-content: space-between;
 }
@@ -75,15 +70,14 @@ app-switch-arrow {
 
 .content {
     margin-top: func.margin-top-full-value(164);
-    max-height: 100%;
     max-width: 740px;
 
 
     #imprint {
-
         >ul {
             margin-top: 22px;
         }
+
 
         >p {
             margin-top: 22px;
@@ -94,6 +88,7 @@ app-switch-arrow {
 
 #call-to-action {
     margin: func.margin-top-full-value(164) 0 func.margin-top-full-value(164) 56px;
+    padding-right: 32px;
     width: 417px;
     display: flex;
     flex-direction: column;
@@ -134,4 +129,104 @@ app-switch-arrow {
         padding: 160px 0;
         transform: rotate(180deg);
     }
+}
+
+
+@media (max-width: #{vars.$breakpoint-tablet-portrait}) {
+    .ma-le-56px {
+        margin-left: 0;
+    }
+
+
+    .ma-le-317px {
+        margin-left: 0;
+    }
+
+
+    .padding-mobile-left-right {
+        box-sizing: border-box;
+        padding: 0 vars.$padding-mobile-left-right;
+    }
+
+
+    .scroll-container {
+        flex-direction: column;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+
+    #mobile-arrow-back-to-homepage {
+        padding-top: 28px;
+        padding-bottom: 28px;
+
+        
+        >img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+
+    .content {
+        margin-top: 0;
+    }
+
+
+    h2 {
+        margin: 0;
+        min-height: auto;
+
+        @include mix.emptyLetters(32px, 2px, vars.$font-color-title);
+
+        writing-mode: unset;
+        align-self: unset;
+    }
+
+
+    #any-questions {
+        padding: 16px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+
+    app-switch-arrow {
+        display: none;
+    }
+
+
+    #call-to-action {
+        display: none;
+    }
+
+
+    #mobile-arrow-back-to-start {
+        padding-top: 46px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        >img {
+            width: 45px;
+            transform: rotate(270deg);
+        }
+    }
+
+
+    app-contact-links {
+        padding: 46px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    app-end-block {
+        position: relative;
+        bottom: 0;
+        width: 100vw;
+    }
+
 }
