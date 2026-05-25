@@ -10,6 +10,7 @@ import { SectionTitleComponent } from '../../shared/components/section-title/sec
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ContactLinksComponent } from '../../shared/components/contact-links/contact-links.component';
 import { MobileSectionTitleComponent } from '../../shared/components/mobile-section-title/mobile-section-title.component';
+import { EndBlock } from '../../shared/components/end-block/end-block';
 
 
 @Component({
@@ -22,6 +23,7 @@ import { MobileSectionTitleComponent } from '../../shared/components/mobile-sect
         SectionTitleComponent,
         ContactFormComponent,
         ContactLinksComponent,
+        EndBlock,
         MobileSectionTitleComponent
     ],
     templateUrl: './contact.component.html',

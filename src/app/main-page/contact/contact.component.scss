@@ -4,14 +4,20 @@
 
 
 :host {
-    margin-top: func.margin-top-full-value(164);
+    min-width: calc(vars.$min-section-width + vars.$switch-arrow-container-width + vars.$section-title-width - 32px);
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
 }
 
 
 app-contact-links {
     display: none;
+}
+
+
+.margin-top-desktop-contact {
+    margin-top: func.margin-top-full-value(164);
 }
 
 
@@ -22,6 +28,7 @@ app-contact-links {
 
 #call-to-action {
     margin-left: 56px;
+    margin-bottom: func.margin-top-full-value(164);
     width: 417px;
     display: flex;
     flex-direction: column;
@@ -67,7 +74,7 @@ app-contact-links {
     .arrow-container {
         display: flex;
 
-        
+
         >img {
             padding: 160px 0;
             transform: rotate(180deg);
@@ -77,12 +84,15 @@ app-contact-links {
 }
 
 
+    app-end-block {
+        margin-left: 32px;
+    }
+
+
 @media (max-width: #{vars.$breakpoint-tablet-portrait}) {
 
     :host {
-        margin-top: vars.$margin-top-section-mobile;
-        padding: 0 vars.$padding-mobile-left-right;
-;
+        padding: vars.$margin-top-section-mobile vars.$padding-mobile-left-right 0 vars.$padding-mobile-left-right;
         flex-direction: column-reverse;
     }
 
@@ -92,6 +102,11 @@ app-contact-links {
         width: 100%;
         display: flex;
         justify-content: center;
+    }
+
+
+    .margin-top-desktop-contact {
+        margin-top: unset;
     }
 
 
@@ -114,12 +129,13 @@ app-contact-links {
     app-contact-form {
         margin-top: 32px;
     }
-    
+
+
     #call-to-action {
         margin: 0;
         width: 100%;
         align-items: start;
-        
+
 
         >div {
             p {
@@ -146,5 +162,10 @@ app-contact-links {
         .arrow-container {
             display: none;
         }
+    }
+
+
+    app-end-block {
+        margin-left: 0;
     }
 }

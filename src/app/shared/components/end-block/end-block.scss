@@ -3,9 +3,8 @@
 
 
 :host {
-    margin-left: 32px;
     min-height: 100%;
-    min-width: 100px;
+    min-width: vars.$desktop-end-block-width;
     background-color: vars.$bright-green;
 }
 

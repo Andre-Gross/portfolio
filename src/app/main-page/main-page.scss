@@ -52,6 +52,11 @@ app-main-page {
 }
 
 
+app-end-block {
+    display: none;
+}
+
+
 @media (max-width: #{vars.$breakpoint-tablet-portrait}) {
     :host {
         flex-direction: column;
@@ -64,5 +69,10 @@ app-main-page {
         overflow-y: scroll;
         overflow-x: hidden;
         width: 100%;
+    }
+
+
+    app-end-block {
+        display: unset;
     }
 }

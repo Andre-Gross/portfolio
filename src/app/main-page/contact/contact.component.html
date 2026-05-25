@@ -1,46 +1,56 @@
-<app-section-title [title]="contentService.content().mainPage.contact.title"
-    (click)="triggerScroll('contactSection')"></app-section-title>
-    
-
-<app-contact-links></app-contact-links>
+<div class="d-flex align-items-start margin-top-desktop-contact">
+    <app-section-title [title]="contentService.content().mainPage.contact.title"
+        (click)="triggerScroll('contactSection')"></app-section-title>
 
 
-<div class="arrow-container" (click)="triggerScroll('landingPage')">
-    <img src="img/next-section-arrow.png" alt="arrow">
+    <app-contact-links class="only-desktop"></app-contact-links>
+
+    <div class="d-flex flex-dir-column-rev">
+
+        <div class="arrow-container" (click)="triggerScroll('landingPage')">
+            <img src="img/next-section-arrow.png" alt="arrow">
+        </div>
+
+
+        <app-contact-form></app-contact-form>
+    </div>
 </div>
 
 
-<app-contact-form></app-contact-form>
+<div class="d-flex h-100-per">
+    <div id="call-to-action" class=" margin-top-desktop-contact">
+        <app-mobile-section-title [text]="contentService.content().mainPage.contact.title"></app-mobile-section-title>
+        <div>
+            <p id="first-line">{{ contentService.content().mainPage.contact.callToAction.firstLine }}</p>
+            <p>{{ contentService.content().mainPage.contact.callToAction.paragraph }}</p>
+            <a href="mailto: {{ contentService.content().general.email }}">
+                <div>
+                    <img src="img/contact/mail.svg" alt="email">
+                </div>
+                <p>E-mail: {{ contentService.content().general.email }}</p>
+            </a>
+            <a href="tel: {{ contentService.content().general.tel}}">
+                <div>
+                    <img src="img/contact/phone.svg" alt="phone">
+                </div>
+                <p>Tel: {{ contentService.content().general.tel }}</p>
+            </a>
+        </div>
 
 
-<div id="call-to-action">
-    <app-mobile-section-title [text]="contentService.content().mainPage.contact.title"></app-mobile-section-title>
-    <div>
-        <p id="first-line">{{ contentService.content().mainPage.contact.callToAction.firstLine }}</p>
-        <p>{{ contentService.content().mainPage.contact.callToAction.paragraph }}</p>
-        <a href="mailto: {{ contentService.content().general.email }}">
-            <div>
-                <img src="img/contact/mail.svg" alt="email">
-            </div>
-            <p>E-mail: {{ contentService.content().general.email }}</p>
-        </a>
-        <a href="tel: {{ contentService.content().general.tel}}">
-            <div>
-                <img src="img/contact/phone.svg" alt="phone">
-            </div>
-            <p>Tel: {{ contentService.content().general.tel }}</p>
-        </a>
+        <div class="arrow-container" (click)="triggerScroll('landingPage')">
+            <img src="img/next-section-arrow.png" alt="arrow">
+        </div>
+
+
+        <div id="links">
+            <a routerLink="/legal-notes">Legal notice</a>
+            <a routerLink="/privacy-policy">Privacy Policy</a>
+            <p>&copy; André Groß 2026</p>
+        </div>
     </div>
 
 
-    <div class="arrow-container" (click)="triggerScroll('landingPage')">
-        <img src="img/next-section-arrow.png" alt="arrow">
-    </div>
+    <app-end-block class="only-desktop"></app-end-block>
 
-
-    <div id="links">
-        <a routerLink="/legal-notes">Legal notice</a>
-        <a routerLink="/privacy-policy">Privacy Policy</a>
-        <p>&copy; André Groß 2026</p>
-    </div>
 </div>
