@@ -79,12 +79,12 @@ export class MainPage implements OnInit, OnDestroy, AfterViewInit {
 
 
     public scrollToElement(element: any) {
-        const target = element instanceof ElementRef ? element.nativeElement : element.nativeElement;
+        const target = element instanceof ElementRef ? element.nativeElement : element;
 
         target.scrollIntoView({
             behavior: 'smooth',
             block: 'start',
-            inline: 'nearest'
+            inline: 'start'
         });
     }
 
