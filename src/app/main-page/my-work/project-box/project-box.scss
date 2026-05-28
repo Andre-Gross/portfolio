@@ -87,27 +87,6 @@ h4 {
             display: flex;
             justify-content: center;
             gap: 28px;
-
-
-            button {
-                border-radius: 22px;
-                border-color: vars.$bright-green;
-                width: 106px;
-                height: 43px;
-                font-size: 14px;
-
-
-                &:first-child {
-                    background-color: transparent;
-                    color: vars.$bright-green;
-                }
-
-
-                &:last-child {
-                    background-color: vars.$font-color-button-transparent;
-                    color: vars.$black;
-                }
-            }
         }
     }
 }
@@ -198,36 +177,6 @@ h4 {
             height: auto;
             width: 100%;
             object-fit: cover;
-        }
-
-
-        #buttons {
-            padding-top: 16px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-
-
-            button {
-                border-radius: 22px;
-                border-color: vars.$bright-green;
-                width: 106px;
-                height: 43px;
-                font-size: 14px;
-
-
-                &:first-child {
-                    background-color: transparent;
-                    color: vars.$bright-green;
-                }
-
-
-                &:last-child {
-                    background-color: vars.$font-color-button-transparent;
-                    color: vars.$black;
-                }
-            }
         }
     }
 }

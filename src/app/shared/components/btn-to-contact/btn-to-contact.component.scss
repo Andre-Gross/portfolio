@@ -1,6 +1,0 @@
-@use '../../../../styles/mixins' as mix;
-
-
-button {
-    @include mix.btn-primary();
-}

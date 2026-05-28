@@ -5,7 +5,8 @@ $bright-green: #B5E93B;
 $bright-green-transparent: #B5E93B33;
 $red: #FD2E12;
 $white: #FFFFFF;
-$grey: #9E9D9D;
+$grey-btn-secondary-disabled: #9E9D9D;
+$dark-grey: #827B7B;
 $nav-grey: #4A4A4A;
 $black: #000000;
 
@@ -20,8 +21,21 @@ $font-family-secondary: $font-stack-roboto-mono;
 $font-color-primary: $white;
 $font-color-secondary: $bright-green;
 $font-color-title: $bright-green;
-$font-color-button-green: $black;
-$font-color-button-transparent: $bright-green;
+$font-color-button-primary-enabled: $black;
+$font-color-button-primary-disabled: $nav-grey;
+$font-color-button-secondary-enabled: $bright-green;
+$font-color-button-secondary-disabled: $grey-btn-secondary-disabled;
+$font-color-navigation: $nav-grey;
+
+$button-color-primary-disabled: $dark-grey;
+$button-color-primary-enabled: $bright-green;
+$button-color-secondary-disabled: transparent;
+$button-color-secondary-enabled: transparent;
+$button-color-secondary-hover: #B5E93B33;
+
+$border-color-button-enabled: $bright-green;
+$border-color-button-secondary-hover: #D3ED97;
+$border-color-button-secondary-disabled: $dark-grey;
 
 $padding-mobile-left-right: 16px;
 $margin-top-section-mobile: 86px;

@@ -77,6 +77,56 @@ a {
 }
 
 
+.btn-primary {
+    border-radius: 30px;
+    padding: 13px 30px;
+    width: max-content;
+    font-family: vars.$font-family-primary;
+
+
+    &:enabled {
+        background-color: vars.$button-color-primary-enabled;
+        color: vars.$font-color-button-primary-enabled;
+        border-color: vars.$border-color-button-enabled;
+    }
+
+
+    &:disabled {
+        background-color: vars.$button-color-primary-disabled;
+        color: vars.$font-color-button-primary-disabled;
+    }
+}
+
+
+.btn-secondary {
+    border-radius: 30px;
+    padding: 13px 30px;
+    width: max-content;
+    font-family: vars.$font-family-primary;
+
+
+    &:enabled {
+        background-color: vars.$button-color-secondary-enabled;
+        color: vars.$font-color-button-secondary-enabled;
+        border-color: vars.$border-color-button-enabled;
+    }
+
+
+    &:enabled:hover {
+        background-color: vars.$button-color-secondary-hover;
+        color: vars.$font-color-primary;
+        border-color: vars.$border-color-button-secondary-hover;
+    }
+
+
+    &:disabled {
+        background-color: vars.$font-color-button-secondary-disabled;
+        color: vars.$font-color-button-secondary-disabled;
+
+    }
+}
+
+
 @media (max-width: #{vars.$breakpoint-tablet-portrait}) {
     html {
         font-size: 16px;
