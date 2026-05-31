@@ -88,8 +88,8 @@ export class ContentService {
             skillName: 'REST-API',
           },
           {
-            imgPath: 'img/my-skill-set/supabase.svg',
-            skillName: 'Supabase',
+            imgPath: 'img/my-skill-set/firebase.svg',
+            skillName: 'Firebase',
           },
           {
             imgPath: 'img/my-skill-set/git.svg',
