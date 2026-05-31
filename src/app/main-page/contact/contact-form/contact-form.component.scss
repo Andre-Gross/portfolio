@@ -1,5 +1,6 @@
 @use '../../../../styles/variables' as vars;
 @use '../../../../styles/functions' as func;
+@use '../../../../styles/mixins' as mix;
 
 
 form {
@@ -38,6 +39,10 @@ form {
     textarea {
         padding: 30px;
         height: 255px;
+    }
+
+    input[type="checkbox"]:not(:checked):hover {
+        @include mix.drop-glow
     }
 
     #privacy-container {

@@ -1,5 +1,6 @@
 @use '_variables' as vars;
 @use '_fonts' as fonts;
+@use '_mixins' as mix;
 
 
 * {
@@ -73,6 +74,12 @@ a {
 
 
 .pointer {
+    cursor: pointer;
+}
+
+
+.glow:hover {
+    @include mix.drop-glow();
     cursor: pointer;
 }
 
