@@ -75,6 +75,10 @@ nav {
                 cursor: pointer;
                 color: vars.$font-color-navigation;
                 font-size: 30px;
+
+                &:hover {
+                    color: vars.$white;
+                }
             }
         }
     }
