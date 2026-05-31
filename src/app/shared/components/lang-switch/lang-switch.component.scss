@@ -27,10 +27,10 @@ $font-color: #FFFDFD;
 
     &.dark {
         >p {
-            color: vars.$nav-grey;
+            color: vars.$font-color-navigation;
 
             &:last-child {
-                border-left: 1px solid vars.$nav-grey;
+                border-left: 1px solid vars.$font-color-navigation;
             }
         }
     }

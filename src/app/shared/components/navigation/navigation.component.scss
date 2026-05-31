@@ -3,7 +3,7 @@
 
 :host {
     a {
-        color: vars.$nav-grey;
+        color: vars.$font-color-navigation;
     }
 }
 
@@ -53,7 +53,7 @@ nav {
                 font-size: 40px;
                 letter-spacing: -0.2rem;
                 color: vars.$font-color-title;
-                -webkit-text-stroke: 2px vars.$nav-grey;
+                -webkit-text-stroke: 2px vars.$font-color-navigation;
             }
         }
 
@@ -73,7 +73,7 @@ nav {
 
             >a {
                 cursor: pointer;
-                color: vars.$nav-grey;
+                color: vars.$font-color-navigation;
                 font-size: 30px;
             }
         }
@@ -141,7 +141,7 @@ nav {
                     font-size: 40px;
                     letter-spacing: -0.2rem;
                     color: vars.$font-color-title;
-                    -webkit-text-stroke: 2px vars.$nav-grey;
+                    -webkit-text-stroke: 2px vars.$font-color-navigation;
                 }
             }
         }
