@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, OnDestroy, AfterViewInit, inject, viewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, OnDestroy, AfterViewInit, inject, viewChild, HostListener } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription, take } from 'rxjs';
 
@@ -28,12 +28,14 @@ import { EndBlock } from '../shared/components/end-block/end-block';
     styleUrl: './main-page.scss',
 })
 export class MainPage implements OnInit, OnDestroy, AfterViewInit {
+    readonly scrollContainer = viewChild('scrollContainer', { read: ElementRef });
     readonly landingPage = viewChild('landingPage', { read: ElementRef });
     readonly whyMe = viewChild('whyMe', { read: ElementRef });
     readonly mySkills = viewChild('mySkills', { read: ElementRef });
     readonly myWork = viewChild('myWork', { read: ElementRef });
     readonly references = viewChild('references', { read: ElementRef });
     readonly contactSection = viewChild('contactSection', { read: ElementRef });
+    readonly endBlock = viewChild('endBlock', { read: ElementRef });
 
     private route = inject(ActivatedRoute);
     private scrollService = inject(ScrollService);
@@ -63,6 +65,8 @@ export class MainPage implements OnInit, OnDestroy, AfterViewInit {
 
 
     ngAfterViewInit() {
+        setTimeout(() => this.updateActiveSection(), 400);
+
         this.route.fragment.pipe(take(1)).subscribe((fragment) => {
             if (fragment) {
                 setTimeout(() => {
@@ -77,6 +81,66 @@ export class MainPage implements OnInit, OnDestroy, AfterViewInit {
         this.scrollSub?.unsubscribe();
     }
 
+
+    onScroll(): void {
+        this.updateActiveSection();
+    }
+
+
+    @HostListener('window:resize')
+    onResize(): void {
+        this.updateActiveSection();
+    }
+
+
+    private updateActiveSection(): void {
+        const container = this.scrollContainer()?.nativeElement;
+        if (!container) return;
+
+        if (window.innerWidth <= 799) {
+            this.scrollService.activeSection.set('');
+            return;
+        } else {
+            const containerRect = container.getBoundingClientRect();
+
+            const sections = [
+                { id: 'landingPage', ref: this.landingPage() },
+                { id: 'whyMe', ref: this.whyMe() },
+                { id: 'mySkills', ref: this.mySkills() },
+                { id: 'myWork', ref: this.myWork() },
+                { id: 'references', ref: this.references() },
+                { id: 'contactSection', ref: this.contactSection() },
+                { id: 'endBlock', ref: this.endBlock() }
+            ];
+
+            const linkedSectionIds = ['whyMe', 'mySkills', 'myWork', 'contactSection'];
+
+            const visibleSections = sections.filter(s => {
+                if (!s.ref) return false;
+                const rect = s.ref.nativeElement.getBoundingClientRect();
+                return rect.right > containerRect.left && rect.left < containerRect.right;
+            });
+
+            const visibleLinkedSections = visibleSections.filter(s => linkedSectionIds.includes(s.id));
+
+            const sectionWithVisibleBeginning = visibleLinkedSections.find(s => {
+                const rect = s.ref!.nativeElement.getBoundingClientRect();
+                return rect.left >= containerRect.left - 1 && rect.left < containerRect.right;
+            });
+
+            if (visibleLinkedSections.length === 0) {
+                this.scrollService.activeSection.set('');
+                return;
+            } else if (visibleLinkedSections.length === 1) {
+                this.scrollService.activeSection.set(visibleLinkedSections[0].id);
+                return;
+            } else if (sectionWithVisibleBeginning) {
+                this.scrollService.activeSection.set(sectionWithVisibleBeginning.id);
+            } else {
+                this.scrollService.activeSection.set(visibleLinkedSections[0].id);
+            }
+        }
+    }
 
     public scrollToElement(element: any) {
         const target = element instanceof ElementRef ? element.nativeElement : element;

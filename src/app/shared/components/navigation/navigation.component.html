@@ -6,10 +6,14 @@
         </a>
 
         <div id="desktop-links">
-            <a (click)="triggerScroll('whyMe')">{{contentService.content().mainPage.whyMe.title}}</a>
-            <a (click)="triggerScroll('mySkills')">{{contentService.content().mainPage.mySkillSet.title}}</a>
-            <a (click)="triggerScroll('myWork')">{{contentService.content().mainPage.myWork.title}}</a>
-            <a (click)="triggerScroll('contactSection')">{{contentService.content().mainPage.contact.title}}</a>
+            <a (click)="triggerScroll('whyMe')"
+                [class.active]="scrollService.activeSection() === 'whyMe'">{{contentService.content().mainPage.whyMe.title}}</a>
+            <a (click)="triggerScroll('mySkills')"
+                [class.active]="scrollService.activeSection() === 'mySkills'">{{contentService.content().mainPage.mySkillSet.title}}</a>
+            <a (click)="triggerScroll('myWork')"
+                [class.active]="scrollService.activeSection() === 'myWork'">{{contentService.content().mainPage.myWork.title}}</a>
+            <a (click)="triggerScroll('contactSection')"
+                [class.active]="scrollService.activeSection() === 'contactSection'">{{contentService.content().mainPage.contact.title}}</a>
         </div>
 
         <button id="menu-toggle" (click)="setMenu(true)">
@@ -28,9 +32,11 @@
 
     <div id="mobile-links">
         <a (click)="triggerScroll('whyMe'); setMenu(false)">{{contentService.content().mainPage.whyMe.title}}</a>
-        <a (click)="triggerScroll('mySkills'); setMenu(false)">{{contentService.content().mainPage.mySkillSet.title}}</a>
+        <a
+            (click)="triggerScroll('mySkills'); setMenu(false)">{{contentService.content().mainPage.mySkillSet.title}}</a>
         <a (click)="triggerScroll('myWork'); setMenu(false)">{{contentService.content().mainPage.myWork.title}}</a>
-        <a (click)="triggerScroll('contactSection'); setMenu(false)">{{contentService.content().mainPage.contact.title}}</a>
+        <a
+            (click)="triggerScroll('contactSection'); setMenu(false)">{{contentService.content().mainPage.contact.title}}</a>
         <app-lang-switch [theme]="'dark'"></app-lang-switch>
     </div>
 </div>

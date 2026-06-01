@@ -1,4 +1,4 @@
-import { Injectable, inject } from '@angular/core';
+import { Injectable, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
 
@@ -9,6 +9,8 @@ export class ScrollService {
   private router = inject(Router); // Modern via inject()
   private scrollRequestSource = new Subject<string>();
   scrollRequest$ = this.scrollRequestSource.asObservable();
+
+  public activeSection = signal<string>('');
 
   requestScroll(sectionId: string): void {
     if (this.router.url === '/' || this.router.url.startsWith('/#')) {

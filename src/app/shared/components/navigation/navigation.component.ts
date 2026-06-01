@@ -19,7 +19,7 @@ import { LangSwitchComponent } from '../lang-switch/lang-switch.component';
 export class NavigationComponent {
 
   isMenuOpen = signal(false);
-  private scrollService = inject(ScrollService);
+  public scrollService = inject(ScrollService);
   public contentService = inject(ContentService);
 
 
