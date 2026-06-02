@@ -18,16 +18,29 @@
         </textarea>
     </div>
 
-    <div id="privacy-container">
-        <input type="checkbox" id="privacy-checkbox" name="privacy-checkbox" [(ngModel)]="contactData.privacyAccepted"
-            required>
+    <div class="privacy-wrapper">
+        <div id="privacy-container">
+            <input type="checkbox" id="privacy-checkbox" name="privacy-checkbox" 
+                [(ngModel)]="contactData.privacyAccepted" 
+                #privacy="ngModel" 
+                [class.is-invalid]="privacy.invalid && privacy.dirty"
+                required>
 
-        <label id="privacy-container-text" for="privacy-checkbox">
-            {{ contentService.content().mainPage.contact.form.privacy.text1 }}
-            <a href="/privacy-policy" target="_blank">{{ contentService.content().mainPage.contact.form.privacy.link
-                }}</a>
-            {{ contentService.content().mainPage.contact.form.privacy.text2 }}
-        </label>
+            <label id="privacy-container-text" for="privacy-checkbox">
+                <span class="custom-checkbox"></span>
+                <span class="text-content">
+                    {{ contentService.content().mainPage.contact.form.privacy.text1 }}
+                    <a href="/privacy-policy" target="_blank">{{ contentService.content().mainPage.contact.form.privacy.link }}</a>
+                    {{ contentService.content().mainPage.contact.form.privacy.text2 }}
+                </span>
+            </label>
+        </div>
+
+        @if (privacy.invalid && privacy.dirty) {
+            <div class="privacy-error">
+                {{ contentService.content().mainPage.contact.form.privacy.error }}
+            </div>
+        }
     </div>
 
     <button class="btn-primary" type="submit" [disabled]="!contactForm.valid">

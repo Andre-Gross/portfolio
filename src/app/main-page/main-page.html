@@ -1,7 +1,9 @@
-<div #scrollContainer class="scroll-container" (wheel)="onWheel($event)" (scroll)="onScroll()"> <app-landing-page #landingPage></app-landing-page>
+<div #scrollContainer class="scroll-container" (wheel)="onWheel($event)" (scroll)="onScroll()">
+    <app-landing-page #landingPage></app-landing-page>
     <app-why-me #whyMe></app-why-me>
     <app-my-skill-set #mySkills></app-my-skill-set>
     <app-my-work #myWork></app-my-work>
     <app-references #references></app-references>
     <app-contact #contactSection></app-contact>
-    <app-end-block #endBlock></app-end-block> </div>
+    <app-end-block #endBlock></app-end-block>
+</div>

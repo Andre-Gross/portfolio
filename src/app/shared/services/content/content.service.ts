@@ -340,6 +340,10 @@ export class ContentService {
               en: ' and agree to the processing of my data as outlined.',
               de: ' gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.'
             },
+            error: {
+              en: 'Please accept the privacy policy.',
+              de: 'Bitte akzeptieren sie die Datenschutzerklärung'
+            }
           },
           submit: {
             en: 'Send',
@@ -499,6 +503,7 @@ export class ContentService {
               text1: t(d.mainPage.contact.form.privacy.text1),
               link: t(d.mainPage.contact.form.privacy.link),
               text2: t(d.mainPage.contact.form.privacy.text2),
+              error: t(d.mainPage.contact.form.privacy.error),
             },
             submit: t(d.mainPage.contact.form.submit),
           }

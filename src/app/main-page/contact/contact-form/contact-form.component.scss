@@ -2,7 +2,6 @@
 @use '../../../../styles/functions' as func;
 @use '../../../../styles/mixins' as mix;
 
-
 form {
     width: 456px;
     display: flex;
@@ -41,36 +40,91 @@ form {
         height: 255px;
     }
 
-    input[type="checkbox"]:not(:checked):hover {
-        @include mix.drop-glow
-    }
-
-    #privacy-container {
+    .privacy-wrapper {
         display: flex;
-        justify-content: center;
-        align-items: center;
-
+        flex-direction: column;
         margin-top: 16px;
     }
 
+#privacy-container {
+    display: flex;
+    align-items: center;
+
+    input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        margin: 0;
+    }
+
+    input[type="checkbox"] + label .custom-checkbox {
+        background-image: url('../../../../../public/img/contact/check-box-empty.svg');
+    }
+
+    input[type="checkbox"]:not(:checked):not(.is-invalid) + label:hover .custom-checkbox {
+        background-image: url('../../../../../public/img/contact/check-box-empty.svg');
+        @include mix.drop-glow(0, 0, 15px, vars.$bright-green); 
+    }
+
+    input[type="checkbox"]:checked + label .custom-checkbox {
+        background-image: url('../../../../../public/img/contact/check-box-checked.svg');
+        filter: none;
+    }
+
+    input[type="checkbox"]:checked:not(.is-invalid) + label:hover .custom-checkbox {
+        background-image: url('../../../../../public/img/contact/check-box-click.svg');
+        filter: none;
+    }
+
+    input[type="checkbox"]:active + label .custom-checkbox {
+        background-image: url('../../../../../public/img/contact/check-box-click.svg');
+    }
+
+    input[type="checkbox"].is-invalid + label .custom-checkbox {
+        background-image: url('../../../../../public/img/contact/check-box-error.svg');
+        filter: none;
+    }
+}
+
     #privacy-container-text {
-        margin-left: 16px;
-        display: inline-block !important;
+        display: flex !important; 
+        align-items: center;
+        gap: 16px; 
         color: vars.$bright-green;
         font-size: 14px;
         line-height: 120%;
+        cursor: pointer;
 
         a {
             color: vars.$white;
             font-size: 14px;
         }
+
+        .custom-checkbox {
+            display: block;
+            width: 18px;
+            height: 18px;
+            min-width: 18px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: background-image 0.2s ease-in-out;
+        }
     }
+
+    .privacy-error {
+        margin-top: 8px;
+        margin-left: 40px; // Rückt den Text ein, passend zur 24px Checkbox + 16px gap
+        color: vars.$font-color-error;
+        font-size: 14px;
+    }
+    // --- NEU & ANGEPASST ENDE ---
 
     button {
         align-self: flex-end;
     }
 }
-
 
 @media (max-width: #{vars.$breakpoint-tablet-portrait}) {
     form {

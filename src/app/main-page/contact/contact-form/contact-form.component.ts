@@ -5,7 +5,6 @@ import { FormsModule, NgForm } from '@angular/forms';
 
 import { ContentService } from '../../../shared/services/content/content.service';
 
-
 @Component({
   selector: 'app-contact-form',
   imports: [
@@ -15,8 +14,6 @@ import { ContentService } from '../../../shared/services/content/content.service
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss',
 })
-
-
 export class ContactFormComponent {
 
   http = inject(HttpClient);
@@ -40,17 +37,19 @@ export class ContactFormComponent {
     },
   };
 
-
   constructor(public contentService: ContentService) { }
-
 
   onSubmit(contactForm: NgForm) {
     if (contactForm.submitted && contactForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
-            contactForm.resetForm();
+            contactForm.resetForm({
+              name: '',
+              email: '',
+              message: '',
+              privacyAccepted: false
+            });
           },
           error: (error) => {
             console.error(error);
@@ -59,7 +58,13 @@ export class ContactFormComponent {
         });
     } else if (contactForm.submitted && contactForm.form.valid && this.mailTest) {
       console.log("Mailtest sucessfully")
-      contactForm.resetForm();
+      
+      contactForm.resetForm({
+        name: '',
+        email: '',
+        message: '',
+        privacyAccepted: false
+      });
     }
   }
 }
