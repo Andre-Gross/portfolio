@@ -115,11 +115,10 @@ form {
 
     .privacy-error {
         margin-top: 8px;
-        margin-left: 40px; // Rückt den Text ein, passend zur 24px Checkbox + 16px gap
+        margin-left: 40px;
         color: vars.$font-color-error;
         font-size: 14px;
     }
-    // --- NEU & ANGEPASST ENDE ---
 
     button {
         align-self: flex-end;
