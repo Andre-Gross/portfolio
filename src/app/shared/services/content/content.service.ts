@@ -316,16 +316,34 @@ export class ContentService {
         },
         form: {
           name: {
-            en: 'Your name',
-            de: 'Ihr Name',
+            placeholder: {
+              en: 'Your name',
+              de: 'Ihr Name',
+            },
+            error: {
+              en: 'Your name is required',
+              de: 'Bitte geben Sie Ihren Namen ein.'
+            }
           },
           email: {
-            en: 'Your e-mail',
-            de: 'Ihre E-Mail-Adresse',
+            placeholder: {
+              en: 'Your e-mail',
+              de: 'Ihre E-Mail-Adresse',
+            },
+            error: {
+              en: 'Your e-mail is required',
+              de: 'Bitte geben Sie ihre E-Mail-Adresse ein.'
+            }
           },
           message: {
-            en: 'Your message',
-            de: 'Ihre Nachricht',
+            placeholder: {
+              en: 'Your message',
+              de: 'Ihre Nachricht',
+            },
+            error: {
+              en: 'Your message is required',
+              de: 'Bitte tragen Sie eine Nachricht ein.'
+            }
           },
           privacy: {
             text1: {
@@ -496,9 +514,18 @@ export class ContentService {
             paragraph: t(d.mainPage.contact.callToAction.paragraph)
           },
           form: {
-            name: t(d.mainPage.contact.form.name),
-            email: t(d.mainPage.contact.form.email),
-            message: t(d.mainPage.contact.form.message),
+            name: {
+              placeholder: t(d.mainPage.contact.form.name.placeholder),
+              error: t(d.mainPage.contact.form.name.error)
+            },
+            email: {
+              placeholder: t(d.mainPage.contact.form.email.placeholder),
+              error: t(d.mainPage.contact.form.email.error)
+            },
+            message: {
+              placeholder: t(d.mainPage.contact.form.message.placeholder),
+              error: t(d.mainPage.contact.form.message.error)
+            },
             privacy: {
               text1: t(d.mainPage.contact.form.privacy.text1),
               link: t(d.mainPage.contact.form.privacy.link),
