@@ -1,45 +1,50 @@
 <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
     <div>
         <label for="name">{{ contentService.content().mainPage.contact.form.name }}</label>
-        <input type="text" id="name" name="name" [placeholder]="contentService.content().mainPage.contact.form.name"
+        <input type="text" id="name" name="name" #nameField="ngModel"
+            [class.is-invalid]="nameField.invalid && nameField.touched"
+            [placeholder]="(nameField.invalid && nameField.touched) ? contentService.content().mainPage.contact.form.name.error : contentService.content().mainPage.contact.form.name.placeholder"
             [(ngModel)]="contactData.name" required>
     </div>
 
     <div>
         <label for="email">{{ contentService.content().mainPage.contact.form.email }}</label>
-        <input type="email" id="email" name="email" [placeholder]="contentService.content().mainPage.contact.form.email"
+        <input type="email" id="email" name="email" #emailField="ngModel"
+            [class.is-invalid]="emailField.invalid && emailField.touched"
+            [placeholder]="(emailField.invalid && emailField.touched) ? contentService.content().mainPage.contact.form.email.error : contentService.content().mainPage.contact.form.email.placeholder"
             [(ngModel)]="contactData.email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
     </div>
 
     <div>
         <label for="message">{{ contentService.content().mainPage.contact.form.message }}</label>
-        <textarea id="message" name="message" [placeholder]="contentService.content().mainPage.contact.form.message"
+        <textarea id="message" name="message" #messageField="ngModel"
+            [class.is-invalid]="messageField.invalid && messageField.touched"
+            [placeholder]="(messageField.invalid && messageField.touched) ? contentService.content().mainPage.contact.form.message.error : contentService.content().mainPage.contact.form.message.placeholder"
             [(ngModel)]="contactData.message" required>
         </textarea>
     </div>
 
     <div class="privacy-wrapper">
         <div id="privacy-container">
-            <input type="checkbox" id="privacy-checkbox" name="privacy-checkbox" 
-                [(ngModel)]="contactData.privacyAccepted" 
-                #privacy="ngModel" 
-                [class.is-invalid]="privacy.invalid && privacy.dirty"
-                required>
+            <input type="checkbox" id="privacy-checkbox" name="privacy-checkbox"
+                [(ngModel)]="contactData.privacyAccepted" #privacy="ngModel"
+                [class.is-invalid]="privacy.invalid && privacy.touched" required>
 
             <label id="privacy-container-text" for="privacy-checkbox">
                 <span class="custom-checkbox"></span>
                 <span class="text-content">
                     {{ contentService.content().mainPage.contact.form.privacy.text1 }}
-                    <a href="/privacy-policy" target="_blank">{{ contentService.content().mainPage.contact.form.privacy.link }}</a>
+                    <a href="/privacy-policy" target="_blank">{{
+                        contentService.content().mainPage.contact.form.privacy.link }}</a>
                     {{ contentService.content().mainPage.contact.form.privacy.text2 }}
                 </span>
             </label>
         </div>
 
-        @if (privacy.invalid && privacy.dirty) {
-            <div class="privacy-error">
-                {{ contentService.content().mainPage.contact.form.privacy.error }}
-            </div>
+        @if (privacy.invalid && privacy.touched) {
+        <div class="privacy-error">
+            {{ contentService.content().mainPage.contact.form.privacy.error }}
+        </div>
         }
     </div>
 
