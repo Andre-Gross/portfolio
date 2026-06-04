@@ -1,13 +1,12 @@
 <p>{{ contentService.content().mainPage.whyMe.aboutMe }}</p>
 
 <div>
-    <h3>{{ contentService.content().mainPage.whyMe.iAm }}<span>:</span>
-    </h3>
+    <h3>{{ contentService.content().mainPage.whyMe.iAm }}<span>:</span></h3>
     
     <div id="argument-block-container">
         @for (item of contentService.content().mainPage.whyMe.singleArguments | keyvalue; track item.key) {
         <div class="argument-block">
-            <img src="img/why-me/{{item.key}}.svg" alt="">
+            <app-dynamic-svg [key]="item.key"></app-dynamic-svg>
             
             <p>{{ item.value }}</p>
         </div>

@@ -1,16 +1,13 @@
 @use '../../../../styles/_variables' as vars;
 @use "../../../../styles/_functions" as func;
 
-
 :host {
     width: 100%;
 }
 
-
 p {
     color: vars.$font-color-primary;
 }
-
 
 h3 {
     margin-top: func.margin-top-full-value(53);
@@ -20,32 +17,40 @@ h3 {
     font-size: 48px;
     line-height: 120%;
 
-
     >span {
         display: none;
     }
 }
 
-
 #argument-block-container {
-    padding:
-        func.margin-top-full-value(18) func.margin-top-full-value(58) 0 func.margin-top-full-value(58);
+    padding: func.margin-top-full-value(18) func.margin-top-full-value(58) 0 func.margin-top-full-value(58);
     display: flex;
     justify-content: space-between;
 }
-
 
 .argument-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 
+    ::ng-deep svg {
+        height: func.margin-top-full-value(40); // Basis-Höhe für Desktop
+        width: auto;
 
-    img {
-        height: func.margin-top-full-value(40);
+        .state-hover {
+            display: none;
+        }
+
+        .state-default {
+            display: block;
+        }
+
+        .base {
+            display: block;
+        }
     }
-
 
     p {
         margin-top: func.margin-top-full-value(17);
@@ -55,9 +60,26 @@ h3 {
         line-height: 120%;
         letter-spacing: 0%;
         text-align: center;
+        color: vars.$font-color-primary;
+        transition: color 0.2s ease-in-out;
+    }
+
+    &:hover {
+        p {
+            color: vars.$font-color-secondary;
+        }
+
+        ::ng-deep svg {
+            .state-hover {
+                display: block !important;
+            }
+
+            .state-default {
+                display: none !important;
+            }
+        }
     }
 }
-
 
 @media (max-width: #{vars.$breakpoint-tablet-portrait}) {
     h3 {
@@ -65,7 +87,6 @@ h3 {
         width: 100%;
         text-align: center;
         font-size: 32px;
-
 
         >span {
             display: inline;
@@ -77,16 +98,17 @@ h3 {
         }
     }
 
-
     #argument-block-container {
         padding: 32px 0;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         gap: 32px;
+    }
 
-        >.argument-block {
-            
+    .argument-block {
+        ::ng-deep svg {
+            height: 50px;
         }
     }
 }
