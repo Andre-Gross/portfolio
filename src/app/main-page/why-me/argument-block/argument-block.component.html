@@ -6,7 +6,7 @@
     <div id="argument-block-container">
         @for (item of contentService.content().mainPage.whyMe.singleArguments | keyvalue; track item.key) {
         <div class="argument-block">
-            <app-dynamic-svg [key]="item.key"></app-dynamic-svg>
+            <app-dynamic-svg [imgName]="item.key" [folder]="'why-me'"></app-dynamic-svg>
             
             <p>{{ item.value }}</p>
         </div>

@@ -12,14 +12,15 @@ export class DynamicSvgComponent {
   private http = inject(HttpClient);
   private sanitizer = inject(DomSanitizer);
 
-  key = input.required<string>();
+  imgName = input.required<string>();
+  folder = input.required<string>();
   svgContent = signal<SafeHtml>('');
 
   constructor() {
     effect(() => {
-      const currentKey = this.key();
+      const currentKey = this.imgName();
       if (currentKey) {
-        this.http.get(`img/why-me/${currentKey}.svg`, { responseType: 'text' })
+        this.http.get(`img/${this.folder()}/${currentKey}.svg`, { responseType: 'text' })
           .subscribe({
             next: (rawSvg) => {
               this.svgContent.set(this.sanitizer.bypassSecurityTrustHtml(rawSvg));

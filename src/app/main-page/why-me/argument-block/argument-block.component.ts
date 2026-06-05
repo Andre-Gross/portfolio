@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { KeyValuePipe } from '@angular/common';
 import { ContentService } from '../../../shared/services/content/content.service';
-import { DynamicSvgComponent } from './dynamic-svg.component';
+import { DynamicSvgComponent } from '../../../shared/components/dynamic-svg/dynamic-svg.component';
 
 @Component({
   selector: 'app-argument-block',
