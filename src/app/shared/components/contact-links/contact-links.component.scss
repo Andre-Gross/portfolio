@@ -1,9 +1,23 @@
+@use '../../../../styles/variables' as vars;
+
+
 #links {
     display: flex;
     gap: 16px;
 
     >a {
         display: flex;
-        align-items: center;
+        align-items: center;            
+        
+        &:hover {
+                ::ng-deep svg {
+
+                    path,
+                    rect,
+                    ellipse {
+                        fill: vars.$bright-green;
+                    }
+                }
+            }
     }
 }
