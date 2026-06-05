@@ -5,8 +5,24 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 @Component({
   selector: 'app-dynamic-svg',
   standalone: true,
-  template: `<div [innerHTML]="svgContent()"></div>`,
-  styles: [`:host { display: flex; justify-content: center; width: 100%; }`]
+  template: `<div class="svg-wrapper" [innerHTML]="svgContent()"></div>`,
+  styles: [`
+    :host { 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      height: min-content; 
+      width: 100%; 
+    }
+
+    .svg-wrapper {
+     display: flex;
+    }
+
+    :host ::ng-deep svg {
+     display: block;
+    }
+  `]
 })
 export class DynamicSvgComponent {
   private http = inject(HttpClient);
