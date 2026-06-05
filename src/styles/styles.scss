@@ -84,6 +84,12 @@ a {
 }
 
 
+.low-glow:hover {
+    @include mix.drop-low-glow(10px);
+    cursor: pointer;
+}
+
+
 .btn-primary {
     border-radius: 30px;
     padding: 13px 30px;

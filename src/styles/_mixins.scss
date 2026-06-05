@@ -9,8 +9,12 @@
 }
 
 
-@mixin drop-glow($horizontal: 0, $vertikal: 0, $blur: 20px, $color: vars.$bright-green) {
+@mixin drop-glow($blur: 20px, $horizontal: 0, $vertikal: 0, $color: vars.$bright-green) {
     filter: drop-shadow($horizontal $vertikal $blur $color) drop-shadow($horizontal $vertikal (
             $blur * 0.5) $color
     );
+}
+
+@mixin drop-low-glow($blur: 20px, $horizontal: 0, $vertikal: 0, $color: vars.$bright-green) {
+    filter: drop-shadow($horizontal $vertikal $blur $color);
 }
