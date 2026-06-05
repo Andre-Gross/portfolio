@@ -24,14 +24,14 @@
             <p id="first-line">{{ contentService.content().mainPage.contact.callToAction.firstLine }}</p>
             <p>{{ contentService.content().mainPage.contact.callToAction.paragraph }}</p>
             <a href="mailto: {{ contentService.content().general.email }}">
-                <div>
-                    <img src="img/contact/mail.svg" alt="email">
+                <div class="svg-wrapper">
+                    <app-dynamic-svg [imgName]="'mail'" [folder]="'contact'"></app-dynamic-svg>
                 </div>
                 <p>E-mail: {{ contentService.content().general.email }}</p>
             </a>
             <a href="tel: {{ contentService.content().general.tel}}">
-                <div>
-                    <img src="img/contact/phone.svg" alt="phone">
+                <div class="svg-wrapper">
+                    <app-dynamic-svg [imgName]="'phone'" [folder]="'contact'"></app-dynamic-svg>
                 </div>
                 <p>Tel: {{ contentService.content().general.tel }}</p>
             </a>

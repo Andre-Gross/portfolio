@@ -58,15 +58,43 @@ app-contact-links {
             align-items: center;
             color: vars.$font-color-primary;
 
-            >div {
+            .svg-wrapper {
                 display: flex;
+                justify-content: center;
                 align-items: center;
-                justify-content: start;
+                height: 30px;
             }
 
             p {
                 margin-top: 0;
                 margin-left: 8px;
+            }
+
+            &:hover {
+                color: vars.$font-color-link-hover;
+
+                ::ng-deep svg {
+
+                    path,
+                    rect,
+                    ellipse {
+                        fill: vars.$font-color-link-hover;
+                    }
+                }
+            }
+
+            &:active {
+                color: vars.$font-color-secondary;
+                text-decoration: underline;
+
+                ::ng-deep svg {
+
+                    path,
+                    rect,
+                    ellipse {
+                        fill: vars.$font-color-secondary;
+                    }
+                }
             }
         }
     }
@@ -84,9 +112,9 @@ app-contact-links {
 }
 
 
-    app-end-block {
-        margin-left: 32px;
-    }
+app-end-block {
+    margin-left: 32px;
+}
 
 
 @media (max-width: #{vars.$breakpoint-tablet-portrait}) {

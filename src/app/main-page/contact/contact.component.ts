@@ -11,6 +11,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ContactLinksComponent } from '../../shared/components/contact-links/contact-links.component';
 import { MobileSectionTitleComponent } from '../../shared/components/mobile-section-title/mobile-section-title.component';
 import { EndBlock } from '../../shared/components/end-block/end-block';
+import { DynamicSvgComponent } from '../../shared/components/dynamic-svg/dynamic-svg.component';
 
 
 @Component({
@@ -24,7 +25,8 @@ import { EndBlock } from '../../shared/components/end-block/end-block';
         ContactFormComponent,
         ContactLinksComponent,
         EndBlock,
-        MobileSectionTitleComponent
+        MobileSectionTitleComponent,
+        DynamicSvgComponent
     ],
     templateUrl: './contact.component.html',
     styleUrl: './contact.component.scss',
