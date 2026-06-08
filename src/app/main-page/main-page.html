@@ -1,4 +1,4 @@
-<div #scrollContainer class="scroll-container" (wheel)="onWheel($event)" (scroll)="onScroll()">
+<div #scrollContainer class="scroll-container" (wheel)="onWheel($event)" (scroll)="onScroll()" (scrollend)="onScrollEnd()">
     <app-landing-page #landingPage></app-landing-page>
     <app-why-me #whyMe></app-why-me>
     <app-my-skill-set #mySkills></app-my-skill-set>

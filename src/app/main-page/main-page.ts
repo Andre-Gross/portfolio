@@ -153,10 +153,45 @@ export class MainPage implements OnInit, OnDestroy, AfterViewInit {
     }
 
 
+    onScrollEnd(): void {
+        if (window.innerWidth <= 799) return;
+
+        const container = this.scrollContainer()?.nativeElement;
+        if (!container) return;
+
+        const containerLeft = container.getBoundingClientRect().left;
+
+        const sections = [
+            this.landingPage(),
+            this.whyMe(),
+            this.mySkills(),
+            this.myWork(),
+            this.references(),
+            this.contactSection()
+        ];
+
+        const SNAP_THRESHOLD = 400;
+
+        for (const sectionRef of sections) {
+            if (!sectionRef) continue;
+
+            const rect = sectionRef.nativeElement.getBoundingClientRect();
+            const distanceToLeft = rect.left - containerLeft;
+
+            if (Math.abs(distanceToLeft) > 1 && Math.abs(distanceToLeft) < SNAP_THRESHOLD) {
+                this.scrollToElement(sectionRef);
+                break; // Ziel gefunden, Schleife abbrechen
+            }
+        }
+    }
+
+
     onWheel(event: WheelEvent): void {
         if (event.deltaY !== 0) {
             const element = event.currentTarget as HTMLElement;
-            element.scrollLeft += 12 * event.deltaY;
+            
+            element.scrollLeft += 6 * event.deltaY;
+            event.preventDefault();
         }
     }
 }
