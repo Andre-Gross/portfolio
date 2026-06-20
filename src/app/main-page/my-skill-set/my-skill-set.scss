@@ -5,7 +5,7 @@
 
 :host {
     margin-top: func.margin-top-full-value(461);
-    min-width: min-content;
+    min-width: vars.$min-section-width;
     height: fit-content;
     display: flex;
 }
