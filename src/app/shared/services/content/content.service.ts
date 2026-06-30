@@ -27,8 +27,8 @@ export class ContentService {
           de: 'Warum mich',
         },
         aboutMe: {
-          en: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.',
-          de: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor.',
+          en: `I am fascinated by code that takes away my routine and unnecessary work. That's why I love programming. My code is also designed to support you precisely there, so that you can focus on the end of what it belongs on: using your skills for real added value.`,
+          de: 'Mich begeistert Code, der mir Routine und unnötige Arbeit abnimmt. Darum liebe ich das Programmieren. Mein Code soll auch dich genau dort unterstützen, damit du dich auf das konzentrieren kannst, worauf es wirklich ankommt: Deine Kompetenzen für echten Mehrwert einsetzen.',
         },
         iAm: {
           en: 'I am',
