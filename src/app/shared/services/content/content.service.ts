@@ -27,8 +27,8 @@ export class ContentService {
           de: 'Warum mich',
         },
         aboutMe: {
-          en: `I am fascinated by code that takes away my routine and unnecessary work. That's why I love programming. My code is also designed to support you precisely there, so that you can focus on the end of what it belongs on: using your skills for real added value.`,
-          de: 'Mich begeistert Code, der mir Routine und unnötige Arbeit abnimmt. Darum liebe ich das Programmieren. Mein Code soll auch dich genau dort unterstützen, damit du dich auf das konzentrieren kannst, worauf es wirklich ankommt: Deine Kompetenzen für echten Mehrwert einsetzen.',
+          en: `"Don't repeat yourself" - I write reusable code. Feel free to check it out in the Dev Tools. Does the element exist twice? The code only once.`,
+          de: `"Don't repeat yourself" - Ich schreibe wiederverwendbaren Code. Schaue ihn dir gerne in den Dev-Tools an. Das Element existiert zweimal? Der Code nur einmal.`,
         },
         iAm: {
           en: 'I am',
