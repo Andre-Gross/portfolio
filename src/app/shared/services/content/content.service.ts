@@ -123,7 +123,7 @@ export class ContentService {
       myWork: {
         title: {
           en: 'My work',
-          de: 'Meine Projekte',
+          de: 'Projekte',
         },
         projects: [
           {
