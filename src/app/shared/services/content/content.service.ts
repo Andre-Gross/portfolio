@@ -161,7 +161,7 @@ export class ContentService {
                 en: 'Technologies I have used',
                 de: 'Verwendete Technologien',
               },
-              content: 'Angular, TypeScript, HTML, CSS, Firebase',
+              content: 'JavaScript, HTML, CSS, Firebase',
             },
             paragraph3: {
               header: {
@@ -169,8 +169,8 @@ export class ContentService {
                 de: 'Meine Erfahrung mit Gruppenprojekten',
               },
               content: {
-                en: 'How many people were in the team and what was your role? Describe your tasks in 1-2 sentences. It is nice to mention a good teamwork and cooperation.',
-                de: 'Wie viele Personen waren im Team und welche Rolle hattest du? Beschreibe deine Aufgaben in 1-2 Sätzen. Erwähne ruhig eine gute Zusammenarbeit im Team.',
+                en: `In this team of three, as developer and moderator, I led the meetings and implemented the API functions, the detail modals in the board, and the "Add Task" page. Through targeted pair programming, I have also supported colleagues with complex bugs in order to secure common goals.`,
+                de: 'In diesem 3er-Team habe ich als Entwickler und Moderator die Meetings angeleitet sowie die API-Funktionen, die Detail-Modals im Board und die "Add Task"-Seite umgesetzt. Durch gezieltes Pair Programming habe ich zudem Kollegen bei komplexen Bugs unterstützt, um die gemeinsamen Ziele zu sichern.',
               },
             },
           },
