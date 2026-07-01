@@ -28,6 +28,11 @@ $distance-padding-text: calc($bullet-point-size + $distance-bullet-point-text);
 }
 
 
+.project-details {
+    margin-top: 16px;
+}
+
+
 h4 {
     display: flex;
     justify-content: start;
