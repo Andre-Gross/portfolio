@@ -301,8 +301,8 @@ export class ContentService {
           },
           {
             text: {
-              en: 'Itś a test text.',
-              de: 'Ist ein Test Text',
+              en: 'Itś a test text. (Wird nach eurem Feedback entfernt. Dient nur dazu, das Design zu prüfen)',
+              de: 'Ist ein Test Text (Wird nach eurem Feedback entfernt. Dient nur dazu, das Design zu prüfen)',
             },
             author: 'Na ich',
             context: 'Project Dieses hier',
