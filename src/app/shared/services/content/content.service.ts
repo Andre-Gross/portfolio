@@ -59,8 +59,8 @@ export class ContentService {
           de: 'Fähigkeiten',
         },
         skillText: {
-          en: 'A short introduction of your skills. Highlight your experience of working on different projects using different front-end technologies and emphasise your openness to learning and adapting to new technologies.',
-          de: 'A short introduction of your skills. Highlight your experience of working on different projects using different front-end technologies and emphasise your openness to learning and adapting to new technologies.',
+          en: `In my daily life, I use various technologies to implement projects such as Kanban boards and team messengers. New framework? New language? If it advances your product, I'll learn it.`,
+          de: 'In meinem Alltag nutze ich diverse Technologien, um Projekte wie Kanban-Boards und Team-Messenger umzusetzen. Neues Framework? Neue Sprache? Bringt es euer Produkt voran, lerne ich es.',
         },
         skills: [
           {
@@ -112,8 +112,8 @@ export class ContentService {
           },
         ],
         motivationText: {
-          en: 'Show that you are motivated to improve your skills, implement innovative solutions and stay abreast of new technologies.',
-          de: 'Show that you are motivated to improve your skills, implement innovative solutions and stay abreast of new technologies.',
+          en: `Are you missing a framework or a key technology? I enthusiastically delve into documentation and code examples to quickly familiarize myself with your product.`,
+          de: 'Dir fehlt ein Framework oder eine Schlüsseltechnologie? Mit Begeisterung vertiefe ich mich in Dokumentationen und Codebeispiele, um mich schnell in euer Produkt einzuarbeiten.',
         },
         contactBtn: {
           en: 'Let´s talk',
