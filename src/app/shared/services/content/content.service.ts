@@ -143,7 +143,7 @@ export class ContentService {
                   de: 'Testen',
                   en: 'Live Test'
                 },
-                link: ''
+                link: 'https://join.andre-gross.dev'
               },
             },
             paragraph1: {
@@ -191,7 +191,7 @@ export class ContentService {
                   de: 'Testen',
                   en: 'Live Test'
                 },
-                link: ''
+                link: 'https://el-pollo-loco.andre-gross.dev'
               },
             },
             paragraph1: {
