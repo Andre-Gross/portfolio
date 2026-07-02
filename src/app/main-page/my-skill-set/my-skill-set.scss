@@ -2,7 +2,6 @@
 @use '../../../styles/functions' as func;
 @use '../../../styles/mixins' as mix;
 
-
 :host {
     margin-top: func.margin-top-full-value(461);
     min-width: vars.$min-section-width;
@@ -21,8 +20,11 @@
     height: fit-content;
     display: grid;
     justify-content: flex-start;
-    grid-template-columns: repeat(6, 1fr);
+    
+    grid-template-columns: repeat(auto-fill, 86px);
     gap: 42px;
+    
+    max-width: 726px; 
 }
 
 
@@ -44,8 +46,7 @@
 
 
 #motivation-item-desktop {
-    grid-column: 6;
-    width: 240px;
+    width: 214px; 
 }
 
 
@@ -56,6 +57,13 @@
 
 app-btn-to-contact {
     display: none;
+}
+
+
+@media (max-width: 1647px) {
+    #skills-container {
+        max-width: 100%; 
+    }
 }
 
 
@@ -85,10 +93,9 @@ app-btn-to-contact {
 
     #motivation-item-mobile {
         margin-top: 32px;
-
         display: block;
     }
-
+    
 
     app-btn-to-contact {
         display: flex;
