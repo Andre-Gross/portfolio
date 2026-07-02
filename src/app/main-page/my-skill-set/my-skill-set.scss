@@ -2,11 +2,28 @@
 @use '../../../styles/functions' as func;
 @use '../../../styles/mixins' as mix;
 
+
 :host {
-    margin-top: func.margin-top-full-value(461);
+    margin-bottom: 8.4444444444vh;
+    padding-top: func.margin-top-full-value(100);
     min-width: vars.$min-section-width;
-    height: fit-content;
+
     display: flex;
+    align-items: flex-end;
+
+    gap: 42px;
+}
+
+
+app-section-title {
+    margin-top: auto;
+}
+
+
+.max-w-1500px {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 
@@ -72,6 +89,12 @@ app-btn-to-contact {
         margin-top: vars.$margin-top-section-mobile;
         padding: 0 vars.$padding-mobile-left-right;
         width: vars.$full-width-with-scroll-bar;
+        display: block;
+    }
+
+
+    .max-w-1500px {
+        display: block;
     }
 
 
@@ -95,8 +118,8 @@ app-btn-to-contact {
         margin-top: 32px;
         display: block;
     }
-    
 
+    
     app-btn-to-contact {
         display: flex;
         justify-content: center;
