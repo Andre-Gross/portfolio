@@ -58,6 +58,10 @@ app-contact-links {
             align-items: center;
             color: vars.$font-color-primary;
 
+            &:first-child {
+                margin-top: 0;
+            }
+
             .svg-wrapper {
                 display: flex;
                 justify-content: center;
@@ -104,7 +108,7 @@ app-contact-links {
 
 
         >img {
-            padding: 160px 0;
+            padding: 0;
             transform: rotate(180deg);
             cursor: pointer;
         }
@@ -114,6 +118,37 @@ app-contact-links {
 
 app-end-block {
     margin-left: 32px;
+}
+
+
+@media (max-height: 950px) and (min-width: #{vars.$breakpoint-tablet-portrait}) {
+    #call-to-action {
+        >div {
+            p {
+                margin-top: 24px;
+            }
+
+            a {
+                margin-top: 24px;
+            }
+        }
+    }
+}
+
+
+@media (max-height: 820px) and (min-width: #{vars.$breakpoint-tablet-portrait}) {
+    #call-to-action {
+        >div {
+            p {
+                margin-top: 18px;
+            }
+
+
+            a {
+                margin-top: 18px;
+            }
+        }
+    }
 }
 
 
