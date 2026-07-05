@@ -68,8 +68,6 @@ nav {
             writing-mode: sideways-lr;
             text-orientation: mixed;
 
-
-
             font-size: 24px;
 
             >a {
@@ -97,6 +95,42 @@ nav {
 #nav-placeholder {
     width: vars.$navigation-width;
     height: 100%;
+}
+
+
+@media (max-height: 820px) and (min-width: #{vars.$breakpoint-tablet-portrait}) {
+    nav {
+        #closed-menu {
+
+            #desktop-links {
+                >a {
+                    font-size: 24px;
+
+                    &.active {
+                        @include mix.emptyLetters(24px, 1px, vars.$font-color-navigation)
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-height: 700px) and (min-width: #{vars.$breakpoint-tablet-portrait}) {
+    nav {
+        #closed-menu {
+
+            #desktop-links {
+                >a {
+                    font-size: 20px;
+
+                    &.active {
+                        @include mix.emptyLetters(20px, 1px, vars.$font-color-navigation)
+                    }
+                }
+            }
+        }
+    }
 }
 
 
