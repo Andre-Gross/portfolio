@@ -113,7 +113,7 @@ export class ContentService {
         ],
         motivationText: {
           en: `Are you missing a framework or a key technology? I enthusiastically delve into documentation and code examples to quickly familiarize myself with your product.`,
-          de: 'Dir fehlt ein Framework oder eine Schlüsseltechnologie? Mit Begeisterung vertiefe ich mich in Dokumentationen und Codebeispiele, um mich schnell in euer Produkt einzuarbeiten.',
+          de: 'Dir fehlt ein Framework oder eine Schlüsseltechnologie? Mit Begeisterung vertiefe ich mich in Dokumentationen und Codebeispiele, um mich schnell in euer Produkt einarbeiten zu können.',
         },
         contactBtn: {
           en: 'Let´s talk',
@@ -217,8 +217,8 @@ export class ContentService {
                 de: 'Was ich gelernt habe',
               },
               content: {
-                en: 'Maybe you used a certain technology for the first time? Have you learnt more about how to keep your code clean or how to organise the components in your projects?',
-                de: 'Hast du eine bestimmte Technologie zum ersten Mal eingesetzt? Hast du mehr darüber gelernt, wie du deinen Code sauber hältst oder deine Projektkomponenten strukturierst?',
+                en: `Through object-oriented programming, I have neatly encapsulated the code and avoided duplicates through inheritance. The result is a structure that is both maintainable and reusable.`,
+                de: 'Durch Objektorientierte Programmierung habe ich den Code sauber gekapselt und Duplikate mittels Vererbung vermieden. Das Ergebnis ist eine Struktur, die sowohl wartbar als auch wiederverwendbar ist.',
               },
             },
           },
@@ -266,8 +266,8 @@ export class ContentService {
             de: 'Laufende Projekte'
           },
           text: {
-            en: 'Are you currently working on a project? What is it about and what technologies are you using? Emphasise that good planning and execution are essential to the success of your work and to achieving great results.',
-            de: 'Are you currently working on a project? What is it about and what technologies are you using? Emphasise that good planning and execution are essential to the success of your work and to achieving great results.'
+            en: 'In my current team project with Angular and Supabase, I am using my knowledge to advance the architecture. Through structured project planning and agile communication, we guarantee efficient execution and excellent results.',
+            de: 'In meinem aktuellen Team-Projekt mit Angular und Supabase setze ich meine Kenntnisse ein, um die Architektur voranzutreiben. Durch strukturierte Projektplanung und agile Kommunikation garantieren wir eine effiziente Ausführung und exzellente Ergebnisse.'
           },
           btn: {
             en: `Let's talk`,
@@ -374,8 +374,8 @@ export class ContentService {
             de: 'Arbeiten wir zusammen.',
           },
           paragraph: {
-            en: 'Encourage people to contact you and describe what role you are interested in. Express confidence in your ability to make a meaningful contribution to a team through your expertise and enthusiasm for improving your skills.',
-            de: 'Encourage people to contact you and describe what role you are interested in. Express confidence in your ability to make a meaningful contribution to a team through your expertise and enthusiasm for improving your skills.',
+            en: 'I am a frontend developer with project experience who is continuing my education and developing full-stack skills. I can support your team in the frontend today and expand your backend tomorrow. Get in touch to help me advance your product.',
+            de: 'Ich bin ein Frontend-Developer mit Projekt-Erfahrung, der sich weiterbildet und Fullstack-Kompetenzen entwickelt. Ich kann dein Team heute im Frontend unterstützen und erweitere morgen dein Backend. Melde dich, um dein Produkt mit mir voranzubringen.',
           }
         }
       }
