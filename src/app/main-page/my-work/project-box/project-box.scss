@@ -24,6 +24,7 @@ $distance-padding-text: calc($bullet-point-size + $distance-bullet-point-text);
     padding: 42px;
     box-sizing: border-box;
     width: 100%;
+    min-height: 100%;
     background-color: vars.$bright-green-transparent;
 }
 
