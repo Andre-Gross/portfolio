@@ -16,7 +16,7 @@ app-main-page {
 
 
 .scroll-container {
-    @include mix.scrollbarX();
+    @include mix.scrollbarDesktop();
 }
 
 
@@ -33,10 +33,8 @@ app-end-block {
 
 
     .scroll-container {
-        flex-direction: column;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        width: 100%;
+        @include mix.scrollbarMobile();
+        gap: 32px;
     }
 
 

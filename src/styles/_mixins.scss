@@ -20,7 +20,7 @@
 }
 
 
-@mixin scrollbarX() {
+@mixin scrollbarDesktop() {
     width: max(calc(100vw - vars.$navigation-width), max-content);
     display: flex;
     overflow-x: scroll;
@@ -50,4 +50,12 @@
         scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
         scrollbar-width: thin;
     }
+}
+
+
+@mixin scrollbarMobile() {
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
 }

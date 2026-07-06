@@ -12,7 +12,7 @@
 
 
 .scroll-container {
-    @include mix.scrollbarX()
+    @include mix.scrollbarDesktop()
 }
 
 
@@ -147,9 +147,7 @@ app-switch-arrow {
 
 
     .scroll-container {
-        flex-direction: column;
-        overflow-y: scroll;
-        overflow-x: hidden;
+        @include mix.scrollbarMobile();
     }
 
 
