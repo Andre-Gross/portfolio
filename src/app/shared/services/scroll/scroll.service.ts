@@ -10,6 +10,7 @@ export class ScrollService {
   private scrollRequestSource = new Subject<string>();
   scrollRequest$ = this.scrollRequestSource.asObservable();
 
+  public breakpointTabletPortrait = 1199;
   public activeSection = signal<string>('');
 
   requestScroll(sectionId: string): void {

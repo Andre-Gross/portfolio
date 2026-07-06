@@ -4,7 +4,7 @@
             <img src="img/legals/arrow-back.svg" alt="arrow back">
         </a>
     </div>
-    <div #start id="legals-panel-one" class="desktop-full-width">
+    <div #start id="legals-panel-one" class="desktop-full-width align-items-center">
         <app-top-bar></app-top-bar>
         <div class="padding-mobile-left-right d-flex just-cont-space-bet mobile-flex-dir-column">
             <h2>{{ contentService.content().legalNotes.title }}</h2>
@@ -36,7 +36,8 @@
         <app-switch-arrow class="pointer" (click)="triggerScroll('legalsPanelTwo')"></app-switch-arrow>
     </div>
 
-    <div #legalsPanelTwo id="legals-panel-two" class="just-cont-space-bet mobile-flex-dir-column desktop-full-width">
+    <div #legalsPanelTwo id="legals-panel-two"
+        class="just-cont-space-bet align-items-center mobile-flex-dir-column desktop-full-width">
         <div class="padding-mobile-left-right">
             <div id="legal-text-part-two" class="content ma-le-317px">
                 @for (paragraph of contentService.content().legalNotes.main.slice(3); track paragraph.header) {

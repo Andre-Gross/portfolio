@@ -1,4 +1,4 @@
-@if (!shallShowMeMore && screenWidth <= breakpointMobile) { <div class="project-container">
+@if (!shallShowMeMore && screenWidth <= this.scrollService.breakpointTabletPortrait) { <div class="project-container">
   <app-headline [index]="index" [name]="project.name"></app-headline>
 
 

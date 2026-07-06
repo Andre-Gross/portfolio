@@ -58,7 +58,7 @@ export class LegalNotes {
 
 
   onWheel(event: WheelEvent): void {
-    if (event.deltaY !== 0) {
+    if (event.deltaY !== 0 && window.innerWidth > this.scrollService.breakpointTabletPortrait) {
       const element = event.currentTarget as HTMLElement;
       event.preventDefault();
       element.scrollLeft += 12 * event.deltaY;

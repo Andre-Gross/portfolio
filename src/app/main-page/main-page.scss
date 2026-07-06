@@ -33,8 +33,25 @@ app-end-block {
 
 
     .scroll-container {
+        box-sizing: border-box;
+        min-width: 100%;
         @include mix.scrollbarMobile();
         gap: 32px;
+        align-items: center;
+
+        app-landing-page,
+        app-why-me,
+        app-my-skill-set,
+        app-my-work,
+        // app-references,
+        app-contact {
+            box-sizing: border-box;
+            max-width: 799px;
+        }
+
+        app-references {
+            padding-left: calc((100% - 799px) / 2)
+        }
     }
 
 

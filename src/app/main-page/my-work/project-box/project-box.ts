@@ -1,6 +1,8 @@
 import { Component, HostListener, inject, Input, OnInit } from '@angular/core';
 import { HeadlineComponent } from './headline/headline.component';
+
 import { ContentService } from '../../../shared/services/content/content.service';
+import { ScrollService } from '../../../shared/services/scroll/scroll.service';
 
 @Component({
   selector: 'app-project-box',
@@ -11,7 +13,6 @@ import { ContentService } from '../../../shared/services/content/content.service
   styleUrl: './project-box.scss',
 })
 export class ProjectBoxComponent implements OnInit {
-  breakpointMobile: number = 799;
   screenWidth: number;
   shallShowMeMore: boolean = false;
 
@@ -19,6 +20,7 @@ export class ProjectBoxComponent implements OnInit {
   @Input() index!: number;
 
   contentService = inject(ContentService);
+  scrollService = inject(ScrollService)
 
 
   constructor() {

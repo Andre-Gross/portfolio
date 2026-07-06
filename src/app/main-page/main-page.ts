@@ -97,7 +97,7 @@ export class MainPage implements OnInit, OnDestroy, AfterViewInit {
         const container = this.scrollContainer()?.nativeElement;
         if (!container) return;
 
-        if (window.innerWidth <= 799) {
+        if (window.innerWidth <= this.scrollService.breakpointTabletPortrait) {
             this.scrollService.activeSection.set('');
             return;
         } else {
@@ -154,7 +154,7 @@ export class MainPage implements OnInit, OnDestroy, AfterViewInit {
 
 
     onScrollEnd(): void {
-        if (window.innerWidth <= 799) return;
+        if (window.innerWidth <= this.scrollService.breakpointTabletPortrait) return;
 
         const container = this.scrollContainer()?.nativeElement;
         if (!container) return;
@@ -170,7 +170,7 @@ export class MainPage implements OnInit, OnDestroy, AfterViewInit {
             this.contactSection()
         ];
 
-        const SNAP_THRESHOLD = 400;
+        const SNAP_THRESHOLD = 200;
 
         for (const sectionRef of sections) {
             if (!sectionRef) continue;
@@ -180,14 +180,14 @@ export class MainPage implements OnInit, OnDestroy, AfterViewInit {
 
             if (Math.abs(distanceToLeft) > 1 && Math.abs(distanceToLeft) < SNAP_THRESHOLD) {
                 this.scrollToElement(sectionRef);
-                break; // Ziel gefunden, Schleife abbrechen
+                break;
             }
         }
     }
 
 
     onWheel(event: WheelEvent): void {
-        if (event.deltaY !== 0) {
+        if (event.deltaY !== 0 && window.innerWidth > this.scrollService.breakpointTabletPortrait) {
             const element = event.currentTarget as HTMLElement;
             
             element.scrollLeft += 6 * event.deltaY;
