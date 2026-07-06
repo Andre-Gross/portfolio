@@ -557,6 +557,5 @@ export class ContentService {
 
   setLang(lang: 'en' | 'de') {
     this.currentLang.set(lang);
-    console.log("Language changed to: ", this.currentLang());
   }
 }
