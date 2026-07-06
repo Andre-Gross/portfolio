@@ -1,7 +1,7 @@
 <nav>
     @if(!isMenuOpen()){
     <div id="closed-menu">
-        <a routerLink="/" id="logo">
+        <a (click)="triggerScroll('landingPage')" id="logo" class="pointer">
             <img src="img/nav/logo-inverted.svg" alt="frontend developer">
         </a>
 

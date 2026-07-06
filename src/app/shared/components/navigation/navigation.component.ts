@@ -1,5 +1,4 @@
 import { Component, signal, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
 
 import { ScrollService } from '../../services/scroll/scroll.service';
 import { ContentService } from '../../services/content/content.service';
@@ -10,7 +9,6 @@ import { LangSwitchComponent } from '../lang-switch/lang-switch.component';
   selector: 'app-navigation',
   standalone: true,
   imports: [
-    RouterLink,
     LangSwitchComponent,
   ],
   templateUrl: './navigation.component.html',
