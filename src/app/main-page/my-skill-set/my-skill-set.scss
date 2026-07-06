@@ -86,8 +86,8 @@ app-btn-to-contact {
 
 @media (max-width: #{vars.$breakpoint-tablet-portrait}) {
     :host {
-        margin-top: vars.$margin-top-section-mobile;
-        padding: 0 vars.$padding-mobile-left-right;
+        margin-top: 0;
+        padding: vars.$spacing-top-section-mobile vars.$padding-mobile-left-right 0 vars.$padding-mobile-left-right;
         width: vars.$full-width-with-scroll-bar;
         display: block;
     }

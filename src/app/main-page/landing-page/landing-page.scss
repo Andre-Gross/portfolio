@@ -64,7 +64,7 @@ h1 {
 @media (max-width: #{vars.$breakpoint-tablet-portrait}) {
     :host {
         position: unset;
-        padding: vars.$margin-top-section-mobile vars.$padding-mobile-left-right 0 vars.$padding-mobile-left-right;
+        padding: vars.$spacing-top-section-mobile vars.$padding-mobile-left-right 0 vars.$padding-mobile-left-right;
         box-sizing: border-box;
         min-width: vars.$full-width-with-scroll-bar;
         max-width: 100%;

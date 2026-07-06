@@ -46,7 +46,8 @@
 
 @media (max-width: #{vars.$breakpoint-tablet-portrait}) {
     :host {
-        margin: vars.$margin-top-section-mobile vars.$padding-mobile-left-right 0 vars.$padding-mobile-left-right;
+        margin-top: 0;
+        padding: vars.$spacing-top-section-mobile vars.$padding-mobile-left-right 0 vars.$padding-mobile-left-right;
         box-sizing: border-box;
         min-width: vars.$full-width-with-scroll-bar;
         max-width: vars.$full-width-with-scroll-bar;

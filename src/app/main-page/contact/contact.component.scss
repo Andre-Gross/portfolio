@@ -155,7 +155,8 @@ app-end-block {
 @media (max-width: #{vars.$breakpoint-tablet-portrait}) {
 
     :host {
-        padding: vars.$margin-top-section-mobile vars.$padding-mobile-left-right 0 vars.$padding-mobile-left-right;
+        margin-top: 0;
+        padding: vars.$spacing-top-section-mobile vars.$padding-mobile-left-right 0 vars.$padding-mobile-left-right;
         flex-direction: column-reverse;
     }
 
