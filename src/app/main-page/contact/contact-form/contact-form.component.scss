@@ -91,7 +91,7 @@ form {
 
         input[type="checkbox"]:not(:checked):not(.is-invalid)+label:hover .custom-checkbox {
             background-image: url('../../../../../public/img/contact/check-box-empty.svg');
-            @include mix.drop-glow(0, 0, 15px, vars.$bright-green);
+            @include mix.drop-glow();
         }
 
         input[type="checkbox"]:checked+label .custom-checkbox {
