@@ -85,13 +85,11 @@ a {
 
 .glow:hover {
     @include mix.drop-glow();
-    cursor: pointer;
 }
 
 
 .low-glow:hover {
     @include mix.drop-low-glow(10px);
-    cursor: pointer;
 }
 
 
@@ -100,6 +98,7 @@ a {
     padding: 13px 30px;
     width: max-content;
     font-family: vars.$font-family-primary;
+    cursor: pointer;
 
 
     &:enabled {
@@ -121,6 +120,7 @@ a {
     padding: 13px 30px;
     width: max-content;
     font-family: vars.$font-family-primary;
+    cursor: pointer;
 
 
     &:enabled {
