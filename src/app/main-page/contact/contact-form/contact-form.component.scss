@@ -21,6 +21,8 @@ form {
         border-radius: 30px;
         background-color: transparent;
         color: vars.$font-color-primary;
+        font-family: vars.$font-family-primary;
+
 
         &:focus {
             background-color: transparent;
