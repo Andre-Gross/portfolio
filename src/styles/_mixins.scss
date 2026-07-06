@@ -18,3 +18,36 @@
 @mixin drop-low-glow($blur: 20px, $horizontal: 0, $vertikal: 0, $color: vars.$bright-green) {
     filter: drop-shadow($horizontal $vertikal $blur $color);
 }
+
+
+@mixin scrollbarX() {
+    width: max(calc(100vw - vars.$navigation-width), max-content);
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+
+    --sb-track-color: #000000;
+    --sb-thumb-color: #b5e93b;
+    --sb-size: #{vars.$scroll-bar-size};
+
+    &::-webkit-scrollbar {
+        width: var(--sb-size);
+        height: var(--sb-size);
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--sb-track-color);
+        border-radius: 0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--sb-thumb-color);
+        border-radius: 0;
+    }
+
+    @supports not selector(::-webkit-scrollbar) {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+        scrollbar-width: thin;
+    }
+}

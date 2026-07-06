@@ -1,4 +1,5 @@
 @use '../../styles/variables' as vars;
+@use '../../styles/mixins' as mix;
 
 
 :host {
@@ -15,40 +16,7 @@ app-main-page {
 
 
 .scroll-container {
-    width: max-content;
-    display: flex;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-
-
-    --sb-track-color: #000000;
-    --sb-thumb-color: #b5e93b;
-    --sb-size: #{vars.$scroll-bar-size};
-
-
-    &::-webkit-scrollbar {
-        width: var(--sb-size);
-        height: var(--sb-size);
-    }
-
-
-    &::-webkit-scrollbar-track {
-        background: var(--sb-track-color);
-        border-radius: 0;
-    }
-
-
-    &::-webkit-scrollbar-thumb {
-        background: var(--sb-thumb-color);
-        border-radius: 0;
-    }
-
-
-    @supports not selector(::-webkit-scrollbar) {
-        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
-        scrollbar-width: thin;
-    }
+    @include mix.scrollbarX();
 }
 
 
