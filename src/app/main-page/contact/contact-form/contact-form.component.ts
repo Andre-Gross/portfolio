@@ -7,6 +7,7 @@ import { ContentService } from '../../../shared/services/content/content.service
 
 @Component({
   selector: 'app-contact-form',
+  standalone: true,
   imports: [
     FormsModule,
     CommonModule,
@@ -16,8 +17,8 @@ import { ContentService } from '../../../shared/services/content/content.service
 })
 export class ContactFormComponent {
 
-  http = inject(HttpClient);
-  mailTest = true;
+  private http = inject(HttpClient);
+  mailTest = false;
 
   contactData = {
     name: '',
@@ -26,45 +27,37 @@ export class ContactFormComponent {
     privacyAccepted: false
   };
 
-  post = {
-    endPoint: 'https://andre-gross.dev/sendMail.php',
-    body: (payload: any) => JSON.stringify(payload),
-    options: {
-      headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
-      },
-    },
-  };
+  private endPoint = '/contact-form-mail.php';
 
   constructor(public contentService: ContentService) { }
 
   onSubmit(contactForm: NgForm) {
-    if (contactForm.submitted && contactForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+    if (contactForm.valid && !this.mailTest) {
+      
+      this.http.post(this.endPoint, this.contactData)
         .subscribe({
           next: (response) => {
-            contactForm.resetForm({
-              name: '',
-              email: '',
-              message: '',
-              privacyAccepted: false
-            });
+            console.log('Formular erfolgreich gesendet:', response);
+            this.resetForm(contactForm);
           },
           error: (error) => {
-            console.error(error);
+            console.error('Fehler beim Senden:', error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => console.info('Send post complete'),
         });
-    } else if (contactForm.submitted && contactForm.form.valid && this.mailTest) {
-      console.log("Mailtest sucessfully")
-      
-      contactForm.resetForm({
-        name: '',
-        email: '',
-        message: '',
-        privacyAccepted: false
-      });
+
+    } else if (contactForm.valid && this.mailTest) {
+      console.log("Mailtest erfolgreich");
+      this.resetForm(contactForm);
     }
+  }
+
+  private resetForm(contactForm: NgForm) {
+    contactForm.resetForm({
+      name: '',
+      email: '',
+      message: '',
+      privacyAccepted: false
+    });
   }
 }
