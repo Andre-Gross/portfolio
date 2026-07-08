@@ -67,7 +67,7 @@ $reference-container-min-width: calc(320px - 2 * vars.$padding-mobile-left-right
     :host {
         margin-top: 60px;
         margin-bottom: 0;
-        width: calc(100vw - vars.$scroll-bar-size);
+        width: 100%;
         display: block;
     }
 
@@ -98,7 +98,7 @@ $reference-container-min-width: calc(320px - 2 * vars.$padding-mobile-left-right
         flex-direction: row;
         justify-content: flex-start;
         gap: 8px;
-        overflow-x: auto;
+        overflow-x: scroll;
         scroll-behavior: smooth;
         scroll-snap-type: x mandatory;
 
