@@ -39,6 +39,7 @@ $font-color: #FFFDFD;
         >p {
             color: $font-color;
 
+            &.active,
             &:hover {
                 color: vars.$font-color-secondary;
             }

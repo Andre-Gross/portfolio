@@ -19,6 +19,11 @@ export class LangSwitchComponent {
   constructor(private contentService: ContentService) { }
 
 
+  checkCurrentLang(lang: 'en' | 'de') {
+    return this.contentService.currentLang() === lang;
+  }
+
+
   setLang(lang: 'en' | 'de') {
     this.contentService.setLang(lang);
   }
