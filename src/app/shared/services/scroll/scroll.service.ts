@@ -6,7 +6,7 @@ import { Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class ScrollService {
-  private router = inject(Router); // Modern via inject()
+  private router = inject(Router);
   private scrollRequestSource = new Subject<string>();
   scrollRequest$ = this.scrollRequestSource.asObservable();
 
