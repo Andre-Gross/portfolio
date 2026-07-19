@@ -13,7 +13,9 @@
         <h2>{{ contentService.content().privacyPolicy.title }}</h2>
 
         @for (column of contentService.content().privacyPolicy.main; track column.header) {
-        <div class="column" [innerHTML]="column">
+        <div class="column">
+            <div class="police-text" [innerHTML]="column"></div>
+            <app-switch-arrow></app-switch-arrow>
         </div>
         }
     </div>

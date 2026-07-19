@@ -31,7 +31,7 @@ a {
     flex-wrap: nowrap;
     align-items: flex-start;
     padding-bottom: 50px;
-    // max-width: $max-column-width;
+    // max-width: min-content;
     // min-width: 201px;
 }
 
@@ -58,43 +58,68 @@ h2 {
 
 .column {
     $title-sum-margins-width: calc($title-margin-left + $title-margin-right + $title-width);
-    $content-width: min(740px, calc(100% - $title-sum-margins-width));
+    $content-max-width: 740px;
 
-    margin-top: func.margin-top-full-value(164);
-    margin-right: calc(100vw - $content-width);
-    width: $content-width;
-    max-width: 740px;
+    box-sizing: border-box;
+    padding-left: $title-sum-margins-width;
+    width: calc(100vw - vars.$navigation-width);
 
-    ::ng-deep {
-        h4 {
-            margin-top: 24px;
-        }
+    display: flex;
+    justify-content: space-between;
+    gap: 64px;
 
-        >p {
-            margin-top: 16px;
-        }
 
-        li {
-            margin-top: 16px;
+    >.police-text {
+        margin-top: func.margin-top-full-value(164);
+        max-width: $content-max-width;
+
+        ::ng-deep {
+            h4 {
+                margin-top: 24px;
+            }
 
             >p {
-                margin-top: 8px;
+                margin-top: 16px;
             }
-        }
+
+            li {
+                margin-top: 16px;
+
+                >p {
+                    margin-top: 8px;
+                }
+            }
 
 
-        .address {
-            margin-top: 16px;
+            .address {
+                margin-top: 16px;
 
-            >div {
-                margin-top: 8px;
+                >div {
+                    margin-top: 8px;
+                }
             }
         }
     }
+
+
+    app-switch-arrow {
+        height: 100vh;
+        align-items: center;
+    }
+
+
+    &:first-of-type {
+        padding-left: 0;
+        width: calc(100vw - vars.$navigation-width - $title-sum-margins-width);
+    }
+
+
+    &:last-of-type {
+        app-switch-arrow {
+            transform: rotate(180deg);
+        }
+    }
 }
-
-
-
 
 
 // .cta-panel {

@@ -1,4 +1,4 @@
-import { Component, ElementRef, viewChild } from '@angular/core';
+import { Component, ElementRef, inject, viewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { ContentService } from '../shared/services/content/content.service';
@@ -7,6 +7,7 @@ import { TopBarComponent } from '../shared/components/top-bar/top-bar.component'
 import { ContactLinksComponent } from "../shared/components/contact-links/contact-links.component";
 import { SwitchArrowComponent } from '../shared/components/switch-arrow/switch-arrow.component';
 import { EndBlock } from '../shared/components/end-block/end-block';
+import { ScrollService } from '../shared/services/scroll/scroll.service';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -32,6 +33,7 @@ export class PrivacyPolicy {
 
   onWheel(event: WheelEvent): void {
     if (window.innerWidth <= 799) return; 
+    const navigationWidth = 172;
 
     event.preventDefault();
 
@@ -42,7 +44,7 @@ export class PrivacyPolicy {
 
     this.isScrolling = true;
 
-    const scrollAmount = window.innerWidth;
+    const scrollAmount = window.innerWidth - navigationWidth;
 
     if (event.deltaY > 0) {
       container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
