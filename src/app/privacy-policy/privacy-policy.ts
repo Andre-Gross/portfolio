@@ -26,14 +26,16 @@ export class PrivacyPolicy {
 
   readonly scrollContainer = viewChild('scrollContainer', { read: ElementRef });
   private isScrolling = false;
+  private scrollService = inject(ScrollService);
 
 
   constructor(public contentService: ContentService) { }
 
 
   onWheel(event: WheelEvent): void {
-    if (window.innerWidth <= 799) return; 
     const navigationWidth = 172;
+
+    if (window.innerWidth <= this.scrollService.breakpointTabletPortrait) return; 
 
     event.preventDefault();
 
