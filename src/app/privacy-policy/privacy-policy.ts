@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject, viewChild } from '@angular/core';
+import { Component, ElementRef, inject, viewChild, viewChildren } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { ContentService } from '../shared/services/content/content.service';
@@ -18,7 +18,7 @@ import { ScrollService } from '../shared/services/scroll/scroll.service';
     SwitchArrowComponent,
     EndBlock,
     ContactLinksComponent
-],
+  ],
   templateUrl: './privacy-policy.html',
   styleUrl: './privacy-policy.scss',
 })
@@ -27,6 +27,7 @@ export class PrivacyPolicy {
   readonly scrollContainer = viewChild('scrollContainer', { read: ElementRef });
   private isScrolling = false;
   private scrollService = inject(ScrollService);
+  readonly columns = viewChildren<ElementRef<HTMLElement>>('col');
 
 
   constructor(public contentService: ContentService) { }
@@ -35,7 +36,7 @@ export class PrivacyPolicy {
   onWheel(event: WheelEvent): void {
     const navigationWidth = 172;
 
-    if (window.innerWidth <= this.scrollService.breakpointTabletPortrait) return; 
+    if (window.innerWidth <= this.scrollService.breakpointTabletPortrait) return;
 
     event.preventDefault();
 
@@ -56,18 +57,24 @@ export class PrivacyPolicy {
 
     setTimeout(() => {
       this.isScrolling = false;
-    }, 500); 
+    }, 500);
   }
 
 
-  scrollToNextColumn(): void {
-    const container = this.scrollContainer()?.nativeElement;
-    if (container) {
-      container.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
+  public scrollToElement(targetIndex: number): void {
+
+    const targetElement = this.columns()[targetIndex]?.nativeElement;
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'start'
+      });
     }
   }
 
-
+  
   triggerScrollToStart(): void {
     const container = this.scrollContainer()?.nativeElement;
     if (container) {

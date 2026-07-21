@@ -12,10 +12,18 @@
 
         <h2>{{ contentService.content().privacyPolicy.title }}</h2>
 
-        @for (column of contentService.content().privacyPolicy.main; track column.header) {
-        <div class="column">
+        @for (
+        column of contentService.content().privacyPolicy.main;
+        track column.header;
+        let i = $index;
+        let isLast = $last
+        ) {
+        <div #col [id]="'privacy-col-' + i" class="column">
             <div class="police-text" [innerHTML]="column"></div>
-            <app-switch-arrow></app-switch-arrow>
+
+            <app-switch-arrow (click)="isLast ? triggerScrollToStart() : scrollToElement(i + 1)">
+            </app-switch-arrow>
         </div>
         }
     </div>
+</div>
