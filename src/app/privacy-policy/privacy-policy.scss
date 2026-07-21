@@ -15,11 +15,7 @@ $title-width: 65px;
 }
 
 .scroll-container {
-    width: 100vw;
-    display: flex;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    position: relative;
+    @include mix.scrollbarDesktop()
 }
 
 a {
