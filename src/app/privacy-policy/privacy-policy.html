@@ -1,16 +1,14 @@
 <div class="scroll-container" #scrollContainer (wheel)="onWheel($event)">
 
-    <div routerLink="/" id="mobile-arrow-back-to-homepage" class="only-mobile padding-mobile-left-right pointer">
-        <a>
-            <img src="img/legals/arrow-back.svg" alt="arrow back">
-        </a>
-    </div>
-
     <app-top-bar class="desktop-top-bar"></app-top-bar>
 
     <div class="horizontal-layout">
 
-        <h2>{{ contentService.content().privacyPolicy.title }}</h2>
+        <div routerLink="/" id="mobile-arrow-back-to-homepage" class="only-mobile padding-mobile-left-right pointer">
+            <a>
+                <img src="img/legals/arrow-back.svg" alt="arrow back">
+            </a>
+        </div>
 
         @for (
         column of contentService.content().privacyPolicy.main;
@@ -21,8 +19,12 @@
         <div #col [id]="'privacy-col-' + i" class="column">
             <div class="police-text" [innerHTML]="column"></div>
 
-            <app-switch-arrow (click)="isLast ? triggerScrollToStart() : scrollToElement(i + 1)">
+            @if (!isLast) {
+            <app-switch-arrow (click)="scrollToElement(i + 1)">
             </app-switch-arrow>
+            } @else {
+                <app-footer [scrollContainer] = "scrollContainer"></app-footer>
+            }
         </div>
         }
     </div>

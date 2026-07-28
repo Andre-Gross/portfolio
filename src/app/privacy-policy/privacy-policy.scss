@@ -26,7 +26,7 @@ a {
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-start;
-    padding-bottom: 50px;
+    // padding-bottom: 50px;
     // max-width: min-content;
     // min-width: 201px;
 }
@@ -54,11 +54,12 @@ h2 {
 
 .column {
     $title-sum-margins-width: calc($title-margin-left + $title-margin-right + $title-width);
-    $content-max-width: 740px;
+    $content-max-width: 530px;
 
     box-sizing: border-box;
     padding-left: $title-sum-margins-width;
     width: calc(100vw - vars.$navigation-width);
+    height: 100%;
 
     display: flex;
     justify-content: space-between;
@@ -168,83 +169,67 @@ h2 {
 //     }
 // }
 
-.desktop-only {
-    display: block;
-}
-
 @media (max-width: #{vars.$breakpoint-tablet-portrait}) {
 
     .desktop-top-bar,
-    .fixed-arrow,
-    .desktop-only {
+    .fixed-arrow {
         display: none;
     }
 
     .scroll-container {
-        flex-direction: column;
-        overflow-y: scroll;
-        overflow-x: hidden;
+        @include mix.scrollbarMobile();
     }
 
     .horizontal-layout {
         flex-direction: column;
         padding-bottom: 0;
-    }
+        align-items: start;
 
-    .multi-column-text {
-        column-width: auto;
-        column-gap: normal;
-        max-width: 740px;
-        height: auto;
-        margin-top: 0;
-        padding: 0 vars.$padding-mobile-left-right;
-    }
+        #mobile-arrow-back-to-homepage {
+            padding-top: 28px;
+            padding-bottom: 28px;
 
-    .cta-panel {
-        margin-left: 0;
-        width: 100%;
-        height: auto;
-    }
+            >img {
+                width: 40px;
+                height: 40px;
+            }
+        }
 
-    h2 {
-        margin: 0;
-        padding: 0 vars.$padding-mobile-left-right;
-        min-height: auto;
-        @include mix.emptyLetters(32px, 2px, vars.$font-color-title);
-        writing-mode: unset;
-        align-self: unset;
-    }
+        h2 {
+            margin: 0;
+            padding: 0 vars.$padding-mobile-left-right;
+            min-height: auto;
+            max-width: 100%;
+            @include mix.emptyLetters(32px, 2px, vars.$font-color-title);
+            writing-mode: unset;
+            align-self: unset;
+        }
 
-    #mobile-arrow-back-to-homepage {
-        padding-top: 28px;
-        padding-bottom: 28px;
+        .column {
+            margin-top: 0;
+            padding: 0 0;
+            width: 100%;
+            height: auto;
+            flex-direction: column;
+            align-items: center;
 
-        >img {
-            width: 40px;
-            height: 40px;
+
+            >.police-text {
+                margin-top: 0;
+                padding: 0 16px;
+            }
+        }
+
+        app-switch-arrow {
+            display: none;
         }
     }
 
-    #call-to-action {
-        display: none;
-    }
-
-    #mobile-arrow-back-to-start {
-        padding-top: 46px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-
-        >img {
-            width: 45px;
-            transform: rotate(270deg);
-        }
-    }
 
     app-contact-links {
         padding: 46px 0;
         width: 100%;
-        display: flex;
+        display: none;
         justify-content: center;
     }
 }
