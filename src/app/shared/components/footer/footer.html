@@ -1,0 +1,27 @@
+<div id="call-to-action">
+    <div>
+        <a href="mailto: {{ contentService.content().general.email }}">
+            <img src="img/contact/mail.svg" alt="email">
+            <p>E-mail: {{ contentService.content().general.email }}</p>
+        </a>
+        <a href="tel: {{ contentService.content().general.tel}}">
+            <img src="img/contact/phone.svg" alt="phone">
+            <p>Tel: {{ contentService.content().general.tel }}</p>
+        </a>
+    </div>
+
+    <img class="glow" src="img/next-section-arrow.png" alt="arrow" (click)="triggerScrollToStart()">
+
+    <div>
+        <a routerLink="/legal-notes">Legal notice</a>
+        <a routerLink="/privacy-policy">Privacy Policy</a>
+        <p>&copy; André Groß 2026</p>
+    </div>
+</div>
+
+<div id="mobile-arrow-back-to-start" class="only-mobile">
+    <img class="glow" src="img/next-section-arrow.png" alt="arrow" (click)="triggerScrollToStart()">
+</div>
+
+<app-contact-links class="only-mobile"></app-contact-links>
+<app-end-block></app-end-block>

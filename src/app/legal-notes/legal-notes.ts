@@ -6,9 +6,8 @@ import { ContentService } from '../shared/services/content/content.service';
 import { ScrollService } from '../shared/services/scroll/scroll.service';
 
 import { TopBarComponent } from '../shared/components/top-bar/top-bar.component';
-import { ContactLinksComponent } from "../shared/components/contact-links/contact-links.component";
 import { SwitchArrowComponent } from '../shared/components/switch-arrow/switch-arrow.component';
-import { EndBlock } from '../shared/components/end-block/end-block';
+import { Footer } from '../shared/components/footer/footer';
 
 @Component({
   selector: 'app-legal-notes',
@@ -17,8 +16,7 @@ import { EndBlock } from '../shared/components/end-block/end-block';
     RouterLink,
     TopBarComponent,
     SwitchArrowComponent,
-    EndBlock,
-    ContactLinksComponent
+    Footer
 ],
   templateUrl: './legal-notes.html',
   styleUrl: './legal-notes.scss'
@@ -26,6 +24,7 @@ import { EndBlock } from '../shared/components/end-block/end-block';
 export class LegalNotes {
 
   readonly start = viewChild('start', { read: ElementRef });
+  readonly scrollContainer = viewChild('scrollContainer', { read: ElementRef });
   readonly legalsPanelTwo = viewChild('legalsPanelTwo', { read: ElementRef });
   private scrollSub!: Subscription;
 

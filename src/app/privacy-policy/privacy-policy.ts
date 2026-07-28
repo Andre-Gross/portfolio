@@ -4,10 +4,9 @@ import { RouterLink } from '@angular/router';
 import { ContentService } from '../shared/services/content/content.service';
 
 import { TopBarComponent } from '../shared/components/top-bar/top-bar.component';
-import { ContactLinksComponent } from "../shared/components/contact-links/contact-links.component";
 import { SwitchArrowComponent } from '../shared/components/switch-arrow/switch-arrow.component';
-import { EndBlock } from '../shared/components/end-block/end-block';
 import { ScrollService } from '../shared/services/scroll/scroll.service';
+import { Footer } from '../shared/components/footer/footer';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -16,8 +15,7 @@ import { ScrollService } from '../shared/services/scroll/scroll.service';
     RouterLink,
     TopBarComponent,
     SwitchArrowComponent,
-    EndBlock,
-    ContactLinksComponent
+    Footer,
   ],
   templateUrl: './privacy-policy.html',
   styleUrl: './privacy-policy.scss',
@@ -71,14 +69,6 @@ export class PrivacyPolicy {
         block: 'nearest',
         inline: 'start'
       });
-    }
-  }
-
-  
-  triggerScrollToStart(): void {
-    const container = this.scrollContainer()?.nativeElement;
-    if (container) {
-      container.scrollTo({ left: 0, behavior: 'smooth' });
     }
   }
 }
