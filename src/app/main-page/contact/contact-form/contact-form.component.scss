@@ -8,6 +8,10 @@ form {
     flex-direction: column;
     gap: 16px;
 
+    .input-container {
+        position: relative;
+    }
+
     label {
         display: none;
     }
@@ -27,6 +31,10 @@ form {
         &:focus {
             background-color: transparent;
             outline: none;
+        }
+
+        &.hide-text {
+            color: transparent !important;
         }
 
         &::placeholder {
@@ -62,6 +70,19 @@ form {
     input[type="email"] {
         padding: 0 30px;
         height: 60px;
+    }
+
+    .error-overlay {
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        transform: translateY(-50%);
+        font-family: vars.$font-family-primary;
+        color: vars.$font-color-error;
+        font-size: 14px;
+        line-height: 120%;
+        font-weight: 400;
+        pointer-events: none;
     }
 
     textarea {

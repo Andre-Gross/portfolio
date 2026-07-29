@@ -7,12 +7,21 @@
             [(ngModel)]="contactData.name" required>
     </div>
 
-    <div>
+    <div class="input-container">
         <label for="email">{{ contentService.content().mainPage.contact.form.email }}</label>
+
         <input type="email" id="email" name="email" #emailField="ngModel"
             [class.is-invalid]="emailField.invalid && emailField.touched"
-            [placeholder]="(emailField.invalid && emailField.touched) ? contentService.content().mainPage.contact.form.email.error : contentService.content().mainPage.contact.form.email.placeholder"
-            [(ngModel)]="contactData.email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+            [class.hide-text]="emailField.invalid && emailField.touched && !emailFocused && contactData.email"
+            [placeholder]="(emailField.invalid && emailField.touched) ? contentService.content().mainPage.contact.form.email.errorNoText : contentService.content().mainPage.contact.form.email.placeholder"
+            [(ngModel)]="contactData.email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            (focus)="emailFocused = true" (blur)="emailFocused = false">
+
+        @if (emailField.invalid && emailField.touched && !emailFocused && contactData.email) {
+        <span class="error-overlay">
+            {{ contentService.content().mainPage.contact.form.email.errorInvalidEmail }}
+        </span>
+        }
     </div>
 
     <div>
@@ -46,7 +55,7 @@
             {{ contentService.content().mainPage.contact.form.privacy.error }}
         </div>
         } @else {
-            <div style="height: 22px; margin-top: 8px;"></div>
+        <div style="height: 22px; margin-top: 8px;"></div>
         }
     </div>
 

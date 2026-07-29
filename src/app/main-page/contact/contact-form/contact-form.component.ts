@@ -19,6 +19,7 @@ export class ContactFormComponent {
 
   private http = inject(HttpClient);
   mailTest = false;
+  emailFocused = false;
 
   contactData = {
     name: '',
