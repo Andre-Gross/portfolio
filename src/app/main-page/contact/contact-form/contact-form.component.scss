@@ -58,11 +58,13 @@ form {
 
         &:-webkit-autofill,
         &:-webkit-autofill:hover,
-        &:-webkit-autofill:focus {
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
             -webkit-text-fill-color: vars.$font-color-primary !important;
-            transition: background-color 5000000s ease-in-out 0s;
+            transition: background-color 5000000s ease-in-out 0s, color 5000000s ease-in-out 0s;
             font-family: vars.$font-family-primary !important;
             font-size: 14px !important;
+            caret-color: vars.$font-color-primary;
         }
     }
 
