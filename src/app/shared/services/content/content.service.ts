@@ -330,9 +330,13 @@ export class ContentService {
               en: 'Your e-mail',
               de: 'Ihre E-Mail-Adresse',
             },
-            error: {
+            errorNoText: {
               en: 'Your e-mail is required',
               de: 'Bitte geben Sie ihre E-Mail-Adresse ein.'
+            },
+            errorInvalidEmail: {
+              en: 'Your name is required',
+              de: 'Bitte geben Sie Ihren Namen ein.'
             }
           },
           message: {
@@ -819,7 +823,7 @@ Before personal data is provided by the data subject, the data subject must cont
 
 <p>Developed by the specialists for <a href="https://willing-able.com/">LegalTech</a> at Willing & Able that also developed the system for <a href="https://abletocontract.com/">electronic agreements</a>. The legal texts contained in our privacy policy generator have been provided and published by <a href="https://dg-datenschutz.de/">Prof. Dr. h.c. Heiko Jonny Maniero</a> from the German Association for Data Protection and <a href="https://www.wbs.legal/" rel="nofollow">Christian Solmecke</a> from WBS law.</p>
 
-`,
+`],
       },
     },
   })
@@ -899,11 +903,12 @@ Before personal data is provided by the data subject, the data subject must cont
           form: {
             name: {
               placeholder: t(d.mainPage.contact.form.name.placeholder),
-              error: t(d.mainPage.contact.form.name.error)
+              error: t(d.mainPage.contact.form.name.error),
             },
             email: {
               placeholder: t(d.mainPage.contact.form.email.placeholder),
-              error: t(d.mainPage.contact.form.email.error)
+              errorNoText: t(d.mainPage.contact.form.email.errorNoText),
+              errorInvalidEmail: t(d.mainPage.contact.form.email.errorInvalidEmail),
             },
             message: {
               placeholder: t(d.mainPage.contact.form.message.placeholder),
