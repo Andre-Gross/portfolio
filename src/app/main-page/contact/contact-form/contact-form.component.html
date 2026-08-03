@@ -54,12 +54,16 @@
         <div class="privacy-error">
             {{ contentService.content().mainPage.contact.form.privacy.error }}
         </div>
+        } @else if (formSended && !contactForm.touched) {
+        <div class="form-sended-text">
+            {{ contentService.content().mainPage.contact.form.submit.feedback }}
+        </div>
         } @else {
         <div style="height: 22px; margin-top: 8px;"></div>
         }
     </div>
 
     <button class="btn-primary" type="submit" [disabled]="!contactForm.valid">
-        {{ contentService.content().mainPage.contact.form.submit }}
+        {{ contentService.content().mainPage.contact.form.submit.button }}
     </button>
 </form>

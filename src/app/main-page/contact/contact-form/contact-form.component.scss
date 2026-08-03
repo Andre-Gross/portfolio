@@ -173,6 +173,14 @@ form {
         height: 22px;
     }
 
+    .form-sended-text {
+        margin-top: 8px;
+        margin-left: 40px;
+        color: vars.$font-color-primary;
+        font-size: 14px;
+        height: 22px;
+    }
+
     button {
         align-self: flex-end;
     }

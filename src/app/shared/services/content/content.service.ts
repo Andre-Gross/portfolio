@@ -368,8 +368,14 @@ export class ContentService {
             }
           },
           submit: {
-            en: 'Send',
-            de: 'Senden',
+            feedback: {
+              en: 'Your message has been sent.',
+              de: 'Deine Nachricht wurde gesendet.'
+            },
+            button: {
+              en: 'Send',
+              de: 'Senden',
+            },
           },
         },
         callToAction: {
@@ -920,7 +926,10 @@ Before personal data is provided by the data subject, the data subject must cont
               text2: t(d.mainPage.contact.form.privacy.text2),
               error: t(d.mainPage.contact.form.privacy.error),
             },
-            submit: t(d.mainPage.contact.form.submit),
+            submit: {
+             button: t(d.mainPage.contact.form.submit.button),
+             feedback: t(d.mainPage.contact.form.submit.feedback),
+            }
           }
         },
       },

@@ -17,6 +17,8 @@ import { ContentService } from '../../../shared/services/content/content.service
 })
 export class ContactFormComponent {
 
+  formSended: boolean = false
+
   private http = inject(HttpClient);
   mailTest = false;
   emailFocused = false;
@@ -34,12 +36,13 @@ export class ContactFormComponent {
 
   onSubmit(contactForm: NgForm) {
     if (contactForm.valid && !this.mailTest) {
-      
+
       this.http.post(this.endPoint, this.contactData)
         .subscribe({
           next: (response) => {
             console.log('Formular erfolgreich gesendet:', response);
             this.resetForm(contactForm);
+            this.formSended = true;
           },
           error: (error) => {
             console.error('Fehler beim Senden:', error);
@@ -50,6 +53,7 @@ export class ContactFormComponent {
     } else if (contactForm.valid && this.mailTest) {
       console.log("Mailtest erfolgreich");
       this.resetForm(contactForm);
+      this.formSended = true;
     }
   }
 
