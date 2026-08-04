@@ -161,6 +161,17 @@ app-end-block {
     }
 
 
+    #call-to-action {
+        >div {
+            p {
+                &:first-child {
+                    margin-top: 12px;
+                }
+            }
+        }
+    }
+
+
     app-contact-links {
         padding: 54px 0;
         width: 100%;
