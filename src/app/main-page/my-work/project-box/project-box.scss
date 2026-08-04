@@ -181,8 +181,16 @@ h4 {
         >img {
             border-radius: 30px;
             height: auto;
+            max-height: 80vh;
             width: 100%;
-            object-fit: cover;
+            object-fit: fill;
+        }
+
+        >#buttons {
+            margin-top: 32px;
+            display: flex;
+            justify-content: center;
+            gap: 64px;
         }
     }
 }
