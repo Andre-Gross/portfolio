@@ -33,7 +33,6 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
 
     ::ng-deep svg {
         height: func.margin-top-full-value(40); // Basis-Höhe für Desktop

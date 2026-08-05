@@ -106,13 +106,13 @@ a {
     padding: 13px 30px;
     width: max-content;
     font-family: vars.$font-family-primary;
-    cursor: pointer;
 
 
     &:enabled {
         background-color: vars.$button-color-primary-enabled;
         color: vars.$font-color-button-primary-enabled;
         border-color: vars.$border-color-button-enabled;
+        cursor: pointer;
     }
 
 
@@ -128,13 +128,13 @@ a {
     padding: 13px 30px;
     width: max-content;
     font-family: vars.$font-family-primary;
-    cursor: pointer;
 
 
     &:enabled {
         background-color: vars.$button-color-secondary-enabled;
         color: vars.$font-color-button-secondary-enabled;
         border-color: vars.$border-color-button-enabled;
+        cursor: pointer;
     }
 
 
