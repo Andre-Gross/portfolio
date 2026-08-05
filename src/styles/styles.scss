@@ -105,6 +105,7 @@ a {
     border-radius: 30px;
     padding: 13px 30px;
     width: max-content;
+    font-size: 18px;
     font-family: vars.$font-family-primary;
 
 
@@ -126,6 +127,7 @@ a {
 .btn-secondary {
     border-radius: 30px;
     padding: 13px 30px;
+    font-size: 18px;
     width: max-content;
     font-family: vars.$font-family-primary;
 
@@ -177,5 +179,15 @@ a {
 
     .mobile-flex-dir-column {
         flex-direction: column;
+    }
+
+
+    .btn-primary {
+        font-size: 16px;
+    }
+
+
+    .btn-secondary {
+        font-size: 16px;
     }
 }
