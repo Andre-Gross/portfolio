@@ -2,10 +2,11 @@
 
 
 
-@mixin emptyLetters($font-size, $line-thickness, $border-color) {
+@mixin emptyLetters($font-size, $line-thickness, $border-color, $line-height: 120%) {
     font-size: $font-size;
     color: transparent;
     -webkit-text-stroke: $line-thickness $border-color;
+    line-height: $line-height;
 }
 
 
