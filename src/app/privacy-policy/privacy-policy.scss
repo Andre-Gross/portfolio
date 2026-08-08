@@ -2,7 +2,6 @@
 @use '../../styles/functions' as func;
 @use '../../styles/mixins' as mix;
 
-// $max-column-width: calc(100vw - #{vars.$navigation-width} - #{vars.$switch-arrow-container-width});
 $title-margin-left: 102px;
 $title-margin-right: 32px;
 $title-width: 65px;
@@ -26,9 +25,6 @@ a {
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-start;
-    // padding-bottom: 50px;
-    // max-width: min-content;
-    // min-width: 201px;
 }
 
 .desktop-top-bar {
@@ -123,56 +119,6 @@ h2 {
 }
 
 
-// .cta-panel {
-//     margin-left: calc(100vw - 740px);
-//     flex-shrink: 0;
-//     height: 100vh;
-// }
-
-// #call-to-action {
-//     margin: func.margin-top-full-value(164) 0 func.margin-top-full-value(164) 0;
-//     padding-right: 32px;
-//     width: 417px;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     align-items: end;
-
-//     >div {
-//         p {
-//             text-align: end;
-//             margin-top: 32px;
-
-//             &:first-child {
-//                 margin-top: 0;
-//             }
-//         }
-
-//         #first-line {
-//             color: vars.$font-color-secondary;
-//         }
-
-//         a {
-//             margin-top: 32px;
-//             height: 30px;
-//             display: flex;
-//             justify-content: end;
-//             align-items: center;
-//             color: vars.$font-color-primary;
-
-//             p {
-//                 margin-top: 0;
-//                 margin-left: 8px;
-//             }
-//         }
-//     }
-
-//     >img {
-//         padding: 160px 0;
-//         transform: rotate(180deg);
-//     }
-// }
-
 @media (max-width: #{vars.$breakpoint-tablet-portrait}) {
 
     .desktop-top-bar,
@@ -227,13 +173,5 @@ h2 {
         app-switch-arrow {
             display: none;
         }
-    }
-
-
-    app-contact-links {
-        padding: 46px 0;
-        width: 100%;
-        display: none;
-        justify-content: center;
     }
 }

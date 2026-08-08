@@ -222,33 +222,6 @@ export class ContentService {
               },
             },
           },
-          // {
-          //   key: 'project3',
-          //   name: 'Project DA Bubble',
-          //   img: {
-          //     imgPath: 'img/my-work/da-bubble.png',
-          //     btn1: {
-          //       text: { de: 'GitHub', en: 'GitHub' },
-          //       link: 'https://github.com/Andre-Gross/join'
-          //     },
-          //     btn2: {
-          //       text: { de: 'Testen', en: 'Live Test' },
-          //       link: ''
-          //     },
-          //   },
-          //   paragraph1: {
-          //     header: { en: 'About the project', de: 'Über das Projekt' },
-          //     content: { en: '...', de: '...' },
-          //   },
-          //   paragraph2: {
-          //     header: { en: 'Technologies I have used', de: 'Verwendete Technologien' },
-          //     content: 'JavaScript, HTML, CSS',
-          //   },
-          //   paragraph3: {
-          //     header: { en: 'My group-projects experience', de: 'Meine Erfahrung mit Gruppenprojekten' },
-          //     content: { en: '...', de: '...' },
-          //   },
-          // },
         ],
         showMeTexts: {
           more: {
@@ -627,13 +600,10 @@ Vor einer Bereitstellung personenbezogener Daten durch den Betroffenen muss sich
 </p>
 
 `],
-        en: `<p>We are very delighted that you have shown interest in our enterprise. Data protection is of a particularly high priority for the management of the André Groß. The use of the Internet pages of the André Groß is possible without any indication of personal data; however, if a data subject wants to use special enterprise services via our website, processing of personal data could become necessary. If the processing of personal data is necessary and there is no statutory basis for such processing, we generally obtain consent from the data subject.</p>
-
-<p>The processing of personal data, such as the name, address, e-mail address, or telephone number of a data subject shall always be in line with the General Data Protection Regulation (GDPR), and in accordance with the country-specific data protection regulations applicable to the André Groß. By means of this data protection declaration, our enterprise would like to inform the general public of the nature, scope, and purpose of the personal data we collect, use and process. Furthermore, data subjects are informed, by means of this data protection declaration, of the rights to which they are entitled.</p>
-
-<p>As the controller, the André Groß has implemented numerous technical and organizational measures to ensure the most complete protection of personal data processed through this website. However, Internet-based data transmissions may in principle have security gaps, so absolute protection may not be guaranteed. For this reason, every data subject is free to transfer personal data to us via alternative means, e.g. by telephone. </p>
-
-<h4>1. Definitions</h4>
+        en: [`<p>We are very delighted that you have shown interest in our enterprise. Data protection is of a particularly high priority for the management of the André Groß. The use of the Internet pages of the André Groß is possible without any indication of personal data; however, if a data subject wants to use special enterprise services via our website, processing of personal data could become necessary. If the processing of personal data is necessary and there is no statutory basis for such processing, we generally obtain consent from the data subject.</p>
+          <p>The processing of personal data, such as the name, address, e-mail address, or telephone number of a data subject shall always be in line with the General Data Protection Regulation (GDPR), and in accordance with the country-specific data protection regulations applicable to the André Groß. By means of this data protection declaration, our enterprise would like to inform the general public of the nature, scope, and purpose of the personal data we collect, use and process. Furthermore, data subjects are informed, by means of this data protection declaration, of the rights to which they are entitled.</p>
+          <p>As the controller, the André Groß has implemented numerous technical and organizational measures to ensure the most complete protection of personal data processed through this website. However, Internet-based data transmissions may in principle have security gaps, so absolute protection may not be guaranteed. For this reason, every data subject is free to transfer personal data to us via alternative means, e.g. by telephone. </p>`,
+          `<h4>1. Definitions</h4>
 <p>The data protection declaration of the André Groß is based on the terms used by the European legislator for the adoption of the General Data Protection Regulation (GDPR). Our data protection declaration should be legible and understandable for the general public, as well as our customers and business partners. To ensure this, we would like to first explain the terminology used.</p>
 
 <p>In this data protection declaration, we use, inter alia, the following terms:</p>
