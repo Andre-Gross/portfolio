@@ -129,6 +129,12 @@ app-switch-arrow {
 
 
 @media (max-width: #{vars.$breakpoint-tablet-portrait}) {
+
+    :host {
+        overflow: hidden;
+    }
+
+
     .ma-le-56px {
         margin-left: 0;
     }
