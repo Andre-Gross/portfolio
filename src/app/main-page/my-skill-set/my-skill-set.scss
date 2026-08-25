@@ -38,9 +38,9 @@ app-section-title {
     display: grid;
     justify-content: flex-start;
 
-    grid-template-columns: repeat(auto-fill, 86px);
+    grid-template-columns: repeat(auto-fill, 86px) 214px;
     gap: 42px;
-    max-width: 726px;
+    max-width: 854px;
 }
 
 
