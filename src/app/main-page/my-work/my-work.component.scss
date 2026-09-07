@@ -79,8 +79,7 @@
             line-height: 100%;
 
             #headline-number {
-                @include mix.emptyLetters(54px, 2px, vars.$font-color-title);
-                font-size: 48px;
+                @include mix.emptyLetters(40px, 2px, vars.$font-color-title);
                 height: min-content;
                 line-height: 100%;
             }
