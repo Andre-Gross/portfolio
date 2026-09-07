@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { NgStyle } from '@angular/common';
 
 import { SectionTitleComponent } from '../../shared/components/section-title/section-title.component';
+import { MobileSectionTitleComponent } from '../../shared/components/mobile-section-title/mobile-section-title.component';
 import { ArgumentBlock } from './argument-block/argument-block.component';
 import { BtnToContactComponent } from '../../shared/components/btn-to-contact/btn-to-contact.component';
 
@@ -13,6 +14,7 @@ import { ContentService } from '../../shared/services/content/content.service';
     selector: 'app-why-me',
     imports: [
     SectionTitleComponent,
+    MobileSectionTitleComponent,
     ArgumentBlock,
     NgStyle,
     BtnToContactComponent
