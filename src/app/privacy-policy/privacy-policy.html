@@ -14,8 +14,12 @@
         column of contentService.content().privacyPolicy.main;
         track column.header;
         let i = $index;
-        let isLast = $last
+        let isFirst = $first;
+        let isLast = $last;
         ) {
+            @if (isFirst) {
+            <h2>{{ contentService.content().privacyPolicy.title }}</h2>
+            }
         <div #col [id]="'privacy-col-' + i" class="column">
             <div class="police-text" [innerHTML]="column"></div>
 
@@ -23,7 +27,7 @@
             <app-switch-arrow (click)="scrollToElement(i + 1)">
             </app-switch-arrow>
             } @else {
-                <app-footer [scrollContainer] = "scrollContainer"></app-footer>
+            <app-footer [scrollContainer]="scrollContainer"></app-footer>
             }
         </div>
         }

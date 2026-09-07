@@ -61,6 +61,11 @@ h2 {
     justify-content: space-between;
     gap: 64px;
 
+    &#privacy-col-0 {
+        padding-left: 0 !important;
+        width: calc(100vw - vars.$navigation-width - $title-sum-margins-width);
+    }
+
 
     >.police-text {
         margin-top: func.margin-top-full-value(164);
