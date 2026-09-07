@@ -454,8 +454,8 @@ export class ContentService {
 <ul>
   <li><strong>Auskunft</strong> über Ihre von mir verarbeiteten personenbezogenen Daten zu erhalten (Art. 15 DSGVO).</li>
   <li>Die <strong>Berichtigung</strong> unrichtiger Daten oder die Vervollständigung Ihrer Daten zu verlangen (Art. 16 DSGVO).</li>
-  <li>Die <strong>Löschung</strong> Ihrer gespeicherten Daten zu verlangen (Art. 17 DSGVO).</li>
-  <li>Die <strong>Einschränkung der Datenverarbeitung</strong> zu fordern (Art. 18 DSGVO).</li>
+  <li>Die <strong>Löschung</strong> Ihrer gespeicherten Daten zu verlangen (Art. 17 DSGVO).</li>`,
+          `<li>Die <strong>Einschränkung der Datenverarbeitung</strong> zu fordern (Art. 18 DSGVO).</li>
   <li>Gegen die Verarbeitung <strong>Widerspruch</strong> einzulegen (Art. 21 DSGVO).</li>
   <li>Daten, die Sie mir bereitgestellt haben, in einem maschinenlesbaren Format zu erhalten (<strong>Datenübertragbarkeit</strong>, Art. 20 DSGVO).</li>
 </ul>
