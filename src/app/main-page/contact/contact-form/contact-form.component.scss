@@ -60,11 +60,15 @@ form {
         &:-webkit-autofill:hover,
         &:-webkit-autofill:focus,
         &:-webkit-autofill:active {
-            -webkit-text-fill-color: vars.$font-color-primary !important;
+            -webkit-text-fill-color: vars.$font-color-primary;
             transition: background-color 5000000s ease-in-out 0s, color 5000000s ease-in-out 0s;
             font-family: vars.$font-family-primary !important;
             font-size: 14px !important;
             caret-color: vars.$font-color-primary;
+
+            &.hide-text {
+                -webkit-text-fill-color: vars.$black !important;
+            }
         }
     }
 
