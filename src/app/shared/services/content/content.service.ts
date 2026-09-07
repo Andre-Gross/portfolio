@@ -427,7 +427,7 @@ export class ContentService {
   <strong>André Groß</strong><br>
   Winckelmannstraße 41<br>
   12487 Berlin<br>
-  <strong>E-Mail:</strong> [Ihre E-Mail-Adresse]
+  <strong>E-Mail:</strong> andre@gross.dev
 </p>
 
 <h4>2. Hosting und Server-Logfiles</h4>
@@ -467,7 +467,7 @@ export class ContentService {
   <strong>André Groß</strong><br>
   Winckelmannstraße 41<br>
   12487 Berlin<br>
-  <strong>Email:</strong> [Your email address]
+  <strong>Email:</strong> andre@gross.dev
 </p>
 
 <h4>2. Hosting and Server Log Files</h4>
