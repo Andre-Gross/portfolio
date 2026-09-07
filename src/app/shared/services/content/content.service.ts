@@ -294,8 +294,8 @@ export class ContentService {
               de: 'Ihr Name',
             },
             error: {
-              en: 'Your name is required',
-              de: 'Bitte geben Sie Ihren Namen ein.'
+              en: 'Please enter your name',
+              de: 'Bitte gebe deinen Namen ein.'
             }
           },
           email: {
@@ -304,12 +304,12 @@ export class ContentService {
               de: 'Ihre E-Mail-Adresse',
             },
             errorNoText: {
-              en: 'Your e-mail is required',
-              de: 'Bitte geben Sie ihre E-Mail-Adresse ein.'
+              en: 'Please enter your e-mail address',
+              de: 'Bitte gebe deine E-Mail-Adresse ein.'
             },
             errorInvalidEmail: {
-              en: 'Your name is required',
-              de: 'Bitte geben Sie Ihren Namen ein.'
+              en: 'Please enter a valid e-mail address',
+              de: 'Bitte gebe eine gültige E-Mail-Adresse ein.'
             }
           },
           message: {
@@ -318,8 +318,8 @@ export class ContentService {
               de: 'Ihre Nachricht',
             },
             error: {
-              en: 'Your message is required',
-              de: 'Bitte tragen Sie eine Nachricht ein.'
+              en: 'Please enter your message',
+              de: 'Bitte trage deine Nachricht ein.'
             }
           },
           privacy: {
