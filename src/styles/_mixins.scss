@@ -24,15 +24,31 @@
 @mixin scrollbarDesktop() {
     width: calc(100vw - vars.$navigation-width);
     display: flex;
-    overflow-x: hidden;
+    overflow-x: scroll;
     overflow-y: hidden;
     scroll-behavior: smooth;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 
 @mixin scrollbarMobile() {
     flex-direction: column;
-    overflow-x: hidden;
-    overflow-y: hidden;
     width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
