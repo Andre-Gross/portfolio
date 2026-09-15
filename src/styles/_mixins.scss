@@ -24,39 +24,15 @@
 @mixin scrollbarDesktop() {
     width: calc(100vw - vars.$navigation-width);
     display: flex;
-    overflow-x: scroll;
+    overflow-x: hidden;
     overflow-y: hidden;
     scroll-behavior: smooth;
-
-    --sb-track-color: #000000;
-    --sb-thumb-color: #b5e93b;
-    --sb-size: #{vars.$scroll-bar-size};
-
-    &::-webkit-scrollbar {
-        width: var(--sb-size);
-        height: var(--sb-size);
-    }
-
-    &::-webkit-scrollbar-track {
-        background: var(--sb-track-color);
-        border-radius: 0;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background: var(--sb-thumb-color);
-        border-radius: 0;
-    }
-
-    @supports not selector(::-webkit-scrollbar) {
-        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
-        scrollbar-width: thin;
-    }
 }
 
 
 @mixin scrollbarMobile() {
     flex-direction: column;
-    overflow-x: auto;
-    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
     width: 100%;
 }
