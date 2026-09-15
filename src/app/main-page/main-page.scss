@@ -24,6 +24,10 @@ app-main-page {
     z-index: -2;
     display: flex;
     height: 100%;
+
+    &:only-child {
+        z-index: 10;
+    }
 }
 
 
@@ -45,6 +49,14 @@ app-end-block {
         box-sizing: border-box;
         @include mix.scrollbarMobile();
         overflow-x: clip;
+    }
+
+
+    #linear-gradient {
+        background: linear-gradient(179.85deg, #0A0909 9.26%, #282626 19.21%, #1B1B1B 24.73%, #0A0909 40.17%, #282626 55.4%, #131212 94.49%, #000000 100%);
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
         gap: 32px;
         align-items: center;
     }
