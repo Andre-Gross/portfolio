@@ -100,8 +100,7 @@ nav {
         opacity: 0.42;
 
         background-color: rgba(0, 0, 0);
-        backdrop-filter: blur(23.5px);
-        -webkit-backdrop-filter: blur(23.5px);
+        filter: blur(11.5px);
     }
 }
 
