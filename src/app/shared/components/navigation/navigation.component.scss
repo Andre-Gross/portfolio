@@ -30,7 +30,6 @@ nav {
     align-items: center;
 
 
-
     #closed-menu {
         height: 100%;
         display: flex;
@@ -162,7 +161,7 @@ nav {
     nav {
         right: 0;
         width: 100%;
-        height: min-content;
+        height: 73px;
 
 
         #closed-menu {
@@ -200,6 +199,16 @@ nav {
                     -webkit-text-stroke: 2px vars.$font-color-navigation;
                 }
             }
+        }
+
+
+        #shadow-menu {
+            top: 73px;
+            left: 0;
+            right: 0;
+            bottom: unset;
+            width: unset;
+            height: 29px;
         }
     }
 
