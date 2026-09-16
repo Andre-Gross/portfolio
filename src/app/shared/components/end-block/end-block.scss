@@ -21,6 +21,10 @@ footer {
         width: 100%;
         min-height: unset;
         height: max-content;
+
+        background:
+            linear-gradient(160.33deg, transparent 50.78%, #547800 133.54%),
+            linear-gradient(179.66deg, #B5E93B 50.78%, #547800 133.54%);
     }
 
 
@@ -30,8 +34,8 @@ footer {
         align-items: center;
         gap: 16px;
 
-
-        p, a {
+        p,
+        a {
             color: vars.$font-color-navigation;
             text-align: center;
             font-size: 13px;
