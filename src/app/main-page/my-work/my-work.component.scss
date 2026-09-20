@@ -57,8 +57,7 @@
 
 @media (max-width: #{vars.$breakpoint-tablet-portrait}) {
     :host {
-        margin-top: 0;
-        padding: vars.$spacing-top-section-mobile vars.$padding-mobile-left-right 0 vars.$padding-mobile-left-right;
+        @include mix.standard-spacing-section-mobile();
         box-sizing: border-box;
         flex-direction: column;
         gap: 40px;
