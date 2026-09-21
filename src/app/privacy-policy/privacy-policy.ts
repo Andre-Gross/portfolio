@@ -2,6 +2,7 @@ import { Component, ElementRef, inject, viewChild, viewChildren } from '@angular
 import { RouterLink } from '@angular/router';
 
 import { ContentService } from '../shared/services/content/content.service';
+import { ConstantsService } from '../shared/services/constants/constants.service';
 
 import { TopBarComponent } from '../shared/components/top-bar/top-bar.component';
 import { SwitchArrowComponent } from '../shared/components/switch-arrow/switch-arrow.component';
@@ -28,11 +29,14 @@ export class PrivacyPolicy {
   readonly columns = viewChildren<ElementRef<HTMLElement>>('col');
 
 
-  constructor(public contentService: ContentService) { }
+    readonly contentService = inject(ContentService);
+    private constantsService = inject(ConstantsService);
+
+  constructor() { }
 
 
   onWheel(event: WheelEvent): void {
-    const navigationWidth = 172;
+    const navigationWidth = this.constantsService.navigationWidth;
 
     if (window.innerWidth <= this.scrollService.breakpointTabletPortrait) return;
 

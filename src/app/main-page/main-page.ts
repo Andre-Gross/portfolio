@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Subscription, take } from 'rxjs';
 
 import { ScrollService } from '../shared/services/scroll/scroll.service';
+import { ConstantsService } from '../shared/services/constants/constants.service';
 
 import { LandingPage } from "./landing-page/landing-page";
 import { WhyMeSection } from "./why-me/why-me.component";
@@ -39,6 +40,7 @@ export class MainPage implements OnInit, OnDestroy, AfterViewInit {
 
     private route = inject(ActivatedRoute);
     private scrollService = inject(ScrollService);
+    private constantsService = inject(ConstantsService);
     private scrollSub!: Subscription;
 
 
@@ -142,14 +144,22 @@ export class MainPage implements OnInit, OnDestroy, AfterViewInit {
         }
     }
 
-    public scrollToElement(element: any) {
-        const target = element instanceof ElementRef ? element.nativeElement : element;
 
-        target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-            inline: 'start'
-        });
+    public scrollToElement(element: any) {
+        const navWidth = this.constantsService.navigationWidth;
+        const arrowWidth = this.constantsService.switchArrowContainerWidth;
+
+        const target = element instanceof ElementRef ? element.nativeElement : element;
+        const container = this.scrollContainer()?.nativeElement;
+
+        if (!container) return;
+
+        const elementLeft = target.offsetLeft;
+        const landingPageElement = this.landingPage()?.nativeElement;
+        const offset = target === landingPageElement ? navWidth : - arrowWidth + navWidth;
+        const offsetLeft = elementLeft - offset;
+
+        container.scrollLeft = offsetLeft;
     }
 
 
@@ -189,7 +199,7 @@ export class MainPage implements OnInit, OnDestroy, AfterViewInit {
     onWheel(event: WheelEvent): void {
         if (event.deltaY !== 0 && window.innerWidth > this.scrollService.breakpointTabletPortrait) {
             const element = event.currentTarget as HTMLElement;
-            
+
             element.scrollLeft += 6 * event.deltaY;
             event.preventDefault();
         }

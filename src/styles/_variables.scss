@@ -53,4 +53,4 @@ $desktop-end-block-width: 100px;
 
 $full-width-with-scroll-bar: calc(100vw - $scroll-bar-size - 2 * $padding-mobile-left-right);
 $full-height-with-scroll-bar: calc(100vh - $scroll-bar-size);
-$min-section-width: calc(100vw - #{$navigation-width} - #{$switch-arrow-container-width} - #{$section-title-width});
+$min-section-width: calc(100vw - #{$navigation-width});

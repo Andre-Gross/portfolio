@@ -4,7 +4,7 @@
 
 
 :host {
-    min-width: calc(vars.$min-section-width + vars.$switch-arrow-container-width + vars.$section-title-width);
+    min-width: calc(vars.$min-section-width + vars.$switch-arrow-container-width);
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
