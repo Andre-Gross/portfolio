@@ -6,7 +6,7 @@
 :host {
     margin-bottom: 8.4444444444vh;
     padding-top: func.margin-top-full-value(100);
-    min-width: vars.$min-section-width;
+    width: vars.$min-section-width;
 
     display: flex;
     align-items: flex-end;
@@ -74,6 +74,14 @@ app-btn-to-contact {
 @media (max-width: 1647px) {
     #skills-container {
         max-width: 100%;
+    }
+}
+
+
+@media (min-width: #{vars.$breakpoint-widescreen}) {
+    :host {
+        width: min-content;
+        min-width: vars.$min-section-width-widescreen !important;
     }
 }
 

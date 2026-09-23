@@ -4,7 +4,7 @@
 
 
 :host {
-    min-width: calc(vars.$min-section-width + vars.$switch-arrow-container-width);
+    width: calc(vars.$min-section-width + vars.$switch-arrow-container-width);
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -119,6 +119,13 @@ app-contact-links {
 app-end-block {
     margin-left: 32px;
 }
+
+
+// @media (min-width: #{vars.$breakpoint-widescreen}) {
+//     :host {
+//         width: calc(vars.$min-section-width-widescreen);
+//     }
+// }
 
 
 @media (max-height: 950px) and (min-width: #{vars.$breakpoint-tablet-portrait}) {

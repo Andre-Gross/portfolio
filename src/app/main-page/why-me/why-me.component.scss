@@ -5,7 +5,7 @@
 
 :host {
     margin-top: func.margin-top-full-value(164);
-    min-width: vars.$min-section-width;
+    width: vars.$min-section-width;
     display: flex;
     flex-direction: column;
 }
@@ -14,6 +14,13 @@
 app-btn-to-contact {
     align-self: flex-end;
     margin-top: func.margin-top-full-value(24);
+}
+
+
+@media (min-width: #{vars.$breakpoint-widescreen}) {
+    :host {
+        width: calc(vars.$min-section-width-widescreen);
+    }
 }
 
 

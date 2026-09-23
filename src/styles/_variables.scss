@@ -1,4 +1,5 @@
 $breakpoint-tablet-portrait: 1199px;
+$breakpoint-widescreen: 2400px;
 
 
 $bright-green: #B5E93B;
@@ -54,3 +55,4 @@ $desktop-end-block-width: 100px;
 $full-width-with-scroll-bar: calc(100vw - $scroll-bar-size - 2 * $padding-mobile-left-right);
 $full-height-with-scroll-bar: calc(100vh - $scroll-bar-size);
 $min-section-width: calc(100vw - #{$navigation-width});
+$min-section-width-widescreen: calc((#{$min-section-width} - #{$switch-arrow-container-width}) / 2);
