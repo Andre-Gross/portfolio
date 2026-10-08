@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class ConstantsService {
   
-  switchArrowContainerWidth = 202;
+  switchArrowContainerWidth = 144;
   navigationWidth = 172;
 
 }
