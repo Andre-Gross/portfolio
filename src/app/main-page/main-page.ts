@@ -146,20 +146,32 @@ export class MainPage implements OnInit, OnDestroy, AfterViewInit {
 
 
     public scrollToElement(element: any) {
-        const navWidth = this.constantsService.navigationWidth;
-        const arrowWidth = this.constantsService.switchArrowContainerWidth;
-
         const target = element instanceof ElementRef ? element.nativeElement : element;
         const container = this.scrollContainer()?.nativeElement;
 
         if (!container) return;
 
-        const elementLeft = target.offsetLeft;
-        const landingPageElement = this.landingPage()?.nativeElement;
-        const offset = target === landingPageElement ? navWidth : - arrowWidth + navWidth;
-        const offsetLeft = elementLeft - offset;
+        if (window.innerWidth > this.scrollService.breakpointTabletPortrait) {
+            const navWidth = this.constantsService.navigationWidth;
+            const arrowWidth = this.constantsService.switchArrowContainerWidth;
 
-        container.scrollLeft = offsetLeft;
+            const elementLeft = target.offsetLeft;
+            const landingPageElement = this.landingPage()?.nativeElement;
+            const offset = target === landingPageElement ? navWidth : - arrowWidth + navWidth;
+            const offsetLeft = elementLeft - offset;
+
+            container.scrollLeft = offsetLeft;
+        } else {
+            const navHeight = this.constantsService.navigationHeightMobile;
+            const additionalOffset = 16;
+
+            const elementTop = target.offsetTop;
+            const landingPageElement = this.landingPage()?.nativeElement;
+            const offset = target === landingPageElement ? navHeight : additionalOffset + navHeight;
+            const offsetTop = elementTop - offset;
+
+            container.scrollTop = offsetTop;
+        }
     }
 
 
