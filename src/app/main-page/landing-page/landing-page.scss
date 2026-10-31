@@ -11,12 +11,13 @@ $subtitle-font-size: calc($main-title-font-size * (48 / 100) - (2* $subtitle-fon
     width: calc(vars.$min-section-width - vars.$switch-arrow-container-width);
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: end;
     align-items: center;
 }
 
 
 #hero-container {
+    position: relative;
     width: max-content;
     display: flex;
     justify-content: center;
@@ -24,6 +25,7 @@ $subtitle-font-size: calc($main-title-font-size * (48 / 100) - (2* $subtitle-fon
 
 
 #title-section {
+    padding-bottom: 20vh;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -34,7 +36,7 @@ $subtitle-font-size: calc($main-title-font-size * (48 / 100) - (2* $subtitle-fon
     z-index: -1;
     position: absolute;
     bottom: 0;
-    height: 80vh
+    width: 100%;
 }
 
 
@@ -63,7 +65,8 @@ h1 {
 
 @media (min-width: #{vars.$breakpoint-widescreen}) {
     :host {
-        width: calc(vars.$min-section-width-widescreen);
+        width: calc(vars.$min-section-width-widescreen - vars.$switch-arrow-container-width / 2);
+
     }
 }
 

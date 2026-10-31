@@ -121,11 +121,11 @@ app-end-block {
 }
 
 
-// @media (min-width: #{vars.$breakpoint-widescreen}) {
-//     :host {
-//         width: calc(vars.$min-section-width-widescreen);
-//     }
-// }
+@media (min-width: #{vars.$breakpoint-widescreen}) {
+    :host {
+        width: calc(1.2 * vars.$min-section-width-widescreen + vars.$switch-arrow-container-width);
+    }
+}
 
 
 @media (max-height: 950px) and (min-width: #{vars.$breakpoint-tablet-portrait}) {

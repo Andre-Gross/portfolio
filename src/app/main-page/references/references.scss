@@ -65,7 +65,7 @@ $reference-container-min-width: calc(320px - 2 * vars.$padding-mobile-left-right
 
 @media (min-width: #{vars.$breakpoint-widescreen}) {
     :host {
-        width: min-content;
+        width: calc(0.8 * vars.$min-section-width-widescreen);
     }
 }
 

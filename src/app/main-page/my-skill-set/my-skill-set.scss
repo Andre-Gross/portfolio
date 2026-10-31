@@ -24,6 +24,7 @@ app-section-title {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    min-width: 0;
 }
 
 
@@ -35,6 +36,7 @@ app-section-title {
 
     grid-template-columns: repeat(auto-fill, 86px) 214px;
     gap: 42px;
+    min-width: 0;
     max-width: 854px;
 }
 
@@ -71,17 +73,16 @@ app-btn-to-contact {
 }
 
 
-@media (max-width: 1647px) {
-    #skills-container {
-        max-width: 100%;
+@media (min-width: #{vars.$breakpoint-widescreen}) {
+    :host {
+        width: vars.$min-section-width-widescreen !important;
     }
 }
 
 
-@media (min-width: #{vars.$breakpoint-widescreen}) {
-    :host {
-        width: min-content;
-        min-width: vars.$min-section-width-widescreen !important;
+@media (max-width: 1647px) {
+    #skills-container {
+        max-width: 100%;
     }
 }
 

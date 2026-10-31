@@ -19,7 +19,7 @@ app-btn-to-contact {
 
 @media (min-width: #{vars.$breakpoint-widescreen}) {
     :host {
-        width: calc(vars.$min-section-width-widescreen);
+        width: calc(vars.$min-section-width-widescreen -  vars.$switch-arrow-container-width / 2);
     }
 }
 

@@ -5,6 +5,7 @@
 :host {
     position: absolute;
     top: 0;
+    left: 0;
 
     margin-top: func.margin-top-full-value(30);
     width: vars.$min-section-width;
@@ -13,6 +14,14 @@
     justify-content: end;
     align-items: center;
     gap: 48px;
+}
+
+
+@media (min-width: #{vars.$breakpoint-widescreen}) {
+    :host {
+        box-sizing: border-box;
+        padding-right: 20px;
+    }
 }
 
 
