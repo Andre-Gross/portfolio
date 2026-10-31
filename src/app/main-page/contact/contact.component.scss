@@ -163,6 +163,8 @@ app-end-block {
 
     :host {
         @include mix.standard-spacing-section-mobile();
+        box-sizing: border-box;
+        width: 100%;
         flex-direction: column-reverse;
     }
 
