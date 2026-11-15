@@ -31,8 +31,24 @@ app-main-page {
 }
 
 
+.widescreen-full-width {
+    display: flex;
+    width: fit-content;
+    height: 100%;
+}
+
+
 app-end-block {
     display: none;
+}
+
+
+@media (min-width: #{vars.$breakpoint-widescreen}) {
+    .widescreen-full-width {
+        width: calc(vars.$min-section-width + vars.$switch-arrow-container-width);
+        height: 100%;
+    }
+
 }
 
 
@@ -64,5 +80,11 @@ app-end-block {
 
     app-end-block {
         display: unset;
+    }
+
+
+    .widescreen-full-width {
+        max-width: 100vw;
+        flex-direction: column;
     }
 }
