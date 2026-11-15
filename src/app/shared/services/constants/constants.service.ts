@@ -7,5 +7,6 @@ export class ConstantsService {
   
   switchArrowContainerWidth = 144;
   navigationWidth = 172;
+  navigationHeightMobile = 73;
 
 }
