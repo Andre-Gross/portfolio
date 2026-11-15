@@ -3,10 +3,10 @@
 
 
 :host {
-    width: calc(vars.$switch-arrow-container-width + vars.$section-title-width);
     max-height: 40vh;
     display: flex;
     cursor: pointer;
+    gap: vars.$section-title-gap
 }
 
 
@@ -14,7 +14,6 @@ h2 {
     margin-right: 32px;
     min-height: 65px;
     line-height: 1.2;
-    padding-left: 44px;
 
     @include mix.emptyLetters(54px, 2px, vars.$font-color-title);
 
@@ -24,9 +23,6 @@ h2 {
 
 
 @media (max-height: 950px) {
-    :host {
-        margin-left: 21px
-    }
 
     h2 {
         @include mix.emptyLetters(36px, 2px, vars.$font-color-title);
