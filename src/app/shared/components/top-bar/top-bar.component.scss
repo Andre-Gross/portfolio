@@ -6,8 +6,10 @@
     position: absolute;
     top: 0;
     left: 0;
-
+    
+    box-sizing: border-box;
     margin-top: func.margin-top-full-value(30);
+    padding-right: 30px;
     width: vars.$min-section-width;
 
     display: flex;
