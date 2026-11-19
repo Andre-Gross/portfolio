@@ -53,5 +53,5 @@ $section-title-gap: 44px;
 $desktop-end-block-width: 100px;
 
 $full-width: calc(100vw - 2 * $padding-mobile-left-right);
-$min-section-width: calc(100vw - #{$navigation-width});
-$min-section-width-widescreen: calc(#{$min-section-width} / 2);
+$min-section-width: calc(100vw - $navigation-width);
+$min-section-width-widescreen: calc($min-section-width / 2);
