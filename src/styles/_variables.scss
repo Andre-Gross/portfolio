@@ -44,7 +44,6 @@ $border-color-button-secondary-disabled: $dark-grey;
 $padding-mobile-left-right: 16px;
 $spacing-top-section-mobile: 86px;
 
-$scroll-bar-size: 4px;
 $navigation-width: 172px;
 $nav-height-mobile: 73px;
 $switch-arrow-img-width: 144px;
@@ -53,7 +52,6 @@ $section-title-width: 141px;
 $section-title-gap: 44px;
 $desktop-end-block-width: 100px;
 
-$full-width-with-scroll-bar: calc(100vw - $scroll-bar-size - 2 * $padding-mobile-left-right);
-$full-height-with-scroll-bar: calc(100vh - $scroll-bar-size);
+$full-width: calc(100vw - 2 * $padding-mobile-left-right);
 $min-section-width: calc(100vw - #{$navigation-width});
 $min-section-width-widescreen: calc(#{$min-section-width} / 2);

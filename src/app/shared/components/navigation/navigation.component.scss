@@ -250,7 +250,7 @@ nav {
     }
 
     #nav-placeholder {
-        width: #{vars.$full-width-with-scroll-bar};
+        width: #{vars.$full-width};
         height: vars.$nav-height-mobile
     }
 }

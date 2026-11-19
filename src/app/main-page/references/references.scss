@@ -122,7 +122,7 @@ $reference-container-min-width: calc(320px - 2 * vars.$padding-mobile-left-right
         box-sizing: border-box;
         height: auto;
         min-width: $reference-container-min-width;
-        max-width: vars.$full-width-with-scroll-bar;
+        max-width: vars.$full-width;
         scroll-snap-align: start;
         flex-shrink: 0;
 
