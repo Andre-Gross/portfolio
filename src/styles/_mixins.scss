@@ -1,7 +1,6 @@
 @use './variables' as vars;
 
 
-
 @mixin emptyLetters($font-size, $line-thickness, $border-color, $line-height: 120%) {
     font-size: $font-size;
     color: transparent;
@@ -15,6 +14,7 @@
             $blur * 0.5) $color
     );
 }
+
 
 @mixin drop-low-glow($blur: 20px, $horizontal: 0, $vertikal: 0, $color: vars.$bright-green) {
     filter: drop-shadow($horizontal $vertikal $blur $color);
@@ -52,6 +52,7 @@
         display: none;
     }
 }
+
 
 @mixin standard-spacing-section-mobile() {
     margin-top: vars.$spacing-top-section-mobile;

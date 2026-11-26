@@ -1,3 +1,8 @@
 @function margin-top-full-value ($margin-top-px-value-of-900px) {
     @return 100vh * ($margin-top-px-value-of-900px / 900);
 }
+
+
+@function width-section-title-h2 ($font-size, $line-height) {
+    @return $font-size * $line-height;
+}
